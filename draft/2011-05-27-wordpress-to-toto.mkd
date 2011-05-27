@@ -29,6 +29,28 @@ entropy!
 
 ### Rewriting history
 
+I have a mass of unfinished draft posts in Wordpress. The first job was to
+begin a fresh repository that retained the content and history of the drafts in
+my [git-wordpress][] repository.
+
+`git filter-branch` is [the tool][gfb1] for [this job][gfb2]:
+
+1. Clone the existing repository:
+
+    $ git clone --no-hardlinks /path/to/existing/repo new-repo
+
+2. Delete what you don't want (from all branches):
+
+    $ git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch
+        articles" --prune-empty -- --all 
+
+3. Clean up
+    
+    cd new-repo
+    rm -rf .git/refs/origin
+    git remote rm origin
+    git gc --aggressive
+    git prune
 
 ## Design
 
@@ -49,5 +71,7 @@ entropy!
   [wpexport]: https://github.com/tlvince/scripts/blob/bash/wordpress-export.sh
   [md4wp]: https://wordpress.org/extend/plugins/markdown-for-wordpress-and-bbpress/
   [git-wordpress]: https://github.com/brool/git-wordpress
+  [gfb1]: http://airbladesoftware.com/notes/moving-a-subdirectory-into-a-separate-git-repository
+  [gfb2]: http://stackoverflow.com/questions/3223053/how-to-remove-old-commits-after-filter-branch
 
   *[WYSIWYG]: What You See Is What You Get

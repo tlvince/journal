@@ -1,0 +1,7 @@
+---
+title: Having a go at implementing a ...
+date: 09/05/2010
+
+---
+
+Having a go at implementing a Boyer-Moore algorithm

@@ -1,0 +1,21 @@
+---
+title: Gmail another little thing to fix reply to all
+date: 08/04/2011
+
+---
+
+Here's another [little thing to fix][1]:
+
+[![A mock-up of Gmail, defaulting to reply to all][gth]][graw]
+
+I'm always forgetting to hit *reply to all* when I really mean to. How about defaulting the reply button to reply to all when there are multiple recipients?
+
+Now, there'll inevitably be times when this won't be what you want. One solution might be to add a weighting to conversations that contain multiple recipients in previous messages.
+
+What's your suggestion?
+
+  [1]: http://gmailblog.blogspot.com/2011/04/fixing-little-things.html
+
+  [graw]: http://www.tlvince.com/blog/wp-content/uploads/2011/01/gmail-reply-to-all.png
+  [gth]: http://www.tlvince.com/blog/wp-content/uploads/2011/01/gmail-reply-to-all-300x111.png 
+

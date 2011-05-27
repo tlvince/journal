@@ -1,0 +1,7 @@
+---
+title: You can now visit me at http/...
+date: 07/07/2010
+
+---
+
+You can now visit me at <a href="http://tlvince.com" rel="nofollow">http://tlvince.com</a>

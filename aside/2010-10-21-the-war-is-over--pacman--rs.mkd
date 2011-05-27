@@ -1,0 +1,7 @@
+---
+title: The war is over '$ pacman -Rs...
+date: 21/10/2010
+
+---
+
+The war is over: '$ pacman -Rsn firefox' #<a href="http://search.twitter.com/search?q=%23webkit" class="aktt_hashtag">webkit</a>

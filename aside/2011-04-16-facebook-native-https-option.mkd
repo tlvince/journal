@@ -1,0 +1,9 @@
+---
+title: Facebook native HTTPS option
+date: 16/04/2011
+
+---
+
+You should enable Facebook's native HTTPS option (if you haven't already):
+
+<a href="http://www.tlvince.com/blog/wp-content/uploads/2011/04/facebook-https.png"><img src="http://www.tlvince.com/blog/wp-content/uploads/2011/04/facebook-https-300x136.png" alt="" title="Facebook HTTPS" width="300" height="136" class="aligncenter size-medium wp-image-795" /></a>

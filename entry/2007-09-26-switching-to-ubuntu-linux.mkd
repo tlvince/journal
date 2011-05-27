@@ -1,0 +1,136 @@
+---
+title: Switching to Ubuntu Linux
+date: 26/09/2007
+
+---
+
+If you haven't heard of Ubuntu yet, it's a flavour of Linux that's based on Debian. To save me the time of writing out why you should be using Ubuntu instead of Windows (or anything else for that matter), all you need to do is have a browse round here: <a href="http://www.whylinuxisbetter.net/">Why Linux is Better</a>.
+
+The first thing you should try is running Ubuntu from a Live CD. Just change your BIOS settings to enable booting from CD and you'll be there. If your happy, next you should be looking at backing up. Instead, I was looking to <em>upgrade</em> my vanilla XP install by using a customised XP disk with nLite.
+
+Below is a log of how I went about it.
+<h2>Deciding To Use Ubuntu</h2>
+I first created a new XP Slipstream disk that contained 64KB cluster size fix: XPSP2 does not normally allow installation on anything other than 4KB cluster size. Unfortunately, the "fix" didn't work and I was presented with <em>Page_Fault Stop Error</em>'s.
+
+Even after rebooting, the error reappeared, stopping me from continuing with the XP installation. Possible casue for this could have been I didn't delete and recreate the Temp Partition after installing Windows and assigning the pagefile to it.
+
+Currently, we haven't found a way of installing Windows on anything but 4KB, but the Temp Partition (w/ 64KB) <strong>will</strong> work if recreated as above. Also note that Windows will only install to a <strong>primary</strong> partition and you can only have 4 primary partitions (remembering that an extended partition uses up a primary partition slot).
+
+<strong>If creating a NTFS TEMP partition for XP (by setting up partitions before installing Windows), make sure you delete it and re-create it after Windows has installed.</strong>
+
+So I had to find a way of reformatting the drive without using a Windows tool. I was going to use Ubuntu's FDISK (during Live CD use), but instead thought it would be a better idea to make the jump and actually convert to Ubuntu instead. I briefly looked up on Linux software equivalents and came to the conclusion that I would only need to use XP again for Cubase (&amp; no Linux drivers for EMU 1616m) and possibly for games.
+<h2>Ubuntu Changeover Log</h2>
+Sun 16 Sep 2007 21:32:43
+<h3>Backing Up From Windows</h3>
+<ul>
+	<li>Backed up all obvious folders, like My Documents etc.</li>
+	<li>Backed up various application settings and profiles</li>
+	<li>Safely moved all non-redudant backups to external hard-drive</li>
+</ul>
+<h3>Formatting Drive</h3>
+After backing up, I decided that I wanted to have my 2 years in use hard-drive completely formatted:
+<ul>
+	<li>First booted Ubuntu using the Live CD</li>
+	<li>Securely formatted the hard-drive using: <code>sudo shred -n1 -v /dev/hda</code></li>
+	<li>Reboot and run the Ubuntu Installer</li>
+</ul>
+<h4>Partition scheme</h4>
+Extended:
+<ul>
+	<li>Linux Swap	 1.5GB</li>
+	<li>/ (Root) Linux 20GB</li>
+	<li>/home	  30GB</li>
+	<li>Finish the install</li>
+	<li>Boot to XP (Slipstream CD)</li>
+</ul>
+Create 2 further partitions (as primary):
+<ul>
+	<li>Primary: - Windows	 2.9GB</li>
+	<li>Primary: - Programs	  18GB</li>
+</ul>
+<h3><span style="color: #444444;">Recovering Linux Boot Manager</span></h3>
+After Windows has been installed, it installs it's own bootloader, which hides our Linux install from the system. To allow us to boot back into Linux, we need to <a href="https://help.ubuntu.com/community/RecoveringUbuntuAfterInstallingWindows?action=show&amp;redirect=RecoverGrub">recover grub</a>.
+
+Used this for the Windows entry:
+<pre>title  		Microsoft Windows XP Home
+root   		(hd0,1)
+makeactive
+chainloader +1</pre>
+<h3>Ubuntu Installed</h3>
+<ul>
+	<li>Now Ubuntu is installed, I am looking for user guides to help ease the transition.</li>
+	<li>Picked up a few (rather out-of-date) Linux books from the Library.</li>
+	<li>Got a good eBook</li>
+	<li>Got <a href="http://www.sigmundvoid.com/?p=81">.docx to work in OO</a></li>
+</ul>
+<h3>Installed Opera 9.5</h3>
+This was hard as I used my XP backup that had D:\Opera\ for the paths used. I had to manually change the paths to their new linux equivelents; in the GUI and by editing the .adr files. Opera kept re-creating folders/files outside of the new profile folder, but I managed to replace all the old paths eventually. Remember, all paths used by Opera can be checked by enterring opera:about
+
+When updating programs (such as new Opera builds) in Ubuntu, (after running the .deb file) it will automatically detect that there was a previous version and will replace/update it perfectly.
+<ul>
+	<li>To add items to the Start Bar; goto: /home/tom/.opera/toolbar and enter manually</li>
+	<li>To remove "Search With..." after update: /usr/share/opera/locale/english.lng</li>
+	<li>Installed Automatix</li>
+</ul>
+<h3>Laptop Drivers For Linux</h3>
+Graphics: 	Intel i915GM		- Stock Driver Version: Intel VGA driver 6.14.10.4250
+Audio:		Conexant		- Stock Driver Version: Conexant Audio driver 6.13.10.8335
+
+I have the Intel i915GM onboard graphics chipset and although the drivers are already included in the distro, there is extra work to be done for it to run at native resolution. Luckily I found some documentation <a href="https://help.ubuntu.com/community/i915Driver">explaining the process</a>. I then ran the autoi915 script and all seems fine!
+<h3>Fonts</h3>
+I thought that even after changing my default resolution back to the monitor's native, the fonts still looked quite bad. Firstly, I had to find <a href="http://ubuntuforums.org/showpost.php?p=99808&amp;postcount=1">change the DPI to 96</a> using:
+<pre>DisplaySize	338	211	# 1280x800 96dpi</pre>
+After running the <code>xdpyinfo | grep resolution</code> command, my dpi would never be 96x96. After searching around, I found there is a <a href="http://ubuntuforums.org/showpost.php?p=2663087&amp;postcount=19">bug in the xorg.config</a> file. Apply the fix worked.
+
+Instead of following the rest of that guide, I found <a href="http://www.stchman.com/ms_fonts.html">a script</a> that automates installing MS fonts for a great look.
+
+I later installed Lucida Console manually. I have now changed the system fonts (in System/Preferance/Font) to Tahoma 8.25 (the default XP) for all system fonts except Fixed Width Font to Lucida Console 10.
+<h3>Ubuntu Control Panel</h3>
+<ul>
+	<li><a href="https://help.ubuntu.com/community/DesktopEffects?highlight=%28effects%29%7C%28desktop%29">Disabled Desktop Effects</a></li>
+	<li><a href="https://help.ubuntu.com/community/DesktopEffects?highlight=%28effects%29%7C%28desktop%29"></a>Set UK as default Keyboard</li>
+	<li>Added Control Panel to preferences</li>
+	<li>Changed Opera to default browser</li>
+	<li>Changed Power settings (Change the "Regard system as idle" in screensaver to 1 minute for shorter times)</li>
+	<li>Changed Mouse Pointer to White Glass (2nd size) and increased the acceleration slightly</li>
+	<li>Disabled System Beep</li>
+</ul>
+<h3>Programs Uninstalled</h3>
+<ul>
+	<li>Totem Player</li>
+	<li>Tomboy Notes</li>
+	<li>Games</li>
+	<li>Gaim</li>
+	<li>Evolution Mail</li>
+	<li>Bittorrent</li>
+</ul>
+<h3>Programs Installed</h3>
+<ul>
+	<li>Opera</li>
+	<li>VLC</li>
+	<li>Automatix</li>
+	<li>DocX for OO</li>
+	<li>Pidgin (the new Gaim)</li>
+	<li>Flash Plugin</li>
+	<li>VLC and Plugin</li>
+	<li><a href="http://www.hosts-file.net/?s=Download">HOSTS Adblock file</a></li>
+	<li><a href="http://www.hosts-file.net/?s=Download"></a>7-Zip</li>
+	<li>Unrar (non free)</li>
+	<li>Brightside 	- Top Left: Mute, Bottom Left: Desktop, Top Right: Off, Bottom Right: Screensaver. Switch to adjecent workspace and wrap on.</li>
+	<li>The <a href="https://bugs.launchpad.net/ubuntu/+source/openoffice.org/+bug/93002/comments/12">new OpenOffice</a></li>
+	<li><a href="https://bugs.launchpad.net/ubuntu/+source/openoffice.org/+bug/93002/comments/12"></a>Converted Office 2007 Templates - find out how to put document properties title</li>
+	<li>Moblock (PeerGuardian)</li>
+	<li>Workrave</li>
+	<li>TuxGuitar (Guitar Pro)</li>
+</ul>
+<h3>Todo</h3>
+<ul>
+	<li>Clear Type Opera</li>
+	<li>Get Wireless Going</li>
+	<li>Find out why Ubuntu crashes when the EMU-1616 is in</li>
+	<li>Find out how to uninstall Firefox</li>
+	<li>Sort out services</li>
+	<li>Sort out Pidgin (it's out of date)</li>
+	<li>Sort out backups</li>
+	<li>Update favourite software with Ubuntu's alternatives</li>
+</ul>

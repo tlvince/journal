@@ -6,17 +6,28 @@ date: 27/05/2011
 
 A customary site redesign write up.
 
+## Rationale
+
+Though infrequent, my existing blog maintenance nightmare. A playground of mine
+since 2007, I had accumulated a combination of a Wordpress SQL database,
+corresponding [XML backups][wpexport], some entries polluted with WYSIWYG
+clutter, some written with [Markdown for Wordpress][md4wp].
+
+Things became more organised when I switched to [git-wordpress][] as the
+canonical source for writing and publishing. This came with it's own problems
+however: each post would be littered with Wordpress identifiers and still
+required posts to be published through the web interface.
+
 ## Architecture
 
 Since [toto][] is fully `git` orientated, maintaining clean repositories is
 worthwhile. After cloning `toto`'s base template, [dorothy][], I began working
 on a bunch of personalisations. During writing a base theme, customising the
 templates and depreceating `.gems` after learning about [Bundler][], it occurred
-to me content should be modularised from the templates. Time for some tricky
-`git`...
+to me content should be modularised from the templates. Time to kill some
+entropy!
 
 ### Rewriting history
-
 
 
 ## Design
@@ -35,3 +46,8 @@ to me content should be modularised from the templates. Time for some tricky
   [jblevins]: http://jblevins.org/log/kindle-dx
   [Solarized]: http://ethanschoonover.com/solarized
   [readability]: https://code.google.com/p/better-web-readability-project/
+  [wpexport]: https://github.com/tlvince/scripts/blob/bash/wordpress-export.sh
+  [md4wp]: https://wordpress.org/extend/plugins/markdown-for-wordpress-and-bbpress/
+  [git-wordpress]: https://github.com/brool/git-wordpress
+
+  *[WYSIWYG]: What You See Is What You Get

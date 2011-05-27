@@ -4,7 +4,7 @@ date: 27/05/2011
 
 ---
 
-A customary site redesign post.
+A customary site redesign write up.
 
 ## Architecture
 
@@ -15,6 +15,23 @@ templates and depreceating `.gems` after learning about [Bundler][], it occurred
 to me content should be modularised from the templates. Time for some tricky
 `git`...
 
+### Rewriting history
+
+
+
+## Design
+
+### Influences
+
+* [Steve Losh][sjl]
+* [Jason Blevins][jblevins]
+* Ethan Schoonover's [Solarized][]
+* Vladimir Carrer's [Better Web Readability Project][readability]
+
   [toto]: http://cloudhead.io/toto
   [dorothy]: https://github.com/cloudhead/dorothy
   [Bundler]: http://gembundler.com/
+  [sjl]: http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/
+  [jblevins]: http://jblevins.org/log/kindle-dx
+  [Solarized]: http://ethanschoonover.com/solarized
+  [readability]: https://code.google.com/p/better-web-readability-project/

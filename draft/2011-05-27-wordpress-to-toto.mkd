@@ -1,0 +1,20 @@
+---
+title: Migrating from Wordpress to Toto
+date: 27/05/2011
+
+---
+
+A customary site redesign post.
+
+## Architecture
+
+Since [toto][] is fully `git` orientated, maintaining clean repositories is
+worthwhile. After cloning `toto`'s base template, [dorothy][], I began working
+on a bunch of personalisations. During writing a base theme, customising the
+templates and depreceating `.gems` after learning about [Bundler][], it occurred
+to me content should be modularised from the templates. Time for some tricky
+`git`...
+
+  [toto]: http://cloudhead.io/toto
+  [dorothy]: https://github.com/cloudhead/dorothy
+  [Bundler]: http://gembundler.com/

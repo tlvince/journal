@@ -52,6 +52,20 @@ my [git-wordpress][] repository.
     git gc --aggressive
     git prune
 
+### Function vs Form
+
+Next was to split the `toto`'s template from it's content. Using a slightly
+different `git --filter-branch` varient as before, I wanted to retain any
+commits *irrelated* to my articles.
+
+Range:
+
+    -- b632770aede01f2b77e0..HEAD
+
+one before
+
+    6b9b23f..HEAD
+
 ## Design
 
 ### Influences

@@ -1,7 +1,4 @@
----
 title: Testing cltwitter... 123
 date: 20/04/2010
-
----
 
 Testing cltwitter... 123

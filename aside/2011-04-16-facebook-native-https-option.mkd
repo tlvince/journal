@@ -1,8 +1,5 @@
----
 title: Facebook native HTTPS option
 date: 16/04/2011
-
----
 
 You should enable Facebook's native HTTPS option (if you haven't already):
 

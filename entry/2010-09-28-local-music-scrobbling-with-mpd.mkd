@@ -1,8 +1,5 @@
----
 title: Local music scrobbling with mpd
 date: 28/09/2010
-
----
 
 A <a href="http://www.musicpd.org/mantis/view.php?id=3033" title="mpdscribble bug tracker">feature request</a> recently <a href="http://git.musicpd.org/cgit/master/mpdscribble.git/commit/?id=ee72953d93b967b665dbc7447ffbaf5d9ffec324" title="The mpdscribble git commit that implements the local logging feature">implemented</a> in mpdscribble allows plays from <a href="http://mpd.wikia.com/" title="Music Player Daemon Community Wiki">mpd</a> to be logged to file. If you already use Last.fm but like the idea of being in control of your private data, this might be of interest. <!--more-->
 

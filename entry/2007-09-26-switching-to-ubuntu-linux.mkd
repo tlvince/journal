@@ -1,8 +1,5 @@
----
 title: Switching to Ubuntu Linux
 date: 26/09/2007
-
----
 
 If you haven't heard of Ubuntu yet, it's a flavour of Linux that's based on Debian. To save me the time of writing out why you should be using Ubuntu instead of Windows (or anything else for that matter), all you need to do is have a browse round here: <a href="http://www.whylinuxisbetter.net/">Why Linux is Better</a>.
 

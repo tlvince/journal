@@ -1,8 +1,5 @@
----
 title: Tiling Window Managers reprise
 date: 13/03/2009
-
----
 
 Previously, I wrote about a newcomer’s experience with so-called Tiling Window Managers (TWM's). Some of the criticisms I highlighted were:
 

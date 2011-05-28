@@ -1,7 +1,4 @@
----
 title: Linux users frustrated about ...
 date: 16/09/2010
-
----
 
 Linux users: frustrated about programs clogging up HOME? Try this: <a href="http://is.gd/fdpv2" rel="nofollow">http://is.gd/fdpv2</a>

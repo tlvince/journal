@@ -1,8 +1,5 @@
----
 title: Tiredness
 date: 05/09/2010
-
----
 
 > When you're tired, go to bed.
 >

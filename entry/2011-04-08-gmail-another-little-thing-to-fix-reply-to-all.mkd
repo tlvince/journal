@@ -1,8 +1,5 @@
----
 title: Gmail another little thing to fix reply to all
 date: 08/04/2011
-
----
 
 Here's another [little thing to fix][1]:
 

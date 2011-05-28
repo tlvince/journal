@@ -1,8 +1,5 @@
----
 title: Lion Rock
 date: 02/10/2010
-
----
 
 A pseudo-natural national park with some great hiking trails.
 

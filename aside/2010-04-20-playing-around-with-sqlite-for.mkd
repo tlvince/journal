@@ -1,7 +1,4 @@
----
 title: Playing around with sqlite for...
 date: 20/04/2010
-
----
 
 Playing around with sqlite for a terminal bookmarking app

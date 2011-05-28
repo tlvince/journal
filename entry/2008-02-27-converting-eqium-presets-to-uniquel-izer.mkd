@@ -1,8 +1,5 @@
----
 title: Converting Eqium Presets To UNIQUEL-IZER
 date: 27/02/2008
-
----
 
 Since <a href="http://www.elementalaudio.com/">Elemental Audio</a> have changed hands to <a href="http://www.rogernicholsdigital.com/">Roger Nichols Digital, Inc</a>, all their original plugins, such as Eqium and Firium have changed name and been given slight updates (mainly just the inclusion of a few extra presets).
 

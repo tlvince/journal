@@ -1,7 +1,4 @@
----
 title: jumanji is an awesome alternat...
 date: 05/08/2010
-
----
 
 jumanji is an awesome alternative webkit browser you should check out

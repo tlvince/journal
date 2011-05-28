@@ -1,7 +1,4 @@
----
 title: Saving my eyes with Zenburn
 date: 29/04/2010
-
----
 
 Saving my eyes with Zenburn

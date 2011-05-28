@@ -1,8 +1,5 @@
----
 title: 915resolution After Ubuntu Upgrade To Gutsy
 date: 05/10/2007
-
----
 
 After getting to grips with the basics of Ubuntu, I thought I might aswell have a try a Gutsy - the new (currently beta) upgrade to Ubuntu.
 

@@ -1,8 +1,5 @@
----
 title: Tiling Window Managers
 date: 24/01/2009
-
----
 
 Being brought up with using (what I now know to be called) <em>Floating</em> window mangers during the short-sighted days of “that other operating-system”, it was only natural to try out what all the cool kids are using: a Tiling window manager.
 

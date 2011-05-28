@@ -1,8 +1,5 @@
----
 title: Web Portfolio
 date: 11/08/2010
-
----
 
 This is a collection of websites I have designed and developed.
 

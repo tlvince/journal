@@ -1,8 +1,5 @@
----
 title: Conquering the miserable programmer paradox
 date: 22/01/2011
-
----
 
 All too commonly, people work on things they despise. Programmers are no different, especially since computers are particularly suited to repetitive tasks. I experienced it recently but devised a challenge helped me overcome it.<!--more-->
 

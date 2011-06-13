@@ -50,13 +50,7 @@ original up side-by-side without any dreaded horizontal scroll-bars. A hugely
 underused feature of Opera in my opinion and one that will deservedly have a
 blog post dedicated to it soon.
 
-<a
-href="http://www.tlvince.com/blog/wp-content/uploads/2010/07/2009-03-13-123531_1280x800_scrot.png/"
-rel="attachment wp-att-117"><img
-src="http://www.tlvince.com/blog/wp-content/uploads/2010/07/2009-03-13-123531_1280x800_scrot-300x187.png"
-alt="A side-by-side, vertical view of two webpages using Opera and dwm"
-title="Opera and dwm" width="300" height="187" class="size-medium wp-image-117"
-/></a>
+[![Opera and DWM][opth]][op]
 
 A side-by-side, vertical view of two webpages using Opera and dwm
 
@@ -80,3 +74,5 @@ them, a TWM can have great effects on improving your workflow!
   [ERA]: http://www.opera.com/press/releases/2004/11/23/ "Information on Opera's ERA mode"
   [cli]: http://abubalay.com/tutorials/linuxcli
   [awesome]: http://awesome.naquadah.org/ "Awesome tiling window manager homepage"
+  [op]: http://www.tlvince.com/blog/wp-content/uploads/2010/07/2009-03-13-123531_1280x800_scrot.png
+  [opth]: http://www.tlvince.com/blog/wp-content/uploads/2010/07/2009-03-13-123531_1280x800_scrot-300x187.png

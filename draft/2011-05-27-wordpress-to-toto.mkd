@@ -1,10 +1,6 @@
----
 title: Migrating from Wordpress to Toto
 date: 27/05/2011
-
----
-
-A customary site redesign write up.
+summary: A customary site redesign write up.
 
 ## Rationale
 

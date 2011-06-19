@@ -64,7 +64,23 @@ one before
 
 ## Design
 
-### Influences
+## Features
+
+Mid-way through the rewrite
+
+### Syntax Highlighting
+
+This was a simple one. Following the [syntax highlighting][totohi] guide of
+`toto`'s wiki, I chose a server-side approach (to minimise any impact on page
+weight or additional HTTP requests with javascript) using
+[Rack::CodeHighlighter][] and [CodeRay][].
+
+After discovering CodeRay does not support Bash (until version 1.1), I
+originally experimented with -- the more bloated -- [Ultraviolet][]. On
+discovering [coderay_bash][] however, simply adding it to the `Gemfile` and
+integrating [a theme][coderay-theme] to my CSS sufficed.
+
+## Influences
 
 * [Steve Losh][sjl]
 * [Jason Blevins][jblevins]
@@ -83,5 +99,11 @@ one before
   [git-wordpress]: https://github.com/brool/git-wordpress
   [gfb1]: http://airbladesoftware.com/notes/moving-a-subdirectory-into-a-separate-git-repository
   [gfb2]: http://stackoverflow.com/questions/3223053/how-to-remove-old-commits-after-filter-branch
+  [totohi]: https://github.com/cloudhead/toto/wiki/Syntax-Highlighting
+  [Rack::CodeHighlighter]: https://github.com/wbzyl/rack-codehighlighter
+  [CodeRay]: http://coderay.rubychan.de/
+  [Ultraviolet]: http://ultraviolet.rubyforge.org/
+  [coderay_bash]: https://github.com/pejuko/coderay_bash
+  [coderay-theme]: http://localhost:3000/css/coderay.css
 
   *[WYSIWYG]: What You See Is What You Get

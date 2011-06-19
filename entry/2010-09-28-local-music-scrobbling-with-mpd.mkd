@@ -41,7 +41,23 @@ I thought so, but remember, my data is now *their data* and they have no obligat
 
 #### lastexport2mpd.py
 
-[gist id="599472"]
+    :::python
+    #!/usr/bin/python3
+    # lastexport2mpd.py
+    # Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>
+
+    import os
+    import sys
+    import time
+
+    file = sys.path[0] + "/exported_tracks.txt"
+
+    with open(file) as tracks:
+        with open(sys.path[0] + "/mpd-formatted-tracks.txt", mode='w', encoding='utf-8') as outFile:
+            for line in tracks:
+                timestamp, track, artist, album, trackmbid, artistmbid, albummbid = line.strip("\n").split("\t")
+                timestamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.localtime(int(timestamp)))
+                outFile.write(timestamp + " " + artist + " - " + track + "\n")
 
 Just put your `exported_tracks.txt` file in the same folder as `lastexport2mpd.py` and grab `mpd-formatted-tracks.txt` once it's finished.
 
@@ -53,7 +69,30 @@ Prior to learning about LastToLibre above, I wrote *another* Python script to ex
 
 #### eugene2plain
 
-[gist id="593430" caption="The Unix epoch *prefix* is used here since timestamps aren't imported by `homescrape`"]
+    :::python
+    #!/usr/bin/python3
+    # eugene2plain.py
+    # Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>
+
+    import os
+    import sqlite3
+
+    DB = os.path.expanduser("~") + "/.mpdcron/stats.db"
+    OUT = os.path.expanduser("~") + "/plays.log"
+    PREFIX = "1970-01-01T00:00:00Z"
+
+    conn = sqlite3.connect(DB)
+    c = conn.cursor()
+    c.execute("SELECT artist,title,play_count FROM song WHERE play_count !='0'")
+    songs = (c.fetchall())
+
+    with open(OUT, mode='w', encoding='utf-8') as outFile:
+        for song in songs:
+            for i in range(int(song[2])):
+                outFile.write(PREFIX + " " + song[0] + " - " + song[1] + "\n")
+        conn.close
+
+The Unix epoch *prefix* is used here since timestamps aren't imported by `homescrape`.
 
 Here're some brief usage notes:
 

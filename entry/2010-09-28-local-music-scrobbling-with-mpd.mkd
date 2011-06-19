@@ -19,8 +19,8 @@ Using [mpdscribble][], we can now log listening habits to a plain-text file, the
 1. Install `mpdscribble-git`
 2. Add the following to your `~/.mpdscribble/mpdscribble.conf`:
 
-        [local]
-        file = /home/[user]/.cache/mpd/plays.log
+       [local]
+       file = /home/[user]/.cache/mpd/plays.log
 
 That takes care of all future plays, but what about existing data?
 
@@ -107,7 +107,7 @@ So... now what?
 
 Now your free to do more with your listening data. Send it off to Last.fm and make a [poster][] out of it, join the free alternative [Libre.fm][] or just keep it private and do cool things like:
 
-        cut -f2- -d ' ' ~/.cache/mpd/plays.log | uniq | wc -l
+    cut -f2- -d ' ' ~/.cache/mpd/plays.log | uniq | wc -l
 
 :)
 

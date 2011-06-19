@@ -34,7 +34,23 @@ Here we're going to make use of inotify to delete some of those rogue files and 
 
 ### prowler
 
-[gist id="469452" caption="`prowler` as it looks at the time of writing. Expecting more?!"]
+    :::bash
+    #!/bin/bash
+    #
+    # prowler: delete unwanted files that otherwise pollute $HOME
+    #
+    # Author:   Tom Vincent
+    # Created:  2010-07-05
+
+    WATCH_FILES="${XDG_CONFIG_HOME:-"$HOME/.config"}/${0##*/}/badfiles" # Bash-ism
+    LOG="${XDG_CACHE_HOME:-"$HOME/.cache"}/${0##*/}.log"
+
+    inotifywait -qm --format '%f' -e create "$HOME" | while read file; do
+        if $(grep -Fq "$file" "$WATCH_FILES"); then
+            rm -rf "$HOME/$file"
+            echo "$(date +"%F %R") :: Deleted $HOME/$file" >> $LOG
+        fi
+    done
 
 `prowler` simply receives a file/directory name when an `inotify` *create* event is triggered, checks to see if it's one we're interested in using `grep` -- [let me know][issues] if it can be done without it -- and if so, deletes it and logs it.
 
@@ -54,6 +70,7 @@ After downloading the latest version of `prowler` from my [GitHub repository][pr
 
 Then, make sure those files and directories are already deleted (before running `prowler` for the fist time):
 
+    :::bash
     rm -rf ~/`cat ~/.config/prowler/badfiles`
 
 Note, you could avoid this step by configuring `inotifywait` to listen for more than just the *create* events. I chose this approach since I would assume listening for more events requires more resources. Again, [let me know][issues] if I'm wrong on that.

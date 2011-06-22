@@ -1,5 +1,6 @@
 title: A brief guide to Hong Kong
 date: 12/09/2010
+summary: Some practicalities and things you should know about Hong Kong
 
 Thinking about moving or taking a visit to Hong Kong? Here are some
 practicalities and things you should know from first-hand experience! Note, I'll
@@ -21,6 +22,7 @@ synonymous with most western countries is welcomingly non-existent. Instead,
 locals customarily opt for eating out with friends, shopping and the occasional
 [karaoke night][karaoke]. For the thirsty expatriate, [Lan Kwai Fong][LKF] and
 [Wan Chai][] are popular watering holes.
+
 
 Transport
 ---------

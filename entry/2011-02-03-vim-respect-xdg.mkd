@@ -1,10 +1,11 @@
 title: Making vim respect the XDG Base Directory Specification
 date: 03/02/2011
 slug: vim-respect-xdg
+summary: Better organisation using XDG
 
 The XDG Base Directory Specification outlines a consistent standard for
 applications to write runtime files. Teaching `vim` to respect it is
-non-trivial, so I've simplified the set up here. <!--more-->
+non-trivial, so I've simplified the set up here.
 
 Problem
 -------

@@ -1,5 +1,6 @@
 title: Lightweight adblock with a hosts file
 date: 02/08/2010
+slug: hosts-adblock
 
 Does your browser's memory usage sky rocket? Are you using an Adblock extension? This guide introduces you to an alternative method of ad blocking using a hosts file and (optionally) CSS element hiding.
 

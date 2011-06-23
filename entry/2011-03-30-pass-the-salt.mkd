@@ -1,6 +1,6 @@
 title: Pass the Salt
 date: 30/03/2011
-summary: Some thoughts on and surrounding the Japan crisis
+abstract: Some thoughts on and surrounding the Japan crisis
 
 March has been a strange month.
 

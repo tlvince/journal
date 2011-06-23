@@ -1,7 +1,7 @@
 title: Local music scrobbling with mpd
 date: 28/09/2010
 slug: local-music-scrobbling
-summary: Logging plays from mpd to a file using mpdscribble
+abstract: Logging plays from mpd to a file using mpdscribble
 
 A [feature request][] recently [implemented][] in mpdscribble allows plays from
 [mpd][] to be logged to file. If you already use Last.fm but like the idea of

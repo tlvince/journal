@@ -1,7 +1,7 @@
 title: Gmail another little thing to fix reply to all
 date: 08/04/2011
 slug: gmail-reply-to-all
-summary: An idea to prevent accidentally not hitting reply to all in Gmail
+abstract: An idea to prevent accidentally not hitting reply to all in Gmail
 
 Here's another [little thing to fix][1]:
 

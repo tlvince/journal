@@ -1,7 +1,7 @@
 title: Fixing slow Zsh command completion
 date: 05/04/2011
 slug: slow-zsh-completion
-summary: How to disable hostname completion in Zsh
+abstract: How to disable hostname completion in Zsh
 
 Zsh's command completion for some commands is unacceptably slow. After a bit of
 digging, I discovered using an atypically large hosts file causes problems.

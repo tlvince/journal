@@ -1,6 +1,6 @@
 title: Command Line Basics & Batch Files
 date: 25/07/2007
-summary: An overview of the Windows command line
+abstract: An overview of the Windows command line
 
 ### Old File Names and Relative Paths
 

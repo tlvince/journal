@@ -9,6 +9,12 @@ task :default => :new
 
 desc "Create a new article." # {{{1
 task :new do
+  path = "draft"
+
+  if not Dir.exist? path
+    abort("Error: Not in draft branch")
+  end
+
   title = ask('Title: ')
   abstract = ask('Abstract: ')
   slug = title.empty?? nil : title.strip.slugize
@@ -17,12 +23,6 @@ task :new do
   article << "date: #{Time.now.strftime("%d/%m/%Y")}\n"
   article << "abstract: #{abstract}\n"
   article << "\n\n"
-
-  path = "draft"
-
-  if not Dir.exist? path
-    abort("Error: Not in draft branch")
-  end
 
   path += "/#{Time.now.strftime("%Y-%m-%d")}#{'-' + slug if slug}.mkd"
 

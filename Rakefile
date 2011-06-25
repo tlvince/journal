@@ -5,8 +5,6 @@
 #
 # Modified by Tom Vincent <http://www.tlvince.com/contact/>
 
-require "yaml"
-
 task :default => :new
 
 desc "Create a new article." # {{{1
@@ -15,8 +13,9 @@ task :new do
   abstract = ask('Abstract: ')
   slug = title.empty?? nil : title.strip.slugize
 
-  article = {'title' => title, 'date' => Time.now.strftime("%d/%m/%Y"),
-    'abstract' => abstract}.to_yaml(:Separator => "")
+  article = "title: #{title}\n"
+  article << "date: #{Time.now.strftime("%d/%m/%Y")}\n"
+  article << "abstract: #{abstract}\n"
   article << "\n\n"
 
   path = "draft"

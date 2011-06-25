@@ -75,5 +75,5 @@ them, a TWM can have great effects on improving your workflow!
   [ERA]: http://www.opera.com/press/releases/2004/11/23/ "Information on Opera's ERA mode"
   [cli]: http://abubalay.com/tutorials/linuxcli
   [awesome]: http://awesome.naquadah.org/ "Awesome tiling window manager homepage"
-  [op]: http://www.tlvince.com/blog/wp-content/uploads/2010/07/2009-03-13-123531_1280x800_scrot.png
-  [opth]: http://www.tlvince.com/blog/wp-content/uploads/2010/07/2009-03-13-123531_1280x800_scrot-300x187.png
+  [op]: http://tlvince.appspot.com/img/2009-03-13-123531.png
+  [opth]: http://tlvince.appspot.com/img/th/2009-03-13-123531.png

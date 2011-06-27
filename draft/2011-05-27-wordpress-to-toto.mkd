@@ -1,12 +1,12 @@
 title: Migrating from Wordpress to Toto
 date: 27/05/2011
-summary: A customary site redesign write up.
+abstract: A customary site redesign write up
 
 ## Rationale
 
 Though infrequent, my existing blog maintenance nightmare. A playground of mine
 since 2007, I had accumulated a combination of a Wordpress SQL database,
-corresponding [XML backups][wpexport], some entries polluted with WYSIWYG
+corresponding [XML backups][wpexport]; some entries polluted with WYSIWYG
 clutter, some written with [Markdown for Wordpress][md4wp].
 
 Things became more organised when I switched to [git-wordpress][] as the
@@ -50,7 +50,7 @@ my [git-wordpress][] repository.
 
 ### Function vs Form
 
-Next was to split the `toto`'s template from it's content. Using a slightly
+Next was to split `toto`'s template from it's content. Using a slightly
 different `git --filter-branch` varient as before, I wanted to retain any
 commits *irrelated* to my articles.
 
@@ -76,9 +76,9 @@ weight or additional HTTP requests with javascript) using
 [Rack::CodeHighlighter][] and [CodeRay][].
 
 After discovering CodeRay does not support Bash (until version 1.1), I
-originally experimented with -- the more bloated -- [Ultraviolet][]. On
-discovering [coderay_bash][] however, simply adding it to the `Gemfile` and
-integrating [a theme][coderay-theme] to my CSS sufficed.
+originally experimented with -- the more bloated -- [Ultraviolet][].
+[coderay_bash][] to the rescue! Simply adding it to the `Gemfile` and
+integrating [a theme][coderay-theme] sufficed.
 
 ## Influences
 
@@ -105,5 +105,3 @@ integrating [a theme][coderay-theme] to my CSS sufficed.
   [Ultraviolet]: http://ultraviolet.rubyforge.org/
   [coderay_bash]: https://github.com/pejuko/coderay_bash
   [coderay-theme]: http://localhost:3000/css/coderay.css
-
-  *[WYSIWYG]: What You See Is What You Get

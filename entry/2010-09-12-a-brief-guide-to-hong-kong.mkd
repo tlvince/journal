@@ -111,7 +111,7 @@ like try to sell you, so definitely give it a read.
   [Kowloon]: http://en.wikipedia.org/wiki/Kowloon
   [Taste]: http://en.wikipedia.org/wiki/Taste_(supermarket)
 
-  *[HK]: Hong Kong
+  <!--*[HK]: Hong Kong-->
   *[MTR]: Mass Transit Railway
   *[HSBC]: The Hongkong and Shanghai Banking Corporation
   *[ATM]: Automated Teller Machine

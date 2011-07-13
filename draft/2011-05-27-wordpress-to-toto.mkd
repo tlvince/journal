@@ -61,7 +61,15 @@ customisation down into distinct components:
 
 ### Design
 
+Minimalism. Nothing else. Growing tired of the plague of bloated websites, I've
+started a collection of [minimal stylesheets][styles] for the most worthy.
+Design is hard.
 
+I wanted my website to be as readable as possible, with focus purely on
+*content*. Rather than reinventing the wheel, I used the [html5boilerplate][]
+and built up. Using Vladimir Carrer's [Better Web Readability
+Project][readability] as a guideline, I've aimed for something with as little
+visual noise as possible.
 
 ### Syntax Highlighting
 
@@ -82,7 +90,6 @@ Credit where credit's due:
 * [Steve Losh][sjl]
 * [Jason Blevins][jblevins]
 * Ethan Schoonover's [Solarized][]
-* Vladimir Carrer's [Better Web Readability Project][readability]
 
   [toto]: http://cloudhead.io/toto
   [dorothy]: https://github.com/cloudhead/dorothy
@@ -111,3 +118,4 @@ Credit where credit's due:
   [drydrop]: http://www.nata2.org/2011/01/26/how-to-use-app-engine-to-host-static-sites-for-free/
   [gitbr]: http://nvie.com/posts/a-successful-git-branching-model/
   [styles]: https://github.com/tlvince/userstyles
+  [html5boilerplate]: http://html5boilerplate.com/

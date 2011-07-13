@@ -19,7 +19,7 @@ required posts to be published through the web interface.
 I wanted more *control*. I wanted something *simpler*. I wanted something to
 *hack* on.
 
-There are *many* [static website generators][staticgen] that fulfill those
+There are *many* [static website generators][staticgen] that fulfil those
 requirements, the central idea being to kill the database, instead creating a
 website from plain-text files.
 
@@ -56,7 +56,7 @@ a fresh repository that retained the content and history of the drafts in my
 
 ## Customising toto
 
-Reminisant of a popular [git branching strategy][gitbr], I broke each
+Reminiscent of a popular [git branching strategy][gitbr], I broke each
 customisation into distinct components:
 
 ### Design
@@ -103,7 +103,7 @@ to:
 
 Although beyond the scope of this post, I rolled up my Python sleeves and wrote
 a script to do it for me. [gen301][] takes a list of URLs and using fuzzy search
-techniques, checks filenames for possible matches. I set it on my [journal][]
+techniques, checks file names for possible matches. I set it on my [journal][]
 and using [rack-rewrite][] solved the problem. Please let me know how I could
 have done it easier ;).
 

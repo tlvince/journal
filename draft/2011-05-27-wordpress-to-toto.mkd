@@ -33,8 +33,7 @@ these days. Heroku provides an excellent free service, but also check out
 
 I had a mass of unfinished draft posts in Wordpress. The first job was to begin
 a fresh repository that retained the content and history of the drafts in my
-[git-wordpress][] repository. For readers migrating directly from Wordpress, I'd
-recommend trying 
+[git-wordpress][] repository.
 
 `git filter-branch` is [the tool][gfb1] for [this job][gfb2]:
 
@@ -55,9 +54,14 @@ recommend trying
     git gc --aggressive
     git prune
 
-## Features
+## Customising toto
 
-Mid-way through the rewrite
+Reminisant of a popular [git branching strategy][gitbr], I broke each
+customisation down into distinct components:
+
+### Design
+
+
 
 ### Syntax Highlighting
 
@@ -71,7 +75,9 @@ originally experimented with -- the more bloated -- [Ultraviolet][].
 [coderay_bash][] to the rescue! Simply adding it to the `Gemfile` and
 integrating [a theme][coderay-theme] sufficed.
 
-## Influences
+## Credit
+
+Credit where credit's due:
 
 * [Steve Losh][sjl]
 * [Jason Blevins][jblevins]
@@ -82,7 +88,7 @@ integrating [a theme][coderay-theme] sufficed.
   [dorothy]: https://github.com/cloudhead/dorothy
   [Bundler]: http://gembundler.com/
   [sjl]: http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/
-  [jblevins]: http://jblevins.org/log/kindle-dx
+  [jblevins]: http://jblevins.org/log/
   [Solarized]: http://ethanschoonover.com/solarized
   [readability]: https://code.google.com/p/better-web-readability-project/
   [wpexport]: https://github.com/tlvince/scripts/blob/bash/wordpress-export.sh
@@ -103,3 +109,5 @@ integrating [a theme][coderay-theme] sufficed.
   [heroku]: http://www.heroku.com/
   [ghp]: http://pages.github.com/
   [drydrop]: http://www.nata2.org/2011/01/26/how-to-use-app-engine-to-host-static-sites-for-free/
+  [gitbr]: http://nvie.com/posts/a-successful-git-branching-model/
+  [styles]: https://github.com/tlvince/userstyles

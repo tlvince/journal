@@ -73,15 +73,12 @@ visual noise as possible.
 
 ### Syntax Highlighting
 
-This was a simple one. Following the [syntax highlighting][totohi] guide of
-`toto`'s wiki, I chose a server-side approach (to minimise any impact on page
-weight or additional HTTP requests with javascript) using
-[Rack::CodeHighlighter][] and [CodeRay][].
-
-After discovering CodeRay does not support Bash (until version 1.1), I
-originally experimented with -- the more bloated -- [Ultraviolet][].
-[coderay_bash][] to the rescue! Simply adding it to the `Gemfile` and
-integrating [a theme][coderay-theme] sufficed.
+I write [a lot][gh] of code, so it *had* to look good. This was a simple one.
+Following the [syntax highlighting][totohi] guide of `toto`'s wiki, I chose a
+server-side approach (to minimise any impact on page weight or additional HTTP
+requests with Javascript) using [Rack::CodeHighlighter][] and [CodeRay][].
+Simply adding it to the `Gemfile` and integrating [a theme][coderay-theme]
+sufficed.
 
 ## Credit
 
@@ -119,3 +116,4 @@ Credit where credit's due:
   [gitbr]: http://nvie.com/posts/a-successful-git-branching-model/
   [styles]: https://github.com/tlvince/userstyles
   [html5boilerplate]: http://html5boilerplate.com/
+  [gh]: https://github.com/tlvince/

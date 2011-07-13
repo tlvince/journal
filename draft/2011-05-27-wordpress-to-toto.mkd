@@ -109,11 +109,15 @@ have done it easier ;).
 
 ## Credit
 
-Credit where credit's due:
+I scoured a lot of resources to create this site (as you can see from the amount
+of links in this post). However, the following inspired me most:
 
 * [Steve Losh][sjl]
 * [Jason Blevins][jblevins]
 * Ethan Schoonover's [Solarized][]
+
+Of course, the site itself is [open source][src]. Hope you learn something from
+it!
 
   [toto]: http://cloudhead.io/toto
   [dorothy]: https://github.com/cloudhead/dorothy
@@ -149,3 +153,4 @@ Credit where credit's due:
   [gen301]: https://github.com/tlvince/gen301
   [journal]: https://github.com/tlvince/journal
   [rack-rewrite]: https://github.com/jtrupiano/rack-rewrite
+  [src]: https://github.com/tlvince/tlvince.com

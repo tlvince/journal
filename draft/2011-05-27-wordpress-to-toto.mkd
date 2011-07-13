@@ -4,8 +4,8 @@ abstract: A customary site redesign write up
 
 ## Rationale
 
-Though infrequent, my existing blog maintenance nightmare. A playground of mine
-since 2007, I had accumulated a combination of a Wordpress SQL database,
+Though infrequent, my existing blog was a maintenance nightmare. A playground of
+mine since 2007, I had accumulated a combination of a Wordpress SQL database,
 corresponding [XML backups][wpexport]; some entries polluted with WYSIWYG
 clutter, some written with [Markdown for Wordpress][md4wp].
 
@@ -14,20 +14,28 @@ canonical source for writing and publishing. This came with it's own problems
 however: each post would be littered with Wordpress identifiers and still
 required posts to be published through the web interface.
 
-## Architecture
+## Choosing toto
+
+I wanted more *control*. I wanted something *simpler*. I wanted something to
+*hack* on.
+
+There are *many* [static website generators][staticgen] that fulfill those
+requirements, the central idea being to rid of a database and create a website
+from plain-text files.
 
 Since [toto][] is fully `git` orientated, maintaining clean repositories is
-worthwhile. After cloning `toto`'s base template, [dorothy][], I began working
-on a bunch of personalisations. During writing a base theme, customising the
-templates and depreceating `.gems` after learning about [Bundler][], it occurred
-to me content should be modularised from the templates. Time to kill some
-entropy!
+worthwhile. After cloning `toto`'s base template, dorothy, I began working on a
+bunch of [personalisations][totofork]. During writing a base theme, customising
+the templates and depreceating `.gems` after learning about [Bundler][], it
+occurred to me content should be modularised from the templates. Time to kill
+some entropy!
 
-### Rewriting history
+## Importing old posts
 
-I have a mass of unfinished draft posts in Wordpress. The first job was to
-begin a fresh repository that retained the content and history of the drafts in
-my [git-wordpress][] repository.
+I had a mass of unfinished draft posts in Wordpress. The first job was to begin
+a fresh repository that retained the content and history of the drafts in my
+[git-wordpress][] repository. For readers migrating directly from Wordpress, I'd
+recommend trying 
 
 `git filter-branch` is [the tool][gfb1] for [this job][gfb2]:
 
@@ -47,22 +55,6 @@ my [git-wordpress][] repository.
     git remote rm origin
     git gc --aggressive
     git prune
-
-### Function vs Form
-
-Next was to split `toto`'s template from it's content. Using a slightly
-different `git --filter-branch` varient as before, I wanted to retain any
-commits *irrelated* to my articles.
-
-Range:
-
-    -- b632770aede01f2b77e0..HEAD
-
-one before
-
-    6b9b23f..HEAD
-
-## Design
 
 ## Features
 
@@ -105,3 +97,6 @@ integrating [a theme][coderay-theme] sufficed.
   [Ultraviolet]: http://ultraviolet.rubyforge.org/
   [coderay_bash]: https://github.com/pejuko/coderay_bash
   [coderay-theme]: http://localhost:3000/css/coderay.css
+  [totowiki]: https://github.com/cloudhead/toto/wiki
+  [totofork]: https://github.com/tlvince/toto
+  [staticgen]: http://iwantmyname.com/blog/2011/02/list-static-website-generators.html

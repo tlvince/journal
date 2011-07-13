@@ -57,7 +57,7 @@ a fresh repository that retained the content and history of the drafts in my
 ## Customising toto
 
 Reminisant of a popular [git branching strategy][gitbr], I broke each
-customisation down into distinct components:
+customisation into distinct components:
 
 ### Design
 
@@ -80,6 +80,33 @@ requests with Javascript) using [Rack::CodeHighlighter][] and [CodeRay][].
 Simply adding it to the `Gemfile` and integrating [a theme][coderay-theme]
 sufficed.
 
+### Search Engine Optimisation
+
+Using a similar approach as [Dmity Fadeyev][fadeyev], I write a one-line
+abstract for each post that's used in the meta description tags. I also used
+[his logic][seo] to generate friendly page titles.
+
+The second, and unfortunately laborious task was to make sure the new site
+structure was index correctly by Google. Following the excellent [moving your
+site][gmvsite] guide, the majority of the work involved writing 301 redirect
+rules.
+
+Since the URL style changed from...
+
+    /[category]/[post]/
+
+to:
+
+    /[YYYY]/[MM]/[DD]/[post]/
+
+... a regex solution *seemed* impossible.
+
+Although beyond the scope of this post, I rolled up my Python sleeves and wrote
+a script to do it for me. [gen301][] takes a list of URLs and using fuzzy search
+techniques, checks filenames for possible matches. I set it on my [journal][]
+and using [rack-rewrite][] solved the problem. Please let me know how I could
+have done it easier ;).
+
 ## Credit
 
 Credit where credit's due:
@@ -90,8 +117,7 @@ Credit where credit's due:
 
   [toto]: http://cloudhead.io/toto
   [dorothy]: https://github.com/cloudhead/dorothy
-  [Bundler]: http://gembundler.com/
-  [sjl]: http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/
+  [sjl]: http://stevelosh.com/
   [jblevins]: http://jblevins.org/log/
   [Solarized]: http://ethanschoonover.com/solarized
   [readability]: https://code.google.com/p/better-web-readability-project/
@@ -117,3 +143,9 @@ Credit where credit's due:
   [styles]: https://github.com/tlvince/userstyles
   [html5boilerplate]: http://html5boilerplate.com/
   [gh]: https://github.com/tlvince/
+  [fadeyev]: http://fadeyev.net/2010/05/10/getting-started-with-toto/
+  [seo]: https://github.com/tlvince/tlvince.com/commit/3b4b4a01aaa99392d2a2cb0940c3c9e9c83a850d
+  [gmvsite]: http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=83105
+  [gen301]: https://github.com/tlvince/gen301
+  [journal]: https://github.com/tlvince/journal
+  [rack-rewrite]: https://github.com/jtrupiano/rack-rewrite

@@ -20,15 +20,14 @@ I wanted more *control*. I wanted something *simpler*. I wanted something to
 *hack* on.
 
 There are *many* [static website generators][staticgen] that fulfill those
-requirements, the central idea being to rid of a database and create a website
-from plain-text files.
+requirements, the central idea being to kill the database, instead creating a
+website from plain-text files.
 
-Since [toto][] is fully `git` orientated, maintaining clean repositories is
-worthwhile. After cloning `toto`'s base template, dorothy, I began working on a
-bunch of [personalisations][totofork]. During writing a base theme, customising
-the templates and depreceating `.gems` after learning about [Bundler][], it
-occurred to me content should be modularised from the templates. Time to kill
-some entropy!
+A popular choice is [Jekyll][], but I chose [toto][] because of it's simplicity.
+`toto` is also designed to run on [Heroku][]; a Ruby web app host. For a
+low-traffic site like mine, there is absolutely no reason to pay for hosting
+these days. Heroku provides an excellent free service, but also check out
+[GitHub Pages][ghp] and [Drydrop][].
 
 ## Importing old posts
 
@@ -100,3 +99,7 @@ integrating [a theme][coderay-theme] sufficed.
   [totowiki]: https://github.com/cloudhead/toto/wiki
   [totofork]: https://github.com/tlvince/toto
   [staticgen]: http://iwantmyname.com/blog/2011/02/list-static-website-generators.html
+  [jekyll]: http://jekyllrb.com/
+  [heroku]: http://www.heroku.com/
+  [ghp]: http://pages.github.com/
+  [drydrop]: http://www.nata2.org/2011/01/26/how-to-use-app-engine-to-host-static-sites-for-free/

@@ -151,4 +151,4 @@ control.
   [chromium]: http://www.chromium.org/developers/linux-technical-faq "Chromium Linux Technical FAQ"
   [dmenu]: http://tools.suckless.org/dmenu/ "dmenu homepage"
   [rmshit]: http://github.com/trapd00r/rmshit "rmshit GitHub repository"
-  [prowler]: http://github.com/tlvince/bin "My GitHub bin repository"
+  [prowler]: https://github.com/tlvince/prowler "Prowler repository on GitHub"

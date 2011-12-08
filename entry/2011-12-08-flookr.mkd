@@ -1,0 +1,27 @@
+title: flookr
+date: 08/12/2011
+abstract: A Flickr/Google Maps mashup
+tags: project
+
+[![A screenshot of flookr][fth]][flookr]
+
+**[flookr][]** is a Flickr/Google Maps mashup.
+
+Written in early 2010, `flookr` introduced me to the world of web apps.
+Aggregating many open source services, I used server-side scripting to serve
+dynamic content from *Flickr*. From given search terms, geo-tagged photos are
+displayed on a *Google Map* and within a *JQuery*-powered gallery.
+
+## Technologies
+
+This project uses the following web technologies:
+
+* Flickr API
+* Google Maps API
+* PHP
+* jQuery (Javascript)
+* REST
+
+  [fraw]: http://tlvince.appspot.com/img/flookr.png
+  [fth]: http://tlvince.appspot.com/img/th/flookr.png
+  [flookr]: http://flookr.herokuapp.com/

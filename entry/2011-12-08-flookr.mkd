@@ -14,7 +14,7 @@ displayed on a *Google Map* and within a *JQuery*-powered gallery.
 
 ## Technologies
 
-This project uses the following web technologies:
+This project uses the following technologies:
 
 * Flickr API
 * Google Maps API

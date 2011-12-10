@@ -9,7 +9,7 @@ task :default => :new
 
 desc "Create a new article." # {{{1
 task :new do
-  path = "draft"
+  path = "entry"
 
   if not Dir.exist? path
     abort("Error: Not in draft branch")

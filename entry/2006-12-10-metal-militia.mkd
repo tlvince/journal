@@ -1,0 +1,28 @@
+title: Metal Militia
+date: 10/12/2006
+abstract: A band community website
+tags: project
+
+[![Screenshot of the Metal Militia homepage][th]][mm]
+
+**[Metal Militia][mm]** was a band community website.
+
+Co-formed with Robert Hicks in 2005, we created a web portal for bands in the
+local area. With as many as 20 bands in its hayday, we provided shared web
+hosting, design and a forum, building a strong community for music discussion.
+
+The project initiated my love for web development. From humble beginnings with
+Microsoft Frontpage, I had learnt the fundamentals of HTML, server
+administration and security principles.
+
+## Technologies
+
+This project uses the following technologies:
+
+* Javascript
+* HTML
+* CSS
+* PHPBB forum
+
+  [th]: http://tlvince.appspot.com/img/th/metal-militia.png
+  [mm]: http://tlvince.appspot.com/img/metal-militia.png

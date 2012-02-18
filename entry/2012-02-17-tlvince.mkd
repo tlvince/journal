@@ -4,7 +4,7 @@ abstract: The evolution of my website
 tags: project
 
 Building websites as a hobby since 2005, it was only a matter of time before I
-made one for for myself. It has served as an ongoing experiment ever since. This
+made one for myself. It has served as an ongoing experiment ever since. This
 post details its evolution, in reverse chronological order.
 
 ## Third iteration
@@ -19,9 +19,9 @@ Gone was the bloated MySQL database-PHP combination; replaced with a subtle
 blend of plain-text files, `git` and Heroku. Everything is based on open source
 software, [even the site itself][gh].
 
-The design compliments the backend minimalism: designed to be as readable as
-possible, it uses a [warm colour pallette][solarized] and contains as little
-visual distraction as possible.
+The design compliments the backend minimalism. Aiming to be as readable as
+possible, it uses a [warm colour pallette][solarized] and focuses purely on the
+*content*.
 
 ## Second iteration
 

@@ -132,10 +132,10 @@ Now click and highlight the text you want copied and press enter.
 
 ### Some useful Commands
 
-* `Cmd /k` -- Keeps the command box up
-* `Tskill  /a` -- Kills the task
-* `Net Start` -- Starts a service
-* `Net Stop` -- Stops a service
-* `rmdir /s` -- Deletes a folder
-* `shutdown -s -f -t 10` -- Shutdown PC
+* `Cmd /k` --- Keeps the command box up
+* `Tskill  /a` --- Kills the task
+* `Net Start` --- Starts a service
+* `Net Stop` --- Stops a service
+* `rmdir /s` --- Deletes a folder
+* `shutdown -s -f -t 10` --- Shutdown PC
 

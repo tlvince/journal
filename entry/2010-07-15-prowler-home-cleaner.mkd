@@ -79,8 +79,8 @@ occurs... introducing `prowler`:
     done
 
 `prowler` simply receives a file/directory name when an `inotify` *create* event
-is triggered, checks to see if it's one we're interested in using `grep` -- [let
-me know][issues] if it can be done without it -- and if so, deletes it and logs
+is triggered, checks to see if it's one we're interested in using `grep` --- [let
+me know][issues] if it can be done without it --- and if so, deletes it and logs
 it.
 
 `prowler` is a simple solution in under eight lines of code that requires

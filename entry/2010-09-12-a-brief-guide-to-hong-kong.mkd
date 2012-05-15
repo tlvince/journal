@@ -30,7 +30,7 @@ Transport
 The MTR is *the* way to travel around in HK. It is equivalent of the London
 underground, except it *actually works*; it's on time, clean, cheap and fast.
 Every major district is accessible by it and it's even more convenient with an
-[Octopus card][] (think Oyster card -- it seems sea life is the running theme
+[Octopus card][] (think Oyster card --- it seems sea life is the running theme
 for transport smart cards :)).
 
 Expenditure

@@ -54,7 +54,7 @@ solid focus; "wired in" as it's known in [The Social Network][fb].
 bashing). Why? Because "how do you account for interruptions, unpredictable
 bugs [and] status meetings..."? [You can't, really][esp].
 
-Only the people who actually write the code -- the developers -- can estimate
+Only the people who actually write the code --- the developers --- can estimate
 how long a task will take, *but* only by recording honest [velocity][] (the
 division of the estimate by the actual time spent) do the developer's estimates
 hold any weight. Experience makes you a better estimator.
@@ -62,8 +62,8 @@ hold any weight. Experience makes you a better estimator.
 ### On Python 3
 
 Without going into too much depth, Python 3's library module for requesting web
-pages -- `urllib.request` -- has it's limitations. Since redirect responses are
-[silently ignored][fancy], I found a mature third-party module -- `httplib2` --
+pages --- `urllib.request` --- has it's limitations. Since redirect responses are
+[silently ignored][fancy], I found a mature third-party module --- `httplib2` --
 to overcome this.
 
 Despite strong praise in [Dive Into Python 3][dip3] (DIP3, my main and excellent
@@ -79,15 +79,15 @@ adoption rate (so far) over Python 2.
 ### On workflows
 
 Having a customised, pre-configured setup particularly helped when the pressure
-was on. Everything was at hand -- windows managed by [xmonad][], complete editing
+was on. Everything was at hand --- windows managed by [xmonad][], complete editing
 efficiency with [vim][], rounded off with continuous integration testing using
-[nosier][] -- helping me concentrate on the task at hand.
+[nosier][] --- helping me concentrate on the task at hand.
 
 TDD is worthwhile methodology, effectively capturing your thought process as
 formal specifications. It gives you confidence your code works and is robust
 enough to withstand changes.
 
-Writing tests -- *good tests* -- is a real art however. Your tests should
+Writing tests --- *good tests* --- is a real art however. Your tests should
 **cover corner cases** and be easily **repetable**, with new tests **only** being
 written **when existing code passes**.
 

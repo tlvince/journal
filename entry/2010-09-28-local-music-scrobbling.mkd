@@ -90,7 +90,7 @@ Just put your `exported_tracks.txt` file in the same folder as
 
 We could have also used [mpdcron][]'s stats module for this. It keeps a log of
 your plays and stores them into an sqlite database, but also includes a tool --
-`homescrape` --  that pulls in your Last.fm data and subsequently updates each
+`homescrape` ---  that pulls in your Last.fm data and subsequently updates each
 matching track's play count.
 
 Prior to learning about LastToLibre above, I wrote *another* Python script to

@@ -13,8 +13,8 @@ refresher in graphics editing and composition techniques, complete with a
 
 ## Credits
 
-* Beetle image -- "[Back to the future][beetle]" -- by Jairo BD
-* Flag (background) -- "[Happy Canada Day!][flag]" -- by Ian Muttoo
+* Beetle image --- "[Back to the future][beetle]" --- by Jairo BD
+* Flag (background) --- "[Happy Canada Day!][flag]" --- by Ian Muttoo
 
 ## Technologies
 

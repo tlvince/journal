@@ -24,8 +24,8 @@ adventurous user).
 While ad blocking extensions do their job with minimal fuss, I've noticed their
 resource usage to be rather large, assumedly due to the sheer amount of regex
 rules and substring comparisons (leave a comment if you have any real
-quantitative data on this). On low end systems -- such as my [Dell C400][]
-(recently given a new lease of life running Arch Linux) -- the lack of resources
+quantitative data on this). On low end systems --- such as my [Dell C400][]
+(recently given a new lease of life running Arch Linux) --- the lack of resources
 becomes very noticeable. Running Chromium and the AdBlock extension with
 anything more than five tabs open caused disk thrashing and general
 unresponsiveness.

@@ -41,7 +41,7 @@ the [zshcompsys(1)][2] manual, I came up with:
     zstyle ':completion:*' hosts off
 
 `:completion:*` matches any context where tab completion can be used (any
-command, path, glob etc). `hosts` -- the "tag" (or type of completion) --
+command, path, glob etc). `hosts` --- the "tag" (or type of completion) --
 accepts one parameter; either a path to a hosts file (defaulting to
 `/etc/hosts`) or a boolean.
 

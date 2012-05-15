@@ -64,7 +64,7 @@ ALT+TAB. TWM's with tagging/workspaces allow you to group similar programs or
 allow launching of programs to specific tags; a more efficient system once
 you've learnt it.
 
-If you haven't already, I urge you to take a look at TWM's -- if you like to keep
+If you haven't already, I urge you to take a look at TWM's --- if you like to keep
 it clean and simple, check out [dwm][]; if your in need of more features and
 don't mind installing a few dependencies, try [xmonad][]. Once you've mastered
 them, a TWM can have great effects on improving your workflow!

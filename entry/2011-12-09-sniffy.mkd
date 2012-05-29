@@ -1,6 +1,6 @@
 title: Sniffy
 date: 09/12/2011
-abstract: Sniff media hosting websites for Flash-free consumption
+abstract: Packet sniff media hosting websites for Flash-free consumption
 tags: project
 
 [![Video demonstration of sniffy][sth]][vid]

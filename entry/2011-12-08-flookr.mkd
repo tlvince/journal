@@ -24,4 +24,4 @@ This project uses the following technologies:
 
   [fraw]: http://tlvince.appspot.com/img/flookr.png
   [fth]: http://tlvince.appspot.com/img/th/flookr.png
-  [flookr]: http://flookr.herokuapp.com/
+  [flookr]: http://flookr.tlvince.com

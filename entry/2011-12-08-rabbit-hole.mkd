@@ -27,6 +27,6 @@ This project uses the following technologies:
 * HTML5 Boilerplate
 
   [rth]: http://tlvince.appspot.com/img/th/rabbit-hole.png
-  [rabbit]: http://rabbit-hole.heroku.com/
+  [rabbit]: http://rabbit.hole.tlvince.com
   [beetle]: http://www.flickr.com/photos/jairo_abud/2365114316/
   [flag]: http://www.flickr.com/photos/imuttoo/2628589070/

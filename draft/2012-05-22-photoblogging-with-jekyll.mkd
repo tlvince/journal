@@ -1,38 +1,52 @@
-title: Photoblogging with Jekyll
+title: Photo blog
 date: 22/05/2012
-abstract: Setting up Jekyll for use as a photoblog
+abstract: Photoblogging with Jekyll and Bootstrap
+tags: project
 
-## Jekyll Bootstrap on Heroku
+[![A screenshot of my photo blog][pth]][photob]
 
-Here we will be deploying [Jekyll Bootstrap][jb] to Heroku:
+My **[photo blog][photob]** showcases some of my favourite photos from my
+collection.
 
-1. Clone `jekyll-bootstrap`
+This project experiments with a few of the latest web trends. Under the hood,
+the website is generated from plain-text files into HTML using [Jekyll][]. The
+design builds upon the prolific [Twitter Bootstrap][bs] framework, glued
+together with [Jekyll Bootstrap][jb].
 
-    git clone https://github.com/plusjade/jekyll-bootstrap photoblog
-    cd photoblog
+Customisations appear in the form of a subtle noise-textured background (a
+current trend), replacing the stock Glyphicons with the awesome [Font
+Awesome][fa] and a paginated view. Indeed, other than the photos themselves, no
+other images are used on the site: the icons use web fonts and the [CSS3
+`@font-face` rule][mdn].
 
-2. Set up `_config.yml`. Note, I had to disable (remove) auto (site regneration)
-   for the buildpack to work.
+I contributed back to the community by implementing a Javascript-free [sharing
+provider plugin][sp] for Jekyll Bootstrap, a [simple `Rake` task][rake] that
+uses the [fleakr][] gem to generate new blog posts from given flickr URLs and
+shared the [frontend design][jbtheme] as a Jekyll Bootstrap compliant theme.
 
-    git commit _config.yml --message "Filled out config"
+## Technologies
 
-3. Deploy to heroku using [heroku-buildpack-jekyll][jekyllb]. Note, I've used a
-   specific commit for saftey reasons:
+This project uses the following web technologies:
 
-    heroku create --stack cedar --buildpack "https://github.com/markpundsack/heroku-buildpack-jekyll.git#9cedb547fc"
-    git push heroku master
-    heroku open
+* Ruby
+* Liquid templating
+* Twitter Bootstrap
+* HTML5
+* CSS3 (`@font-face`)
+* Git/Heroku deployment
 
-## Theme
-
-Next step is to customise the theme.
-
-http://johntornow.com/contact/
-http://thenextweb.com/apps/2012/02/03/instagram-is-firm-on-its-stance-refusing-third-party-apps-upload-access/
-http://www.mwmanning.com/2011/12/04/Jekyll-on-Heroku-Part-2.html
-http://brizzled.clapper.org/blog/2012/03/05/using-twitter-bootstrap-with-jekyll/
-
+  [pth]: http://tlvince.appspot.com/img/th/photo.tlvince.png
+  [photob]: http://photo.tlvince.com
   [jb]: http://jekyllbootstrap.com/
   [jbgh]: https://github.com/plusjade/jekyll-bootstrap
   [herokubp]: https://devcenter.heroku.com/articles/third-party-buildpacks#using_a_custom_buildpack
+  [jekyll]: http://jekyllrb.com/
   [jekyllbp]: https://github.com/markpundsack/heroku-buildpack-jekyll
+  [liquid]: http://liquidmarkup.org/
+  [bs]: http://twitter.github.com/bootstrap/
+  [fa]: http://fortawesome.github.com/Font-Awesome/
+  [mdn]: https://developer.mozilla.org/en/CSS/@font-face
+  [sp]: https://github.com/plusjade/jekyll-bootstrap/pull/90
+  [fleakr]: http://fleakr.org/
+  [rake]: https://github.com/plusjade/jekyll-bootstrap/pull/91
+  [jbtheme]: https://github.com/tlvince/jb-theme-tlvince

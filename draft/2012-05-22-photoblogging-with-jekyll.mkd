@@ -1,0 +1,38 @@
+title: Photoblogging with Jekyll
+date: 22/05/2012
+abstract: Setting up Jekyll for use as a photoblog
+
+## Jekyll Bootstrap on Heroku
+
+Here we will be deploying [Jekyll Bootstrap][jb] to Heroku:
+
+1. Clone `jekyll-bootstrap`
+
+    git clone https://github.com/plusjade/jekyll-bootstrap photoblog
+    cd photoblog
+
+2. Set up `_config.yml`. Note, I had to disable (remove) auto (site regneration)
+   for the buildpack to work.
+
+    git commit _config.yml --message "Filled out config"
+
+3. Deploy to heroku using [heroku-buildpack-jekyll][jekyllb]. Note, I've used a
+   specific commit for saftey reasons:
+
+    heroku create --stack cedar --buildpack "https://github.com/markpundsack/heroku-buildpack-jekyll.git#9cedb547fc"
+    git push heroku master
+    heroku open
+
+## Theme
+
+Next step is to customise the theme.
+
+http://johntornow.com/contact/
+http://thenextweb.com/apps/2012/02/03/instagram-is-firm-on-its-stance-refusing-third-party-apps-upload-access/
+http://www.mwmanning.com/2011/12/04/Jekyll-on-Heroku-Part-2.html
+http://brizzled.clapper.org/blog/2012/03/05/using-twitter-bootstrap-with-jekyll/
+
+  [jb]: http://jekyllbootstrap.com/
+  [jbgh]: https://github.com/plusjade/jekyll-bootstrap
+  [herokubp]: https://devcenter.heroku.com/articles/third-party-buildpacks#using_a_custom_buildpack
+  [jekyllbp]: https://github.com/markpundsack/heroku-buildpack-jekyll

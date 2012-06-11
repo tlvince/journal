@@ -1,7 +1,7 @@
 title: flookr
 date: 08/12/2011
 abstract: A Flickr/Google Maps mashup
-tags: project
+tags: project web
 
 [![A screenshot of flookr][fth]][flookr]
 

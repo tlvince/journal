@@ -5,7 +5,7 @@ tags: project web audio
 
 [![A screenshot of the TV Studios website][th]][tv]
 
-**[TV Studios][]** is my sound engineering venture.
+**[TV Studios][tv]** is my sound engineering venture.
 
 This project provides numerous audio production services for the local music
 scene. Specialising in mobile recording and live sound, I help drive creative

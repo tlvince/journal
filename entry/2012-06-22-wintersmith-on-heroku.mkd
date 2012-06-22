@@ -1,0 +1,43 @@
+title: Wintersmith on Heroku
+date: 22/06/2012
+abstract: Efficiently serving generated static files using Connect
+
+[Wintersmith][] is a static site generator written in Node.
+
+Note, much of this post is analogous to Matthew Manning's [write up][mm] for
+Jekyll/Ruby-powered sites.
+
+We'll begin with how *not* to do it:
+
+## Wintersmith server on Heroku
+
+The simplest method of serving a Wintersmith site is by using its built-in web
+server. The [process model][pm] of Heroku's Cedar stack (now the default at the
+time of writing) makes it really easy to get this up and running quickly.
+
+If you haven't already, create a heroku app:
+
+    heroku create -s cedar
+
+Next, create a `package.json` file at the root of your app, declaring
+Wintersmith as a dependency:
+
+    {
+      "name": "node-example",
+      "version": "0.0.1",
+      "dependencies": {
+        "wintersmith": "1.0.x"
+      }
+    }
+
+Finally, write a [Procfile][], declaring Wintersmith as the default web process
+type:
+
+    web: wintersmith preview --chdir public --port $PORT
+
+... replacing `public` with the directory that contains your site.
+
+  [mm]: http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html
+  [pm]: https://devcenter.heroku.com/articles/cedar#process_model
+  [procfile]: https://devcenter.heroku.com/articles/procfile
+  [wintersmith]: http://jnordberg.github.com/wintersmith/

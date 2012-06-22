@@ -9,7 +9,7 @@ Jekyll/Ruby-powered sites.
 
 We'll begin with how *not* to do it:
 
-## Wintersmith server on Heroku
+## Wintersmith's preview server on Heroku
 
 The simplest method of serving a Wintersmith site is by using its built-in web
 server. The [process model][pm] of Heroku's Cedar stack (now the default at the
@@ -19,7 +19,7 @@ If you haven't already, create a heroku app:
 
     heroku create -s cedar
 
-Next, create a `package.json` file at the root of your app, declaring
+Next, create a `package.json` file (at the root of your app), declaring
 Wintersmith as a dependency:
 
     {
@@ -30,14 +30,33 @@ Wintersmith as a dependency:
       }
     }
 
-Finally, write a [Procfile][], declaring Wintersmith as the default web process
-type:
+Next, write a [Procfile][] (again, at the root of your app), declaring
+Wintersmith as the default web process type:
 
     web: wintersmith preview --chdir public --port $PORT
 
 ... replacing `public` with the directory that contains your site.
 
+Finally, deploy to Heroku and open up your new site in a browser:
+
+    git push heroku master
+    heroku open
+
+## Serving static files with Connect
+
+Whilst the previous method works, it is inefficient: in preview mode,
+Wintersmith generates pages on the fly for *every* request. Instead, lets make
+full use of Wintersmith's *build* option. Rather than generating pages on the
+fly, the entire site is generated *once* as static HTML files. This way, not
+only is the site much faster, we are free to choose any web server.
+
+Here we'll be using [Connect][] to stay within the Node/Javascript paradigm but
+feel free to use something else (Rack/Thin might be a good option).
+
+
+
   [mm]: http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html
   [pm]: https://devcenter.heroku.com/articles/cedar#process_model
+  [connect]: http://www.senchalabs.org/connect/
   [procfile]: https://devcenter.heroku.com/articles/procfile
   [wintersmith]: http://jnordberg.github.com/wintersmith/

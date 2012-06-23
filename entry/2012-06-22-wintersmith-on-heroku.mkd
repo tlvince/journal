@@ -70,7 +70,7 @@ First add Connect to your `package.json` file:
 
 ### Connect server
 
-Now we write a minimal web server using the Connect framework. Create a
+Now we'll write a minimal web server using the Connect framework. Create a
 `server.js` file (at the root of the project) containing the following:
 
     :::javascript
@@ -114,7 +114,7 @@ Any arbitrary shell commands can also be added to the task as necessary.
 ### Testing
 
 Lets test the set up by first building the site using our `Makefile` and then
-firing up Connect server:
+firing up the Connect server:
 
     make
     node server.js

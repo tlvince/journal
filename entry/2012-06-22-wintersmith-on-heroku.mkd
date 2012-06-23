@@ -2,10 +2,10 @@ title: Wintersmith on Heroku
 date: 22/06/2012
 abstract: Efficiently serving generated static files using Connect
 
-[Wintersmith][] is a static site generator written in Node.
-
-Note, much of this post is analogous to Matthew Manning's [write up][mm] for
-Jekyll/Ruby-powered sites.
+[Wintersmith][] is a static site generator written in Node. This post describes
+two methods of hosting a Wintersmith-powered site on Heroku. Note, much of this
+post is analogous to Matthew Manning's [write up][mm] for Jekyll/Ruby-powered
+sites. Thanks Matthew.
 
 We'll begin with how *not* to do it:
 

@@ -1,4 +1,0 @@
-title: Converting all my SVN projects...
-date: 16/07/2010
-
-Converting all my SVN projects to Git

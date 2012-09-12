@@ -1,6 +1,0 @@
-title: Photostream
-date: 24/08/2010
-
-A <span title="frequently updated">stream</span> of photos that don't belong anywhere else.
-
-[gallery] 

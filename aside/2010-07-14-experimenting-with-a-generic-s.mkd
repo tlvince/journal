@@ -1,4 +1,0 @@
-title: Experimenting with a generic S...
-date: 14/07/2010
-
-Experimenting with a generic SQLite3 Bash interface

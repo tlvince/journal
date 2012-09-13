@@ -1,5 +1,5 @@
 title: Fixing slow Zsh command completion
-date: 05/04/2011
+date: 2011-04-05
 slug: slow-zsh-completion
 abstract: How to disable hostname completion in Zsh
 

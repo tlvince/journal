@@ -1,5 +1,5 @@
 title: tlvince
-date: 17/02/2012
+date: 2012-02-17
 abstract: The evolution of my website
 tags: project web
 

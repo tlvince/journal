@@ -1,5 +1,5 @@
 title: Gmail another little thing to fix
-date: 08/04/2011
+date: 2011-04-08
 slug: gmail-reply-to-all
 abstract: An idea to prevent accidentally not hitting reply to all in Gmail
 

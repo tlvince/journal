@@ -1,5 +1,5 @@
 title: Local music scrobbling with mpd
-date: 28/09/2010
+date: 2010-09-28
 slug: local-music-scrobbling
 abstract: Logging plays from mpd to a file using mpdscribble
 

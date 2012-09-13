@@ -1,5 +1,5 @@
 title: Command Line Basics & Batch Files
-date: 25/07/2007
+date: 2007-07-25
 abstract: An overview of the Windows command line
 
 ### Old File Names and Relative Paths

@@ -22,7 +22,7 @@ It's pretty bleak, but it's good to know there are other options to consider
 (though, sorry to the non-Linux users; the rest of this article probably isn't
 for you).
 
-Logging to a file {#mpdscribble}
+Logging to a file
 -----------------
 
 Using [mpdscribble][], we can now log listening habits to a plain-text file, the

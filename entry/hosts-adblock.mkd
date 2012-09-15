@@ -7,7 +7,7 @@ Does your browser's memory usage sky rocket? Are you using an Adblock extension?
 This guide introduces you to an alternative method of ad blocking using a hosts
 file and (optionally) CSS element hiding.
 
-Background reading {#reading}
+Background reading
 ------------------
 
 Chromium is a great, modern approach to a web browser. It's lightweight,
@@ -30,7 +30,7 @@ becomes very noticeable. Running Chromium and the AdBlock extension with
 anything more than five tabs open caused disk thrashing and general
 unresponsiveness.
 
-Hosts file approach {#hosts}
+Hosts file approach
 -------------------
 
 A hosts file is used by most operating systems as a lookup table of IP addresses
@@ -44,7 +44,7 @@ implemented with the [beforeload][] event) with minimal overheads.
 
 To try this, check out [MVPS][] or (the more rigorous) [hpHosts][] hosts files.
 
-Element hiding {#elem}
+Element hiding
 --------------
 
 While we could leave it there, wouldn't it be nice to clean up all those "This
@@ -56,7 +56,7 @@ CSS `display:none` property, we can hide any element on a page. Here we will be
 using [Fanboy's optimised element filter list][Fanboy] and a Chromium extension
 to do the job.
 
-### userContent {#userConent}
+### userContent
 
 userContent is a browser-based stylesheet that overrides CSS files served from
 web pages. Firefox and Opera have this built-in, whereas Chromium (strangely)
@@ -64,7 +64,7 @@ requires an extension. I'm using the simple [userContent][] extension, though if
 you want more features and simple installation, try [userScriptCSS][] (with the
 `.*` regex rule to apply to all pages) or even [Stylish][].
 
-#### Installing the userContent extension {#extension}
+#### Installing the userContent extension
 
 Firstly, download the [userContent source][userContent] from GitHub (using `git
 clone` or the [userContent zip package][userContent src]) and open the extension

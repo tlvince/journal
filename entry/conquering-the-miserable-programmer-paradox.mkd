@@ -106,7 +106,3 @@ inkling of assurance.
   [xmonad]: http://xmonad.org/
   [vim]: http://www.vim.org/
   [nosier]: http://pypi.python.org/pypi/nosier
-
-  *[TDD]: Test-driven Development
-  *[DIP3]: Dive Into Python 3
-  *[HTTP]: Hypertext Transfer Protocol

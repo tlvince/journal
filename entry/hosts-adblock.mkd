@@ -94,8 +94,3 @@ solution.
   [beforeload]: http://code.google.com/p/chromium/issues/detail?id=35897#c63 "Chromium beforeload event on Chromium issue tracker"
   [MVPS]: http://www.mvps.org/winhelp2002/hosts.htm "MVPS hosts file homepage"
   [hpHosts]: http://hosts-file.net/ "hpHosts homepage"
-
-  *[OS]: Operating System
-  *[DNS]: Domain Name System
-  *[IP]: Internet Protocol
-  *[CSS]: Cascading Style Sheets

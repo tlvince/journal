@@ -110,14 +110,3 @@ like try to sell you, so definitely give it a read.
   [Central]: http://en.wikipedia.org/wiki/Central,_Hong_Kong
   [Kowloon]: http://en.wikipedia.org/wiki/Kowloon
   [Taste]: http://en.wikipedia.org/wiki/Taste_(supermarket)
-
-  <!--*[HK]: Hong Kong-->
-  *[MTR]: Mass Transit Railway
-  *[HSBC]: The Hongkong and Shanghai Banking Corporation
-  *[ATM]: Automated Teller Machine
-  *[UK]: United Kingdom
-  *[SIM]: Subscriber Identity Module
-  *[HKD]: Hong Kong Dollars
-  *[GBP]: Great British Pounds
-  *[VoIP]: Voice over Internet Protocol
-  *[SMS]: Short Message Service

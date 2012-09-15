@@ -20,11 +20,11 @@ task :new do
   slug = title.empty?? nil : title.strip.slugize
 
   article = "title: #{title}\n"
-  article << "date: #{Time.now.strftime("%d/%m/%Y")}\n"
+  article << "date: #{Time.now}\n"
   article << "abstract: #{abstract}\n"
   article << "\n\n"
 
-  path += "/#{Time.now.strftime("%Y-%m-%d")}#{'-' + slug if slug}.mkd"
+  path += "/#{slug}.mkd"
 
   if not File.exist? path
     File.open(path, "w") do |file|

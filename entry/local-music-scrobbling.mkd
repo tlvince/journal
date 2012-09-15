@@ -65,7 +65,6 @@ to do exactly that:
 
 #### lastexport2mpd.py
 
-    :::python
     #!/usr/bin/python3
     # lastexport2mpd.py
     # Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>
@@ -99,7 +98,6 @@ export the `mpdcron` database to a format that mimics the output from
 
 #### eugene2plain
 
-    :::python
     #!/usr/bin/python3
     # eugene2plain.py
     # Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>

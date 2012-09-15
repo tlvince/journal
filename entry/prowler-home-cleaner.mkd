@@ -60,7 +60,6 @@ occurs... introducing `prowler`:
 
 ### prowler
 
-    :::bash
     #!/bin/bash
     #
     # prowler: delete unwanted files that otherwise pollute $HOME
@@ -105,7 +104,6 @@ Mine looks like this:
 Then, make sure those files and directories are already deleted (before running
 `prowler` for the fist time):
 
-    :::bash
     rm -rf ~/`cat ~/.config/prowler/badfiles`
 
 Note, you could avoid this step by configuring `inotifywait` to listen for more

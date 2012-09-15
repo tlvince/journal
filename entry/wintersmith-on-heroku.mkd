@@ -39,7 +39,6 @@ Wintersmith as the default web process type:
 
 Finally, deploy to Heroku and open up your new site in a browser:
 
-    :::bash
     git push heroku master
     heroku open
 
@@ -73,7 +72,6 @@ First add Connect to your `package.json` file:
 Now we'll write a minimal web server using the Connect framework. Create a
 `server.js` file (at the root of the project) containing the following:
 
-    :::javascript
     var connect = require('connect');
     var port = process.env.PORT || 3000;
     var oneDay = 86400000;

@@ -78,8 +78,8 @@ Extended:
 
 Create 2 further partitions (as primary):
 
-* Primary: - Windows 2.9GB
-* Primary: - Programs 18GB
+* Primary: --- Windows 2.9GB
+* Primary: --- Programs 18GB
 
 ### Recovering Linux Boot Manager
 
@@ -119,10 +119,10 @@ replace/update it perfectly.
 
 ### Laptop Drivers For Linux
 
-    Graphics: Intel i915GM - Stock
+    Graphics: Intel i915GM --- Stock
     Driver Version: Intel VGA driver 6.14.10.4250
 
-    Audio: Conexant - Stock Driver
+    Audio: Conexant --- Stock Driver
     Version: Conexant Audio driver 6.13.10.8335
 
 I have the Intel i915GM onboard graphics chipset and although the drivers are
@@ -179,10 +179,10 @@ except Fixed Width Font to Lucida Console 10.
 * [HOSTS Adblock file][]
 * 7-Zip
 * Unrar (non free)
-* Brightside - Top Left: Mute, Bottom Left: Desktop, Top Right: Off,
+* Brightside --- Top Left: Mute, Bottom Left: Desktop, Top Right: Off,
     Bottom Right: Screensaver. Switch to adjecent workspace and wrap on.
 * The [new OpenOffice][]
-* Converted Office 2007 Templates - find out how to put document properties
+* Converted Office 2007 Templates --- find out how to put document properties
   title
 * Moblock (PeerGuardian)
 * Workrave

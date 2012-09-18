@@ -3,7 +3,7 @@ date: 2007-10-05
 abstract: How to remove 915resolution for upgrading to Gutsy Ubuntu
 
 After getting to grips with the basics of Ubuntu, I thought I might aswell have
-a try a Gutsy - the new (currently beta) upgrade to Ubuntu.
+a try a Gutsy --- the new (currently beta) upgrade to Ubuntu.
 
 One of the biggest gripes with Feisty was that it didn't detect my Laptop
 graphics (monitor) native resolution. I solved that by using the endless amount
@@ -22,8 +22,8 @@ Feisty (like most people will be), you will need to reconfigure your xorg.conf
 for the new settings:
 
 1.  Make sure "xserver-xorg-video-intel" is installed (search in Synaptic)
-2.  Remove 915resolution - I chose remove completely
-3.  Remove Auto915resolution (startup script - if you used it):
+2.  Remove 915resolution --- I chose remove completely
+3.  Remove Auto915resolution (startup script --- if you used it):
 
     cd /etc/rc2.d
     sudo rm S08startupscript
@@ -31,7 +31,7 @@ for the new settings:
     sudo rm auto915resolutionScript
  
 4.  At that point, I restarted just to check if the resolution had changed (from
-    native) - and it did
+    native) --- and it did
 5.  Now run:
 
     sudo dpkg-reconfigure xserver-xorg

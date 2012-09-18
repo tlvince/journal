@@ -73,14 +73,14 @@ This iteration uses the following technologies:
 
 This post will be updated to include future iterations.
 
-  [first1]: http://tlvince.appspot.com/img/tlvince.com_2007-01-01_01.png
-  [first1th]: http://tlvince.appspot.com/img/th/tlvince.com_2007-01-01_01.png
-  [second1]: http://tlvince.appspot.com/img/tlvince.com_2007-07-03.png
-  [second1th]: http://tlvince.appspot.com/img/th/tlvince.com_2007-07-03.png
-  [second2]: http://tlvince.appspot.com/img/tlvince.com_2011-02-27.png
-  [second2th]: http://tlvince.appspot.com/img/th/tlvince.com_2011-02-27.png
-  [third]: http://tlvince.appspot.com/img/tlvince.com_2012-02-17.png
-  [thirdth]: http://tlvince.appspot.com/img/th/tlvince.com_2012-02-17.png
+  [first1]: /assets/img/tlvince.com_2007-01-01_01.png
+  [first1th]: /assets/img/th/tlvince.com_2007-01-01_01.png
+  [second1]: /assets/img/tlvince.com_2007-07-03.png
+  [second1th]: /assets/img/th/tlvince.com_2007-07-03.png
+  [second2]: /assets/img/tlvince.com_2011-02-27.png
+  [second2th]: /assets/img/th/tlvince.com_2011-02-27.png
+  [third]: /assets/img/tlvince.com_2012-02-17.png
+  [thirdth]: /assets/img/th/tlvince.com_2012-02-17.png
   [wp2toto]: /wordpress-to-toto
   [gh]: https://github.com/tlvince/tlvince.com
   [solarized]: http://ethanschoonover.com/solarized

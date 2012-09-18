@@ -49,6 +49,6 @@ accepts one parameter; either a path to a hosts file (defaulting to
         zero-click information, https url rewrites and the !bang syntax. Check
         it out!
 
-  [1]: /computing/hosts-adblock/
+  [1]: /hosts-adblock
   [2]: https://duckduckgo.com/?q=!man+zshcompsys
   [3]: https://duckduckgo.com/?q=zsh+tab+completion+slow

@@ -139,7 +139,7 @@ without them!
 
 So until more developers make use of the [XDG][] base directory standards,
 `prowler` keeps your `$HOME` directory clean and in turn offers a sense of
-control. 
+control.
 
   [inotify]: http://en.wikipedia.org/wiki/Inotify "Wikipedia entry on inotify"
   [polling]: http://en.wikipedia.org/wiki/Polling_(computer_science) "Wikipedia entry on polling"

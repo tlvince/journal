@@ -29,7 +29,7 @@ for the new settings:
     sudo rm S08startupscript
     cd /etc/init.d
     sudo rm auto915resolutionScript
-  
+ 
 4.  At that point, I restarted just to check if the resolution had changed (from
     native) - and it did
 5.  Now run:

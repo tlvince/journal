@@ -99,7 +99,7 @@ inkling of assurance.
   [tdd]: https://secure.wikimedia.org/wikipedia/en/wiki/Test-driven_development
   [esp]: http://www.joelonsoftware.com/items/2007/10/26.html
   [velocity]: https://secure.wikimedia.org/wikipedia/en/wiki/Velocity_(software_methodology)
-  [fb]: https://secure.wikimedia.org/wikipedia/en/wiki/The_social_network 
+  [fb]: https://secure.wikimedia.org/wikipedia/en/wiki/The_social_network
   [pilgrim]: http://www.reddit.com/r/IAmA/comments/f545e/i_am_a_fourtime_published_author_i_write_free/c1dcgsm
   [fancy]: http://docs.python.org/py3k/library/urllib.request.html?highlight=urllib#urllib.request.FancyURLopener
   [dip3]: http://diveintopython3.org/http-web-services.html#introducing-httplib2

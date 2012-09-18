@@ -18,5 +18,5 @@ What's your suggestion?
 
   [1]: http://gmailblog.blogspot.com/2011/04/fixing-little-things.html
   [graw]: http://tlvince.appspot.com/img/gmail-reply-to-all.png
-  [gth]: http://tlvince.appspot.com/img/th/gmail-reply-to-all.png 
+  [gth]: http://tlvince.appspot.com/img/th/gmail-reply-to-all.png
 

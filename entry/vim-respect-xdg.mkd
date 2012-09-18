@@ -88,5 +88,5 @@ A more complete solution is to set `VIMINIT` like so:
     export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
   [xdg]: http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
-  [prowler]: /linux/prowler-home-cleaner/
+  [prowler]: /prowler-home-cleaner
   [me]: https://github.com/tlvince/vim-config

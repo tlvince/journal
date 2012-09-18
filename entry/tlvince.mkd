@@ -81,10 +81,10 @@ This post will be updated to include future iterations.
   [second2th]: http://tlvince.appspot.com/img/th/tlvince.com_2011-02-27.png
   [third]: http://tlvince.appspot.com/img/tlvince.com_2012-02-17.png
   [thirdth]: http://tlvince.appspot.com/img/th/tlvince.com_2012-02-17.png
-  [wp2toto]: /2011/05/27/wordpress-to-toto/
+  [wp2toto]: /wordpress-to-toto
   [gh]: https://github.com/tlvince/tlvince.com
   [solarized]: http://ethanschoonover.com/solarized
   [journo]: https://wordpress.org/extend/themes/journalist
-  [hk]: /2010/09/12/a-brief-guide-to-hong-kong/
+  [hk]: /a-brief-guide-to-hong-kong
   [2010]: http://2010dev.wordpress.com/
   [vh]: https://en.wikipedia.org/wiki/Victoria_harbour

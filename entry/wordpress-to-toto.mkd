@@ -47,7 +47,7 @@ a fresh repository that retained the content and history of the drafts in my
        $ git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch articles" --prune-empty -- --all
 
 3. Clean up:
-   
+
        cd new-repo
        rm -rf .git/refs/origin
        git remote rm origin

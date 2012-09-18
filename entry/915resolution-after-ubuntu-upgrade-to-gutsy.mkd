@@ -11,8 +11,8 @@ of help avaliable:
 
 I have the Intel i915GM onboard graphics chipset and although the drivers are
 already included in the distro, there is extra work to be done for it to run at
-native resolution. Luckily I found some documentation [explaining the
-process][].
+native resolution. Luckily I found some [documentation][] explaining the
+process.
 
 I then ran the `autoi915` script and all seems fine!
 
@@ -25,21 +25,22 @@ for the new settings:
 2.  Remove 915resolution --- I chose remove completely
 3.  Remove Auto915resolution (startup script --- if you used it):
 
-    cd /etc/rc2.d
-    sudo rm S08startupscript
-    cd /etc/init.d
-    sudo rm auto915resolutionScript
- 
+        cd /etc/rc2.d
+        sudo rm S08startupscript
+        cd /etc/init.d
+        sudo rm auto915resolutionScript
+
 4.  At that point, I restarted just to check if the resolution had changed (from
     native) --- and it did
 5.  Now run:
 
-    sudo dpkg-reconfigure xserver-xorg
+        sudo dpkg-reconfigure xserver-xorg
 
 6.  This will reconfigure your xorg.conf file. Run through the process as
     normal, it's worth reading the description of whats about to be changed, if
-in doubt, leave the field blank. In the video driver screen, **select "Intel"**
-instead of "i810 or i915".
-7.  Restart and your resolution should be correct!
+    in doubt, leave the field blank. In the video driver screen, **select
+    "Intel"** instead of "i810 or i915".
 
-  [explaining the process]: https://help.ubuntu.com/community/i915Driver
+Restart and your resolution should be correct!
+
+  [documentation]: https://help.ubuntu.com/community/i915Driver

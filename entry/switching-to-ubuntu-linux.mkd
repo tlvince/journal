@@ -87,8 +87,8 @@ After Windows has been installed, it installs it's own bootloader, which
 hides our Linux install from the system. To allow us to boot back into
 Linux, we need to [recover grub][]. Used this for the Windows entry:
 
-    title          Microsoft Windows XP Home
-    root        (hd0,1)
+    title           Microsoft Windows XP Home
+    root            (hd0,1)
     makeactive
     chainloader +1
 
@@ -119,11 +119,10 @@ replace/update it perfectly.
 
 ### Laptop Drivers For Linux
 
-    Graphics: Intel i915GM --- Stock
-    Driver Version: Intel VGA driver 6.14.10.4250
-
-    Audio: Conexant --- Stock Driver
-    Version: Conexant Audio driver 6.13.10.8335
+* Graphics: Intel i915GM --- Stock
+* Driver Version: Intel VGA driver 6.14.10.4250
+* Audio: Conexant --- Stock Driver
+* Version: Conexant Audio driver 6.13.10.8335
 
 I have the Intel i915GM onboard graphics chipset and although the drivers are
 already included in the distro, there is extra work to be done for it to run at

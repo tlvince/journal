@@ -179,7 +179,7 @@ except Fixed Width Font to Lucida Console 10.
 * 7-Zip
 * Unrar (non free)
 * Brightside --- Top Left: Mute, Bottom Left: Desktop, Top Right: Off,
-    Bottom Right: Screensaver. Switch to adjecent workspace and wrap on.
+  Bottom Right: Screensaver. Switch to adjecent workspace and wrap on.
 * The [new OpenOffice][]
 * Converted Office 2007 Templates --- find out how to put document properties
   title
@@ -197,6 +197,8 @@ except Fixed Width Font to Lucida Console 10.
 * Sort out Pidgin (it's out of date)
 * Sort out backups
 * Update favourite software with Ubuntu's alternatives
+
+Fin!
 
   [explaining the process]: https://help.ubuntu.com/community/i915Driver
   [change the DPI to 96]: http://ubuntuforums.org/showpost.php?p=99808&postcount=1

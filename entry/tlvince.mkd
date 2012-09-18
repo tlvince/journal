@@ -23,6 +23,17 @@ The design compliments the backend minimalism. Aiming to be as readable as
 possible, it uses a [warm colour pallette][solarized] and focuses purely on the
 *content*.
 
+### Technologies
+
+This iteration uses the following technologies:
+
+* Ruby (toto, rack)
+* HTML 5 boilerplate
+* CSS 3
+* Javascript (Disqus, hyphenator)
+* Git
+* Heroku
+
 ## Second iteration
 
 [![A screenshot of tlvince.com circa July 2007][second1th]][second1]
@@ -37,6 +48,12 @@ experiment, more of a blogging experiment.
 For my [year in Hong Kong][hk], I updated to the default [Twenty Ten][2010]
 theme, with a banner of [Victoria Harbour][vh].
 
+### Technologies
+
+This iteration uses the following technologies:
+
+* Wordpress (PHP)
+
 ## First iteration
 
 [![A screenshot of tlvince.com circa Jan 2007][first1th]][first1]
@@ -47,27 +64,14 @@ learning CSS, evident by the curious `div` background colours. I'm not sure it
 ever worked in the new browser on the block: Firefox 2, but why would anyone
 click on anything but the "blue e"?
 
-## Technologies
+### Technologies
 
-This project uses the following web technologies:
-
-### Third iteration
-
-* Ruby (toto, rack)
-* HTML 5 boilerplate
-* CSS 3
-* Javascript (Disqus, hyphenator)
-* Git
-* Heroku
-
-### Second iteration
-
-* Wordpress (PHP)
-
-### First iteration
+This iteration uses the following technologies:
 
 * HTML
 * CSS
+
+This post will be updated to include future iterations.
 
   [first1]: http://tlvince.appspot.com/img/tlvince.com_2007-01-01_01.png
   [first1th]: http://tlvince.appspot.com/img/th/tlvince.com_2007-01-01_01.png

@@ -1,6 +1,5 @@
 title: Migrating from Wordpress to Toto
 date: 2011-05-27
-slug: wordpress-to-toto
 abstract: A customary site redesign write up
 
 ## Rationale

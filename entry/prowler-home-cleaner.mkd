@@ -1,6 +1,5 @@
 title: prowler an inotify based home directory cleaner
 date: 2010-07-15
-slug: prowler-home-cleaner
 abstract: A Linux shell script to keep your home directory clean
 tags: project
 

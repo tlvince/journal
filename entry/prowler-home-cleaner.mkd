@@ -1,4 +1,4 @@
-title: prowler: an inotify based home directory cleaner
+title: prowler an inotify based home directory cleaner
 date: 2010-07-15
 slug: prowler-home-cleaner
 abstract: A Linux shell script to keep your home directory clean
@@ -141,12 +141,12 @@ So until more developers make use of the [XDG][] base directory standards,
 `prowler` keeps your `$HOME` directory clean and in turn offers a sense of
 control.
 
-  [inotify]: https://en.wikipedia.org/wiki/Inotify "Wikipedia entry on inotify"
-  [polling]: https://en.wikipedia.org/wiki/Polling_(computer_science) "Wikipedia entry on polling"
-  [issues]: https://github.com/tlvince/prowler/issues "GitHub issue tracker"
+  [inotify]: http://en.wikipedia.org/wiki/Inotify "Wikipedia entry on inotify"
+  [polling]: http://en.wikipedia.org/wiki/Polling_(computer_science) "Wikipedia entry on polling"
+  [issues]: http://github.com/tlvince/bin/issues "GitHub issue tracker"
   [heuristics]: http://www.useit.com/papers/heuristic/heuristic_list.html "Nielsen's 10 usability heuristics"
   [XDG]: http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html "XDG base directory specification"
   [chromium]: http://www.chromium.org/developers/linux-technical-faq "Chromium Linux Technical FAQ"
   [dmenu]: http://tools.suckless.org/dmenu/ "dmenu homepage"
-  [rmshit]: https://github.com/trapd00r/rmshit "rmshit GitHub repository"
+  [rmshit]: http://github.com/trapd00r/rmshit "rmshit GitHub repository"
   [prowler]: https://github.com/tlvince/prowler "Prowler repository on GitHub"

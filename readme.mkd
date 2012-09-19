@@ -1,4 +1,3 @@
 Journal entries for http://tlvince.com
 
-I haven't decided on a license for this, so everything you see here (aside from
-the rakefile) is: Copyright 2007-2011 Tom Vincent <http://tlvince.com/contact/>.
+Copyright 2007-2012 Tom Vincent <http://tlvince.com/contact>

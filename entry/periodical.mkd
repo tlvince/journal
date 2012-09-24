@@ -73,10 +73,10 @@ need including in python-boilerpipe.
 
   [bs]: http://www.crummy.com/software/BeautifulSoup/
   [f1]: https://en.wikipedia.org/wiki/F1_score
-  [tomz]: http://tomazkovacic.com/blog/category/text-extraction/
+  [tomaz]: http://tomazkovacic.com/blog/category/text-extraction/
   [jpype]: http://jpype.sourceforge.net/
   [dephell]: https://en.m.wikipedia.org/wiki/Dependency_hell
-  [deptree]: http://ompldr.org/vZmY5Zw
+  [deptree]: /assets/img/periodical-dependency-tree.png
   [kindlerb]: https://github.com/danchoi/kindlerb
   [kindlegen]: https://www.amazon.com/gp/feature.html?docId=1000234621
   [periodical]: https://github.com/tlvince/periodical

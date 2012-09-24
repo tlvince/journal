@@ -2,9 +2,9 @@ title: xmonad
 abstract: My usage notes for the Haskell-based tiling window manager
 date: 2009-11-21
 
-[xmonad][] is an excelant tiling window manager (TWM) written in Haskell.
+[xmonad][] is an excellent tiling window manager (TWM) written in Haskell.
 Following my [review of TWM's][review] and publication of my [config
-repositoriy][xmonad-config], this post details my usage of xmonad.
+repository][xmonad-config], this post details my usage of xmonad.
 
 ## Contrib extensions
 
@@ -21,7 +21,7 @@ The prompt namespace of modules contains a library for displaying input prompts.
 Similar to `dmenu`. Advantages over `dmenu` are:
 
 * Displayed on your currently active screen rather than where mouse focus is
-* Tab-completetion
+* Tab-completion
 
 By design, its *raise* feature also doubles up to provide functionality similar 
 to `xmonad.Prompt.Window`'s `Bring` option (albeit listing everything in `$PATH` 

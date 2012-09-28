@@ -35,8 +35,8 @@ The YUI Compressor homepage currently looks like this:
 
   [![YUI Compressor homepage][yuith]][yui]
 
-  [yui]: http://tlvince.appspot.com/img/2011-03-14_15-15-28.png
-  [yuith]: http://tlvince.appspot.com/img/th/2011-03-14_15-15-28.png
+  [yui]: assets/img/2011-03-14_15-15-28.png
+  [yuith]: assets/img/th/2011-03-14_15-15-28.png
 
 "OK, well, where's the download link". That's a screenshot in a Chromium app
 window and still there's another 2/3'rds to go. Scanning amongst the wall of
@@ -44,15 +44,15 @@ text, I finally notice the unassuming download link:
 
   [![The well-hidden YUI compressor download link][yuidlth]][yuidl]
 
-  [yuidl]: http://tlvince.appspot.com/img/2011-03-14_15-35-58.png
-  [yuidlth]: http://tlvince.appspot.com/img/th/2011-03-14_15-35-58.png
+  [yuidl]: assets/img/2011-03-14_15-35-58.png
+  [yuidlth]: assets/img/th/2011-03-14_15-35-58.png
 
 Latest (presumedly stable) build was 2009?!
 
   [![YUI's last stable build was 2009][yuistth]][yuist]
 
-  [yuist]: http://tlvince.appspot.com/img/2011-03-14_15-39-17.png
-  [yuistth]: http://tlvince.appspot.com/img/th/2011-03-14_15-39-17.png
+  [yuist]: assets/img/2011-03-14_15-39-17.png
+  [yuistth]: assets/img/th/2011-03-14_15-39-17.png
 
 Oh, well, I've come this far, I might as well try it:
 
@@ -92,8 +92,8 @@ jump to pages. "Hmm, what are those called again?"; [google sitelinks][gsl].
 
   [![Google webmaster help pages][gwhpth]][gwhp]
 
-  [gwhp]: http://tlvince.appspot.com/img/2011-03-14_16-36-05.png
-  [gwhpth]: http://tlvince.appspot.com/img/th/2011-03-14_16-36-05.png
+  [gwhp]: assets/img/2011-03-14_16-36-05.png
+  [gwhpth]: assets/img/th/2011-03-14_16-36-05.png
 
 "This Help Centre is not currently available in your language." "Argh!!" Just
 because I live in China, doesn't mean I can speak Chinese. Where's an English
@@ -101,8 +101,8 @@ fall-back option? Oh, forget it.
 
   [![The 1st of a Google search for Apache Ant][gantth]][gant]
 
-  [gant]: http://tlvince.appspot.com/img/2011-03-14_16-41-54.png
-  [gantth]: http://tlvince.appspot.com/img/th/2011-03-14_16-41-54.png
+  [gant]: assets/img/2011-03-14_16-41-54.png
+  [gantth]: assets/img/th/2011-03-14_16-41-54.png
 
 Anyway, those links are called "mini sitelinks". Back to the [apache ant][ivy]
 search... I want to download it, and oh, great, there's the download link
@@ -110,8 +110,8 @@ straight away.
 
   [![Arrow as a clear metaphor for download][antdlth]][antdl]
 
-  [antdl]: http://tlvince.appspot.com/img/2011-03-14_16-42-46.png
-  [antdlth]: http://tlvince.appspot.com/img/2011-03-14_16-42-46.png
+  [antdl]: assets/img/2011-03-14_16-42-46.png
+  [antdlth]: assets/img/2011-03-14_16-42-46.png
 
 Nice, a nice easy download link.
 
@@ -134,24 +134,24 @@ instead.
 
   [![Duck Duck Go's official site badge][ddgth]][ddg]
 
-  [ddg]: http://tlvince.appspot.com/img/2011-03-14_16-48-38.png
-  [ddhth]: http://tlvince.appspot.com/img/2011-03-14_16-48-38.png
+  [ddg]: assets/img/2011-03-14_16-48-38.png
+  [ddhth]: assets/img/2011-03-14_16-48-38.png
 
 Nice, an "offical site" badge. I wonder how they determine that. Hmm,
 this is looking different...
 
   [![Side-by-side view of the Apache Ant and Apache Ivy websites][antssth]][antss]
 
-  [antss]: http://tlvince.appspot.com/img/2011-03-14_16-52-32.png
-  [antssth]: http://tlvince.appspot.com/img/th/2011-03-14_16-52-32.png
+  [antss]: assets/img/2011-03-14_16-52-32.png
+  [antssth]: assets/img/th/2011-03-14_16-52-32.png
 
 Damn it! If this is `ant`, what did I just download? Pft, nevermind. Proceed to
 the download link.
 
   [![Apache Ant's download sidebar][antsideth]][antside]
 
-  [antside]: http://tlvince.appspot.com/img/2011-03-14_16-54-13.png
-  [antsideth]: http://tlvince.appspot.com/img/th/2011-03-14_16-54-13.png
+  [antside]: assets/img/2011-03-14_16-54-13.png
+  [antsideth]: assets/img/th/2011-03-14_16-54-13.png
 
 Good, nice and easy. Moving on...
 
@@ -212,8 +212,8 @@ OK (beleaguered by this point), let's grab JDK.
 
   [![Insufficient privileges error message from the Java installer][jdkth]][jdk]
 
-  [jdk]: http://tlvince.appspot.com/img/2011-03-14_17-26-28.png
-  [jdkth]: http://tlvince.appspot.com/img/th/2011-03-14_17-26-28.png
+  [jdk]: assets/img/2011-03-14_17-26-28.png
+  [jdkth]: assets/img/th/2011-03-14_17-26-28.png
 
 Damn. There's not much I can do about that.
 

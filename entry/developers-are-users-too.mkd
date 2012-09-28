@@ -2,8 +2,7 @@ title: Developers are users too!
 date: 2011-03-29
 abstract: A rant about user experience from a developers perspective
 
-Fanboy
-------
+## Fanboy
 
 Here's the situation: I want to update Chromium's `userstyle` CSS file with the
 latest Fanboy element hider rules. As hackers do, my first instinict is to write
@@ -17,7 +16,7 @@ a script to do it for me. A few lines of Python later, and I'm faced with this:
 
 "Uh?! It must be that damn corperate firewall again." Now, I've seen this one
 before and, armed with another script (to set up `cmd` with the correct proxy
-settings), I try again... with no joy:
+settings... yes, I'm running Windows here), I try again... with no joy:
 
     File "C:\Python31\lib\http\client.py", line 684, in _tunnel
     for header, value in self._tunnel_headers.iteritems():
@@ -25,28 +24,37 @@ settings), I try again... with no joy:
 
 "I'll fix it later", I think as I copy/paste the file manually.
 
-YUI, You Eee?
--------------
+## YUI, You Eee?
 
-"Hmm, I wonder if anyone's thought of minifying `userstyles`." With Fanboy's CSS
+"Hmm, I wonder if anyone's thought of minifying `userstyles`?" With Fanboy's CSS
 file, being ~4500 lines, it can't be a bad idea. Having not used `yuicompressor`
 for a year or so now, I thought I'd take a look to see where the development has
 come since then.
 
-The YUI Compressor homepage looks like this:
+The YUI Compressor homepage currently looks like this:
 
-  [![YUI Compressor homepage](http://tlvince.appspot.com/img/th/2011-03-14_15-15-28.png)](http://tlvince.appspot.com/img/2011-03-14_15-15-28.png)
+  [![YUI Compressor homepage][yuith]][yui]
+
+  [yui]: http://tlvince.appspot.com/img/2011-03-14_15-15-28.png
+  [yuith]: http://tlvince.appspot.com/img/th/2011-03-14_15-15-28.png
 
 "OK, well, where's the download link". That's a screenshot in a Chromium app
 window and still there's another 2/3'rds to go. Scanning amongst the wall of
 text, I finally notice the unassuming download link:
 
-  [![The well-hidden YUI compressor download link](http://tlvince.appspot.com/img/th/2011-03-14_15-35-58.png)](http://tlvince.appspot.com/img/2011-03-14_15-35-58.png)
+  [![The well-hidden YUI compressor download link][yuidlth]][yuidl]
 
-  [![YUI's last stable build was 2009](http://tlvince.appspot.com/img/th/2011-03-14_15-39-17.png)](http://tlvince.appspot.com/img/2011-03-14_15-39-17.png)
+  [yuidl]: http://tlvince.appspot.com/img/2011-03-14_15-35-58.png
+  [yuidlth]: http://tlvince.appspot.com/img/th/2011-03-14_15-35-58.png
 
-Latest (presumedly stable) build was 2009?! Oh, well, I've come this far, I
-might as well try it:
+Latest (presumedly stable) build was 2009?!
+
+  [![YUI's last stable build was 2009][yuistth]][yuist]
+
+  [yuist]: http://tlvince.appspot.com/img/2011-03-14_15-39-17.png
+  [yuistth]: http://tlvince.appspot.com/img/th/2011-03-14_15-39-17.png
+
+Oh, well, I've come this far, I might as well try it:
 
     java -jar yuicompressor-2.4.2.jar Custom.css
 
@@ -64,39 +72,46 @@ might as well try it:
 
 "Damnnn it!".
 
-The battle has only just begun
-------------------------------
+## Squashing bugs
 
 The first result of a Google for `yui InvocationTargetException` returns a [bug
 report][yuibug], with a comment mentioning a fix(?) was committed in 2010. "OK,
-fine. It's impossible to not notice the "Fork me on GitHub" banner, so there
+fine. It's impossible to not notice the 'Fork me on GitHub' banner, so there
 must be a newer build there."
 
 "Damn, there are no pre-packaged builds. Nevermind, I'll try building myself."
 Noticing the `build.xml` file, I head over to download Apache Ant. While, I've
-never used `ant` before (I prefer `make`), I know it's a mature project, so
-things should go smoothly, right?
+never used `ant` before (I more versed with `make`), I know it's a mature
+project, so things should go smoothly, right?
 
-Ant, err, Ivy
--------------
+## Ant, err, Ivy
 
 A quick Google for [apache ant][ivy] gives me those handy links to directly
-jump to pages. "Hmm, what are those called again?" [google sitelinks][gsl].
+jump to pages. "Hmm, what are those called again?"; [google sitelinks][gsl].
 "Great! relevant-looking results".
 
-  [![Google webmaster help pages](http://tlvince.appspot.com/img/th/2011-03-14_16-36-05.png)](http://tlvince.appspot.com/img/2011-03-14_16-36-05.png)
+  [![Google webmaster help pages][gwhpth]][gwhp]
+
+  [gwhp]: http://tlvince.appspot.com/img/2011-03-14_16-36-05.png
+  [gwhpth]: http://tlvince.appspot.com/img/th/2011-03-14_16-36-05.png
 
 "This Help Centre is not currently available in your language." "Argh!!" Just
 because I live in China, doesn't mean I can speak Chinese. Where's an English
 fall-back option? Oh, forget it.
 
-  [![The 1st of a Google search for Apache Ant](http://tlvince.appspot.com/img/th/2011-03-14_16-41-54.png)](http://tlvince.appspot.com/img/2011-03-14_16-41-54.png)
+  [![The 1st of a Google search for Apache Ant][gantth]][gant]
+
+  [gant]: http://tlvince.appspot.com/img/2011-03-14_16-41-54.png
+  [gantth]: http://tlvince.appspot.com/img/th/2011-03-14_16-41-54.png
 
 Anyway, those links are called "mini sitelinks". Back to the [apache ant][ivy]
 search... I want to download it, and oh, great, there's the download link
 straight away.
 
-  [![Arrow as a clear metaphor for download](http://tlvince.appspot.com/img/2011-03-14_16-42-46.png)](http://tlvince.appspot.com/img/2011-03-14_16-42-46.png)
+  [![Arrow as a clear metaphor for download][antdlth]][antdl]
+
+  [antdl]: http://tlvince.appspot.com/img/2011-03-14_16-42-46.png
+  [antdlth]: http://tlvince.appspot.com/img/2011-03-14_16-42-46.png
 
 Nice, a nice easy download link.
 
@@ -112,25 +127,33 @@ Zzz. About a minute later and nothing happend. "Resolving dependencies... Oh,
 it's trying to download something." Firing up the aformentioned "cmd proxy
 setter" script, but no, still nothing.
 
-Ant (round 2)
--------------
+## Ant (round 2)
 
 Something's up here. I'll rollback. Arbitrarily, I tried a [DDG search][ddg]
 instead. 
 
-  [![Duck Duck Go's official site badge](http://tlvince.appspot.com/img/2011-03-14_16-48-38.png)](http://tlvince.appspot.com/img/2011-03-14_16-48-38.png)
+  [![Duck Duck Go's official site badge][ddgth]][ddg]
+
+  [ddg]: http://tlvince.appspot.com/img/2011-03-14_16-48-38.png
+  [ddhth]: http://tlvince.appspot.com/img/2011-03-14_16-48-38.png
 
 Nice, an "offical site" badge. I wonder how they determine that. Hmm,
 this is looking different...
 
-  [![Side-by-side view of the Apache Ant and Apache Ivy websites](http://tlvince.appspot.com/img/th/2011-03-14_16-52-32.png)](http://tlvince.appspot.com/img/2011-03-14_16-52-32.png)
+  [![Side-by-side view of the Apache Ant and Apache Ivy websites][antssth]][antss]
+
+  [antss]: http://tlvince.appspot.com/img/2011-03-14_16-52-32.png
+  [antssth]: http://tlvince.appspot.com/img/th/2011-03-14_16-52-32.png
 
 Damn it! If this is `ant`, what did I just download? Pft, nevermind. Proceed to
 the download link.
 
-  [![Apache Ant's download sidebar](http://tlvince.appspot.com/img/2011-03-14_16-54-13.png)](http://tlvince.appspot.com/img/2011-03-14_16-54-13.png)
+  [![Apache Ant's download sidebar][antsideth]][antside]
 
-Good, nice and easy.
+  [antside]: http://tlvince.appspot.com/img/2011-03-14_16-54-13.png
+  [antsideth]: http://tlvince.appspot.com/img/th/2011-03-14_16-54-13.png
+
+Good, nice and easy. Moving on...
 
     ant
     Unable to locate tools.jar. Expected to find it in C:\Program Files\Java\jre6\li
@@ -181,21 +204,20 @@ that what `[target]` is?). Anyway, let's try that:
 
     Total time: 0 seconds
 
-**BUILD FAILED**. Ah, now you tell me that I explicitly need JDK.
+**BUILD FAILED**. Ah, *now* you tell me that I explicitly need JDK.
 
-The Draconian Admin
--------------------
+## The Draconian Admin
 
 OK (beleaguered by this point), let's grab JDK.
 
-  [![Insufficient privileges error message from the Java installer](http://tlvince.appspot.com/img/th/2011-03-14_17-26-28.png)](http://tlvince.appspot.com/img/2011-03-14_17-26-28.png)
+  [![Insufficient privileges error message from the Java installer][jdkth]][jdk]
+
+  [jdk]: http://tlvince.appspot.com/img/2011-03-14_17-26-28.png
+  [jdkth]: http://tlvince.appspot.com/img/th/2011-03-14_17-26-28.png
 
 Damn. There's not much I can do about that.
 
-Closing Points
---------------
-
-
+## Closing Points
 
   [yuibug]: http://yuilibrary.com/projects/yuicompressor/ticket/2528046
   [ivy]: https://encrypted.google.com/search?hl=en&q=apache+ant

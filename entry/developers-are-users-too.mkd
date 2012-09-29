@@ -10,7 +10,7 @@ dealing with new technologies.
 ## Fanboy
 
 Here's the situation: I want to update Chromium's `userstyle` CSS file with the
-latest Fanboy element hider rules. As hackers do, my first instinict is to write
+latest Fanboy element hider rules. As hackers do, my first instinct is to write
 a script to do it for me. A few lines of Python later, and I'm faced with this:
 
     Traceback (most recent call last):
@@ -19,7 +19,7 @@ a script to do it for me. A few lines of Python later, and I'm faced with this:
     because the connected party did not properly respond after a period of time, or
     established connection failed because connected host has failed to respond>
 
-"Uh?! It must be that damn corperate firewall again." Now, I've seen this one
+"Uh?! It must be that damn corporate firewall again." Now, I've seen this one
 before and, armed with another script (to set up `cmd` with the correct proxy
 settings... yes, I'm running Windows here), I try again... with no joy:
 
@@ -129,7 +129,7 @@ Nice, a nice easy download link.
     , source]
 
 Zzz. About a minute later and nothing happend. "Resolving dependencies... Oh,
-it's trying to download something." Firing up the aformentioned "cmd proxy
+it's trying to download something." Firing up the aforementioned "cmd proxy
 setter" script, but no, still nothing.
 
 ## Ant (round 2)
@@ -142,7 +142,7 @@ instead.
   [ddg]: /assets/img/2011-03-14_16-48-38.png
   [ddhth]: /assets/img/2011-03-14_16-48-38.png
 
-Nice, an "offical site" badge. I wonder how they determine that. Hmm,
+Nice, an "official site" badge. I wonder how they determine that. Hmm,
 this is looking different...
 
   [![Side-by-side view of the Apache Ant and Apache Ivy websites][antssth]][antss]

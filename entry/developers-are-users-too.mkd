@@ -2,6 +2,11 @@ title: Developers are users too!
 date: 2011-03-29
 abstract: A rant about user experience from a developers perspective
 
+*Design for users* is an oft cited, well grounded mantra in programming circles.
+However, us developers often forget about a principle user group: *other
+developers*. This post details a typical, frustrating afternoon for a developer
+dealing with new technologies.
+
 ## Fanboy
 
 Here's the situation: I want to update Chromium's `userstyle` CSS file with the
@@ -215,9 +220,17 @@ OK (beleaguered by this point), let's grab JDK.
   [jdk]: /assets/img/2011-03-14_17-26-28.png
   [jdkth]: /assets/img/th/2011-03-14_17-26-28.png
 
-Damn. There's not much I can do about that.
+Despite my efforts (oh yes, *yes*, I *tried*), there's no getting round this
+one.
 
 ## Closing Points
+
+Things don't have be this hard! Design for users, yes, but don't neglect fellow
+developers. Writing an API? Always prefer simple, well defined interfaces.
+Laboriously writing documentation for the sake of busywork? Stop. Rethink your
+design. It can always be simpler.
+
+Developers are users too.
 
   [yuibug]: http://yuilibrary.com/projects/yuicompressor/ticket/2528046
   [ivy]: https://encrypted.google.com/search?hl=en&q=apache+ant

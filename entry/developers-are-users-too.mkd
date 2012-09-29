@@ -140,7 +140,7 @@ instead.
   [![Duck Duck Go's official site badge][ddgth]][ddg]
 
   [ddg]: /assets/img/2011-03-14_16-48-38.png
-  [ddhth]: /assets/img/2011-03-14_16-48-38.png
+  [ddgth]: /assets/img/2011-03-14_16-48-38.png
 
 Nice, an "official site" badge. I wonder how they determine that. Hmm,
 this is looking different...
@@ -153,10 +153,9 @@ this is looking different...
 Damn it! If this is `ant`, what did I just download? Pft, nevermind. Proceed to
 the download link.
 
-  [![Apache Ant's download sidebar][antsideth]][antside]
+  [![Apache Ant's download sidebar][antside]][antside]
 
   [antside]: /assets/img/2011-03-14_16-54-13.png
-  [antsideth]: /assets/img/th/2011-03-14_16-54-13.png
 
 Good, nice and easy. Moving on...
 

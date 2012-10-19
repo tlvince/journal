@@ -1,0 +1,49 @@
+title: Static comments roundup
+date: 2012-10-19 16:52:22 +0800
+abstract: A comparison of commenting plugins for static website generators
+
+I recently redid my site and decided to turn comments off. Most people
+use Disqus these days but as [Jekyll and other static site generators
+are, currently, harmful to the free, open source software movement][1]
+mentions, they just encourage tracking/bubbling and are not search
+engine friendly.
+
+For static website generators, we have the following options:
+
+* [Jekyll static comments][2] ([source on Github][10]): probably the
+  best, although will take require comment moderation effort
+
+* [Juvia][3]: more of a complete Disqus replacement and comes with
+  Askimet support (auto spam filtering as built into Wordpress), though
+  still requires Javascript and therefore un-indexable by Google et al.
+
+* [PyBlosxom][4]: a quite antiquated blogging engine with a commenting
+  plugin using plain-text storage (see [Dieter_be's blog][5] as an
+  example)
+
+* [yesod][6] (with [yesod-comments][7]): written in Haskell (remarkably
+  [still possible][8] to deploy on Heroku), which will require time
+  commitment (see [pbrisbin's blog][9] as an example)
+
+All in all, there's still nothing as simple as Wordpress.
+
+However, amongst it all (sorry, this has just been a brain dump so far),
+I did notice [NoNonsense Forum][11] which seems to align with your ideas
+of how to "fix" forums. Take a look.
+
+One more:
+https://blog.caurea.org/2012/03/31/this-blog-has-comments-again.html
+
+Email the comment to an address comprised of the page's url
+
+  [1]: http://www.jeremyscheff.com/2011/08/jekyll-and-other-static-site-generators-are-currently-harmful-to-the-free-open-source-software-movement/
+  [2]: http://hezmatt.org/~mpalmer/blog/2011/07/19/static-comments-in-jekyll.html
+  [3]: https://github.com/phusion/juvia
+  [4]: http://pyblosxom.github.com/
+  [5]: http://dieter.plaetinck.be/migrating_blogs_from_drupal_to_pyblosxom.html#comments
+  [6]: http://www.yesodweb.com/
+  [7]: https://github.com/pbrisbin/yesod-comments
+  [8]: https://github.com/yesodweb/yesod/wiki/Deploying-Yesod-Apps-to-Heroku
+  [9]: http://pbrisbin.com/posts/comments
+  [10]: https://github.com/mpalmer/jekyll-static-comments
+  [11]: http://camendesign.com/code/nononsense_forum

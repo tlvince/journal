@@ -34,11 +34,11 @@ approaches to static commenting.
 [Jekyll::StaticComments][jekyll-static] ([source on
 Github][jekyll-static-source]), uses a HTML form and a PHP submission script
 that emails comments to a given address. Comments are then converted to YAML
-format using a mail user agent hook (MUA) and rendered in the site with example
+format using a mail user agent (MUA) hook and rendered in the site with example
 templates.
 
-Whilst not entirely static (a server running PHP is required), a nice side-
-effect of this approach is spam is implicitly dealt with by existing email
+Whilst not entirely static (a server running PHP is required), a nice
+side-effect of this approach is spam is implicitly dealt with by existing email
 anti-spam technique(s) (whether that's your email provider's spam protection or
 [otherwise][anti-spam]).
 
@@ -64,7 +64,7 @@ deployment.
 Alternatively, as the author mentions (in comment of the blog post), email
 could be removed entirely by having the PHP script dump each comment on a
 server for the moderator to periodically download and review. Further still,
-integration with [Akismet][] could produces Wordpress-like, fully automated
+integration with [Akismet][] could produce a Wordpress-like, fully automated
 system.
 
 ### Emailed comments

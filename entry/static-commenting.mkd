@@ -6,6 +6,8 @@ Static website generators typically rely on third-parties to provide commenting
 services. This post introduces *static commenting* as an alternative and
 reviews existing solutions.
 
+## Background
+
 Comments are an oft-neglected facet of static website generators. Typically,
 they are outsourced to third-parties (Disqus [et al][disqus]., social networks
 and news websites) or are simply "[switched off][comments off]".
@@ -29,7 +31,7 @@ approaches to static commenting.
 
 ### Jekyll Static Comments
 
-[Jekyll::StaticComments][jekyll-static] [source on
+[Jekyll::StaticComments][jekyll-static] ([source on
 Github][jekyll-static-source]), uses a HTML form and a PHP submission script
 that emails comments to a given address. Comments are then converted to YAML
 format using a mail user agent hook (MUA) and rendered in the site with example

@@ -10,7 +10,7 @@ Comments are an oft-neglected facet of static website generators. Typically,
 they are outsourced to third-parties (Disqus [et al][disqus]., social networks
 and news websites) or are simply "[switched off][comments off]".
 
-Whilst the [pros][three reasons] and [cons][harmful] of the aformentioned are
+Whilst the [pros][three reasons] and [cons][harmful] of the aforementioned are
 well-documented, the middle-ground --- a commenting system that doesn't rely on
 a third-party that's suitable for static websites --- is not. Lets call this
 *static commenting* and explore its characteristics.
@@ -44,7 +44,7 @@ One drawback could be the level of manual intervention involved. Although the
 author does not specify the exact details of the MUA hook, the process appears
 to be only partially automated and favours hand-moderation.
 
-However, derivitives that provide further automation are easily achivable. [As
+However, derivatives that provide further automation are easily achievable. [As
 the author mentions][jekyll-static-auto], the PHP script could be modified to
 automatically commit the comment to a `git` repository and, with [further
 hooks][jekyll-deployment], rebuild the site.
@@ -52,7 +52,7 @@ hooks][jekyll-deployment], rebuild the site.
 The MUA hook is central to the suggested workflow. A mail client that supports
 hooks/external scripting (such as Mutt) is therefore a prerequisite for this
 approach. The alternative (copy/pasting the email) is unlikely to be attractive
-for webmail users or email clients less command-line orientated.
+for web mail users or email clients less command-line orientated.
 
 That said, the suggested workflow is only one example; the script itself does
 not force it and is flexible to accommodate other approaches. For example,
@@ -67,7 +67,7 @@ system.
 
 ### Emailed comments
 
-[Tomas Carnecky][emailed-comments] takes Jekyll Static Comments's approach one
+[Tomas Carnecky][emailed-comments] takes Jekyll Static Comment's approach one
 further: removing the form and PHP components and asking commenters to email
 directly.
 
@@ -77,13 +77,13 @@ path). The emails are then processed in the same way as Jekyll Static Comments;
 using a MUA hook.
 
 This rather ingenious use of `mailto:` can easily be integrated in existing
-templates and therefore is truely static; no plugins or server required.
+templates and therefore is truly static; no plugins or server required.
 
 It could be argued that sending an email rather than writing in a form
 disconnects the commenter from the website somewhat. Also, loading an email
 client just to leave a short comment (for example) may deter some users.
 
-On the other hand, the user will already by well acquaninted with the writing
+On the other hand, the user will already by well acquainted with the writing
 environment provided by an email client (which are typically better suited than
 a plain input box). Second, most modern browsers can associate `mailto:`
 handlers with with webmail clients, minimising loading time friction.
@@ -96,7 +96,7 @@ that ships with a [comment plugin][pyblosxom-comments] but sadly does not work
 with static rendering, [Juvia][]; an open-source commenting service similar to
 Disqus which depends on JavaScript and [NoNonsense Forum][nononsense]; which,
 as the name implies, is more a standalone forum but makes novel use of RSS as a
-datastore.
+data store.
 
 ## Conclusion
 

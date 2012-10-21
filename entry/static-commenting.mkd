@@ -88,7 +88,7 @@ client just to leave a short comment (for example) may deter some users.
 On the other hand, the user will already by well acquainted with the writing
 environment provided by an email client (which are typically better suited than
 a plain input box). Second, most modern browsers can associate `mailto:`
-handlers with with webmail clients, minimising loading time friction.
+handlers with webmail clients, minimising loading time friction.
 
 ### The rest
 

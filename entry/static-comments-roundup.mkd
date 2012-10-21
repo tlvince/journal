@@ -1,17 +1,70 @@
-title: Static comments roundup
+title: Static commenting
 date: 2012-10-19 16:52:22 +0800
-abstract: A comparison of commenting plugins for static website generators
+abstract: A comparison static commenting approaches for static websites generators
 
-I recently redid my site and decided to turn comments off. Most people
-use Disqus these days but as [Jekyll and other static site generators
-are, currently, harmful to the free, open source software movement][1]
-mentions, they just encourage tracking/bubbling and are not search
-engine friendly.
+Static website generators typically rely on third-parties to provide commenting
+services. This post compares alternative approaches.
 
-For static website generators, we have the following options:
+Comments are an oft-neglected facet of static website generators. Typically,
+they are outsourced to third-parties (such as Disqus [et al][disqus].) or are
+simply "[switched off][comments off]".
 
-* [Jekyll static comments][2] ([source on Github][10]): probably the
-  best, although will take require comment moderation effort
+Whilst the [pros][three reasons] and [cons][harmful] of the aformentioned are
+well-documented, the middle-ground --- a commenting system that doesn't rely on
+a third-party that's suitable for static websites --- is not. Lets call this
+*static commenting*.
+
+## Static commenting
+
+What constitutes a good static commenting approach? Here are a few
+possibilities:
+
+* Adheres to the *progressive enhancement* strategy
+* Uses a *plain-text* data store
+* Works well with existing static website generators
+
+With these criteria in mind, the remainder of this post reviews existing
+approaches to static commenting.
+
+### Jekyll Static Comments
+
+[Jekyll::StaticComments][jekyll-static] [source on
+Github][jekyll-static-source]), uses a HTML form and a PHP submission script
+that emails comments to a given address. Comments are then converted to YAML
+format using a mail user agent hook (MUA) and rendered in the site with example
+templates.
+
+Whilst not entirely static (a server running PHP is required), a nice side-
+effect of this approach is spam is implicitly dealt with by existing email
+anti-spam technique(s) (whether that's your email provider's spam protection or
+[otherwise][anti-spam]).
+
+One drawback could be the level of manual intervention involved. Although the
+author does not specify the exact details of the MUA hook, the process appears
+to be only partially automated and favours hand-moderation.
+
+However, derivitives that provide further automation are easily achivable. [As
+the author mentions][jekyll-static-auto], the PHP script could be modified to
+automatically commit the comment to a `git` repository and, with [further
+hooks][jekyll-deployment], rebuild the site.
+
+The MUA hook is central to the suggested workflow. A mail client that supports
+hooks/external scripting (such as Mutt) is therefore a prerequisite for this
+approach. The alternative (copy/pasting the email) is unlikely to be attractive
+for webmail users or email clients less command-line orientated.
+
+That said, the suggested workflow is only one example; the script itself does
+not force it and is flexible to accommodate other approaches. For example,
+email rules could be set up that automatically forward the comment for
+deployment. Alternatively, as the author mentions (in comment of the blog post),
+email could be removed entirely by having the PHP script dump each comment on a
+server for the moderator to periodically download and review.
+
+### Emailed comments
+
+[Tomas Carnecky][emailed-comments] takes Jekyll Static Comments's approach one
+further by removing the PHP component. A special `mailto:` link is constructed
+from the page identifier (typically the page's pathname)
 
 * [Juvia][3]: more of a complete Disqus replacement and comes with
   Askimet support (auto spam filtering as built into Wordpress), though
@@ -27,17 +80,11 @@ For static website generators, we have the following options:
 
 All in all, there's still nothing as simple as Wordpress.
 
-However, amongst it all (sorry, this has just been a brain dump so far),
-I did notice [NoNonsense Forum][11] which seems to align with your ideas
-of how to "fix" forums. Take a look.
-
 One more:
 https://blog.caurea.org/2012/03/31/this-blog-has-comments-again.html
 
 Email the comment to an address comprised of the page's url
 
-  [1]: http://www.jeremyscheff.com/2011/08/jekyll-and-other-static-site-generators-are-currently-harmful-to-the-free-open-source-software-movement/
-  [2]: http://hezmatt.org/~mpalmer/blog/2011/07/19/static-comments-in-jekyll.html
   [3]: https://github.com/phusion/juvia
   [4]: http://pyblosxom.github.com/
   [5]: http://dieter.plaetinck.be/migrating_blogs_from_drupal_to_pyblosxom.html#comments
@@ -45,5 +92,18 @@ Email the comment to an address comprised of the page's url
   [7]: https://github.com/pbrisbin/yesod-comments
   [8]: https://github.com/yesodweb/yesod/wiki/Deploying-Yesod-Apps-to-Heroku
   [9]: http://pbrisbin.com/posts/comments
-  [10]: https://github.com/mpalmer/jekyll-static-comments
-  [11]: http://camendesign.com/code/nononsense_forum
+  [11]: http://camendesign.com/code/nononsense_forums
+
+  [disqus]: http://alternativeto.net/software/disqus/
+  [comments off]: http://mattgemmell.com/2011/11/29/comments-off/
+  [harmful]: http://www.jeremyscheff.com/2011/08/jekyll-and-other-static-site-generators-are-currently-harmful-to-the-free-open-source-software-movement/
+  [three reasons]: http://avc.blogs.com/a_vc/2008/05/three-reasons-t.html
+
+  [jekyll-static]: http://theshed.hezmatt.org/jekyll-static-comments/
+  [jekyll-static-blog]: http://hezmatt.org/~mpalmer/blog/2011/07/19/static-comments-in-jekyll.html
+  [jekyll-static-source]: https://github.com/mpalmer/jekyll-static-comments
+  [jekyll-static-auto]: http://hezmatt.org/~mpalmer/blog/2011/07/19/static-comments-in-jekyll.html#fnref:comment-antispam
+  [anti-spam]: https://en.m.wikipedia.org/wiki/Anti_spam
+  [jekyll-deployment]: https://github.com/mojombo/jekyll/wiki/Deployment
+
+  [emailed-comments]: https://blog.caurea.org/2012/03/31/this-blog-has-comments-again.html

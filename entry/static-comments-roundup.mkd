@@ -1,27 +1,28 @@
 title: Static commenting
 date: 2012-10-19 16:52:22 +0800
-abstract: A comparison static commenting approaches for static websites generators
+abstract: A review of static commenting solutions for static websites generators
 
 Static website generators typically rely on third-parties to provide commenting
-services. This post compares alternative approaches.
+services. This post introduces *static commenting* as an alternative and
+reviews existing solutions.
 
 Comments are an oft-neglected facet of static website generators. Typically,
-they are outsourced to third-parties (such as Disqus [et al][disqus].) or are
-simply "[switched off][comments off]".
+they are outsourced to third-parties (Disqus [et al][disqus]., social networks
+and news websites) or are simply "[switched off][comments off]".
 
 Whilst the [pros][three reasons] and [cons][harmful] of the aformentioned are
 well-documented, the middle-ground --- a commenting system that doesn't rely on
 a third-party that's suitable for static websites --- is not. Lets call this
-*static commenting*.
+*static commenting* and explore its characteristics.
 
 ## Static commenting
 
 What constitutes a good static commenting approach? Here are a few
 possibilities:
 
-* Adheres to the *progressive enhancement* strategy
+* Adheres to the *progressive enhancement* strategy (doesn't rely on JavaScript)
 * Uses a *plain-text* data store
-* Works well with existing static website generators
+* Integrates well with existing static website generators
 
 With these criteria in mind, the remainder of this post reviews existing
 approaches to static commenting.
@@ -56,43 +57,57 @@ for webmail users or email clients less command-line orientated.
 That said, the suggested workflow is only one example; the script itself does
 not force it and is flexible to accommodate other approaches. For example,
 email rules could be set up that automatically forward the comment for
-deployment. Alternatively, as the author mentions (in comment of the blog post),
-email could be removed entirely by having the PHP script dump each comment on a
-server for the moderator to periodically download and review.
+deployment.
+
+Alternatively, as the author mentions (in comment of the blog post), email
+could be removed entirely by having the PHP script dump each comment on a
+server for the moderator to periodically download and review. Further still,
+integration with [Akismet][] could produces Wordpress-like, fully automated
+system.
 
 ### Emailed comments
 
 [Tomas Carnecky][emailed-comments] takes Jekyll Static Comments's approach one
-further by removing the PHP component. A special `mailto:` link is constructed
-from the page identifier (typically the page's pathname)
+further: removing the form and PHP components and asking commenters to email
+directly.
 
-* [Juvia][3]: more of a complete Disqus replacement and comes with
-  Askimet support (auto spam filtering as built into Wordpress), though
-  still requires Javascript and therefore un-indexable by Google et al.
+Linkage between page and comment is provided using a `mailto:` link composed of
+a `comment+` prefix (plus addressing) and the page identifier (typically its
+path). The emails are then processed in the same way as Jekyll Static Comments;
+using a MUA hook.
 
-* [PyBlosxom][4]: a quite antiquated blogging engine with a commenting
-  plugin using plain-text storage (see [Dieter_be's blog][5] as an
-  example)
+This rather ingenious use of `mailto:` can easily be integrated in existing
+templates and therefore is truely static; no plugins or server required.
 
-* [yesod][6] (with [yesod-comments][7]): written in Haskell (remarkably
-  [still possible][8] to deploy on Heroku), which will require time
-  commitment (see [pbrisbin's blog][9] as an example)
+It could be argued that sending an email rather than writing in a form
+disconnects the commenter from the website somewhat. Also, loading an email
+client just to leave a short comment (for example) may deter some users.
 
-All in all, there's still nothing as simple as Wordpress.
+On the other hand, the user will already by well acquaninted with the writing
+environment provided by an email client (which are typically better suited than
+a plain input box). Second, most modern browsers can associate `mailto:`
+handlers with with webmail clients, minimising loading time friction.
 
-One more:
-https://blog.caurea.org/2012/03/31/this-blog-has-comments-again.html
+### The rest
 
-Email the comment to an address comprised of the page's url
+Other approaches that don't meet the criteria of static commenting though may
+be of interest include [PyBlosxom][]; a well-matured Python blogging engine
+that ships with a [comment plugin][pyblosxom-comments] but sadly does not work
+with static rendering, [Juvia][]; an open-source commenting service similar to
+Disqus which depends on JavaScript and [NoNonsense Forum][nononsense]; which,
+as the name implies, is more a standalone forum but makes novel use of RSS as a
+datastore.
 
-  [3]: https://github.com/phusion/juvia
-  [4]: http://pyblosxom.github.com/
-  [5]: http://dieter.plaetinck.be/migrating_blogs_from_drupal_to_pyblosxom.html#comments
-  [6]: http://www.yesodweb.com/
-  [7]: https://github.com/pbrisbin/yesod-comments
-  [8]: https://github.com/yesodweb/yesod/wiki/Deploying-Yesod-Apps-to-Heroku
-  [9]: http://pbrisbin.com/posts/comments
-  [11]: http://camendesign.com/code/nononsense_forums
+## Conclusion
+
+This post set out to explore alternatives to third-party commenting services
+that are suitable for static website generators.
+
+Despite best efforts, only two approaches were found; the first using a
+traditional PHP-powered form, the second being email-based and using specially
+purposed `mailto:` links.
+
+A review of both approaches was given and extensions to the former offered.
 
   [disqus]: http://alternativeto.net/software/disqus/
   [comments off]: http://mattgemmell.com/2011/11/29/comments-off/
@@ -105,5 +120,11 @@ Email the comment to an address comprised of the page's url
   [jekyll-static-auto]: http://hezmatt.org/~mpalmer/blog/2011/07/19/static-comments-in-jekyll.html#fnref:comment-antispam
   [anti-spam]: https://en.m.wikipedia.org/wiki/Anti_spam
   [jekyll-deployment]: https://github.com/mojombo/jekyll/wiki/Deployment
+  [akismet]: https://en.m.wikipedia.org/wiki/Akismet
 
   [emailed-comments]: https://blog.caurea.org/2012/03/31/this-blog-has-comments-again.html
+
+  [pyblosxom]: http://pyblosxom.github.com/
+  [pyblosxom-comments]: http://pyblosxom.github.com/1.5/plugins/comments.html
+  [juvia]: https://github.com/phusion/juvia
+  [nononsense]: http://camendesign.com/code/nononsense_forum

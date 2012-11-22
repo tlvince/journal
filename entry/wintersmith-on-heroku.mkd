@@ -100,7 +100,7 @@ root and call its default task (`all`) to generate the Wintersmith site.
 
 Firstly, add the buildpack using:
 
-    heroku config:add BUILDPACK_URL="https://github.com/tlvince/heroku-buildpack-wintersmith.git"
+    heroku config:add BUILDPACK_URL="https://github.com/tlvince/heroku-buildpack-wintersmith.git#wintersmith"
 
 ... then create a `Makefile` containing the command used to build the site:
 
@@ -129,5 +129,5 @@ output, followed by `-----> Building Wintersmith site` in the build log.
   [connect]: http://www.senchalabs.org/connect/
   [procfile]: https://devcenter.heroku.com/articles/procfile
   [buildpack]: https://devcenter.heroku.com/articles/buildpacks
-  [buildpackws]: https://github.com/tlvince/heroku-buildpack-wintersmith
+  [buildpackws]: https://github.com/tlvince/heroku-buildpack-wintersmith/tree/wintersmith
   [wintersmith]: http://jnordberg.github.com/wintersmith/

@@ -1,0 +1,86 @@
+title: Wintersmith Static Commenting
+date: 2012-12-01 08:24:04 +0000
+abstract: An implementation of static commenting in Wintersmith
+
+Read my previous entry on [static commenting][] and wondering how to use it?
+This article walks through one implementation of the "emailed comments"
+approach, using Wintersmith and subsequently, Jade templating.
+
+## Create a mailbox
+
+Comments will eventually be arriving to a designated email address, so it's
+probably worth creating a dedicated mailbox first. `mailto:` links will be
+constructed in the form:
+
+    [mailbox]+[post-slug]@[domain]?subject=[post title]
+
+... so it's worth considering its name for clarities sake. Mine is simply
+`comment@tlvince.com`.
+
+Note, you could use your regular email address here but be ready for increased
+spam.
+
+## Add a config entry
+
+Now you've decided on an email address, add it as a variable that can be later
+accessed in a view/template. Here we'll be using Wintersmith's `config.json`
+but it could quite happily be set as an environment variable (a la [The
+Twelve-Factor App][twelve-factor]).
+
+Add a new key `comment_email` within the locals section:
+
+    {
+      "locals": {
+        ...
+        "comment_email": "comment@tlvince.com"
+      }
+    }
+
+## Create a comments repository
+
+An overarching goal of static commenting is freedom. Here, we'll be storing
+comments as plain-text (Markdown formatted) files in a `git` repository.
+
+Create a new repository within Wintersmith's *contents* directory. Files placed
+here will later be accessible in the `ContentTree` object.
+
+    cd public/contents
+    git init comments
+
+The directory structure here should take the form:
+
+    .
+    |-- [post-url]
+    |   `-- 00.mkd
+    `-- [post2-url]
+        |-- 00.mkd
+        |-- 01.mkd
+        |-- 02.mkd
+        `-- 03.mkd
+
+... where `00.mkd`, `01.mkd`, etc. are comments in chronological order
+containing Markdown and some leading metadata (a la Wintersmith's [page
+plugin][]).
+
+    name: Paul Graham
+    date: 2011-04-07T19:18:06
+    url: http://paulgraham.com
+
+    An insightful comment.
+
+The only mandatory metadata keys are `name` and `date`; arbitrary keys can
+later be accessed in the view.
+
+### An aside for Disqus users
+
+If you're migrating away from Disqus (or just want a backup), try my
+[disqus2yaml][] script. Give it an [API key][disqus-api] and your website's
+short url (Disqus ID) and it'll spit out a directory tree like the one
+explained above.
+
+  [static commenting]: /static-commenting
+  [twelve-factor]: http://www.12factor.net/
+  [page-plugin]: https://github.com/jnordberg/wintersmith/#the-page-plugin
+  [disqus2yaml]: https://github.com/tlvince/scripts-python/blob/master/disqus2yaml.py
+  [disqus-api]: http://help.disqus.com/customer/portal/articles/472122-where-do-i-find-my-api-keys-
+

@@ -104,7 +104,7 @@ Although beyond the scope of this post, I rolled up my Python sleeves and wrote
 a script to do it for me. [gen301][] takes a list of URLs and using fuzzy search
 techniques, checks file names for possible matches. I set it on my [journal][]
 and using [rack-rewrite][] solved the problem. Please let me know how I could
-have done it easier ;).
+have done it easier.
 
 ## Credit
 

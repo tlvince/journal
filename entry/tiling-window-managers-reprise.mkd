@@ -18,7 +18,7 @@ revoke my uneducated view of TWM's!
 I'm a [KISS][] advocate, especially as this equates to optimising the most from
 (old) hardware and so maybe, I lost sight of this slightly by diving into the
 not so-[awesome][]. It's still in baby-stages, true, but I ditched *desktop
-environments* years ago ;) I was on the lookout for something leaner, *KISS'er*
+environments* years ago. I was on the lookout for something leaner, *KISS'er*
 and more importantly easier to use. Then I <span style="text-decoration:
 line-through;">makepkg -efi</span> found dwm.
 

@@ -2,25 +2,14 @@ title: Wintersmith Static Commenting
 date: 2012-12-01 08:24:04 +0000
 abstract: An implementation of static commenting in Wintersmith
 
-Read my previous entry on [static commenting][] and wondering how to use it?
-This article walks through one implementation of the "emailed comments"
-approach, using Wintersmith and subsequently, Jade templating.
+Following my previous entry on [static commenting][], this article serves as a
+step-by-step implementation of the "[emailed comments][]" approach, using
+Wintersmith and subsequently, Jade templating.
+
+*Note*: I have generalised and packaged a variant of this project as
+[wintersmith-static-comments][] on GitHub.
 
 ## Create a mailbox
-
-Comments will eventually be arriving to a designated email address, so it's
-probably worth creating a dedicated mailbox first. `mailto:` links will be
-constructed in the form:
-
-    [mailbox]+[post-slug]@[domain]?subject=[post title]
-
-... so it's worth considering its name for clarities sake. Mine is simply
-`comment@tlvince.com`.
-
-Note, you could use your regular email address here but be ready for increased
-spam.
-
-## Add a config entry
 
 Now you've decided on an email address, add it as a variable that can be later
 accessed in a view/template. Here we'll be using Wintersmith's `config.json`
@@ -78,9 +67,91 @@ If you're migrating away from Disqus (or just want a backup), try my
 short url (Disqus ID) and it'll spit out a directory tree like the one
 explained above.
 
+## Jade includes
+
+With the data source set up, we'll now create a template to present the
+comments.
+
+### comments.jade
+
+```
+- var url = page.url.substring(page.url.indexOf('/') + 1).replace(/\//g, '-');
+- var email = locals.comment_email.split('@');
+- var mailto = email[0] + '+' + url + '@' + email[1];
+
+section#comments
+  h2 Comments
+
+  if _.has(contents.comments, url)
+    - var index = 1;
+    for comment in _.keys(contents.comments[url]).sort()
+      - comment = contents.comments[url][comment]
+      include comment
+      - index++;
+
+  p
+    | Have something to add? Leave a 
+    a(href='mailto:'+mailto+'?subject='+page.title, target='_blank') comment
+    | .
+```
+
+In short, this simply loops through the comment directories that match a
+normalised version of the current url and passes its contents to
+`comment.jade`.
+
+A `mailto` link in the following format is constructed for commenters to leave
+a reply:
+
+    [mailbox]+[normalised-post-url]@[domain]?subject=[post title]
+
+### comment.jade
+
+```
+- var permalink = 'comment' + index;
+
+blockquote(id=permalink,
+  class="#{comment._metadata.reply ? 'comment reply' : 'comment'}")
+  - var content = marked(comment._content)
+  | !{content}
+  p
+    small
+      if comment._metadata.url
+        a(href=comment._metadata.url)=comment._metadata.name
+      else)
+        =comment._metadata.name
+      | , 
+      a(href='\##{permalink}')=comment._metadata.date
+```
+
+The comment is then wrapped in a `blockquote`, given a class for styling and
+anchored with a permalink. Simple.
+
+As an embellishment to the [generalised version][wintersmith-static-comments],
+the comment is also parsed as Markdown by exposing `marked` in Wintersmith's
+[page plugin][expose-marked]. You'll need to use *exposed-marked* branch of [my
+fork][wintersmith-fork] of Wintersmith if you want to try this.
+
+## Integration
+
+Lastly, integrate comments into your main template using an `include`
+statement:
+
+```
+article
+  header
+    h1=page.title
+  section#contents
+    | !{page.html}
+  include comments
+```
+
   [static commenting]: /static-commenting
+  [emailed comments]: /static-commenting#emailed-comments
   [twelve-factor]: http://www.12factor.net/
   [page-plugin]: https://github.com/jnordberg/wintersmith/#the-page-plugin
   [disqus2yaml]: https://github.com/tlvince/scripts-python/blob/master/disqus2yaml.py
   [disqus-api]: http://help.disqus.com/customer/portal/articles/472122-where-do-i-find-my-api-keys-
-
+  [underscore]: http://underscorejs.org/#objects
+  [wintersmith-static-comments]: https://github.com/tlvince/wintersmith-static-comments
+  [expose-marked]: https://github.com/tlvince/wintersmith/commit/8c8e0faed8b76629825ab270cb79034e48f165c6
+  [wintersmith-fork]: https://github.com/tlvince/wintersmith/branches

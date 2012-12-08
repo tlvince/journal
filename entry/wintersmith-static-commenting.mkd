@@ -3,10 +3,10 @@ date: 2012-12-01 08:24:04 +0000
 abstract: An implementation of static commenting in Wintersmith
 
 Following my previous entry on [static commenting][], this article serves as a
-step-by-step implementation of the "[emailed comments][]" approach, using
+step-by-step guide to implementing the "[emailed comments][]" approach in
 Wintersmith and subsequently, Jade templating.
 
-*Note*: I have generalised and packaged a variant of this project as
+*Note*: I've generalised and packaged a variant of this project as
 [wintersmith-static-comments][] on GitHub.
 
 ## Create a mailbox

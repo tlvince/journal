@@ -128,7 +128,7 @@ anchored with a permalink. Simple.
 
 As an embellishment to the [generalised version][wintersmith-static-comments],
 comment are also parsed as Markdown by exposing `marked` in Wintersmith's [page
-plugin][expose-marked]. You'll need to use *exposed-marked* branch of [my
+plugin][expose-marked]. You'll need to use the *exposed-marked* branch of [my
 fork][wintersmith-fork] of Wintersmith if you want to try this.
 
 ## Integration
@@ -149,14 +149,14 @@ You should now see a new comment section like the one below. See my [Vim
 XDG][vim-xdg] post for an example of how comments themselves are rendered.
 
 When you receive a comment, it's a simple case of saving it in the comments
-repository and rebuilding the site. If the repository is hosted public (as is
+repository and rebuilding the site. If the repository is hosted publicly (as is
 the case with [mine][gh-comments]), commenters could even add their comment via
 a pull-request or use GitHub's [create file feature][gh-create] directly.
 
   [static commenting]: /static-commenting
   [emailed comments]: /static-commenting#emailed-comments
   [twelve-factor]: http://www.12factor.net/
-  [page-plugin]: https://github.com/jnordberg/wintersmith/#the-page-plugin
+  [page plugin]: https://github.com/jnordberg/wintersmith/#the-page-plugin
   [disqus2yaml]: https://github.com/tlvince/scripts-python/blob/master/disqus2yaml.py
   [disqus-api]: http://help.disqus.com/customer/portal/articles/472122-where-do-i-find-my-api-keys-
   [underscore]: http://underscorejs.org/#objects

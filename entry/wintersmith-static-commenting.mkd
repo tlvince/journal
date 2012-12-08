@@ -145,6 +145,14 @@ article
   include comments
 ```
 
+You should now see a new comment section like the one below. See my [Vim
+XDG][vim-xdg] post for an example of how comments themselves are rendered.
+
+When you receive a comment, it's a simple case of saving it in the comments
+repository and rebuilding the site. If the repository is hosted public (as is
+the case with [mine][gh-comments]), commenters could even add their comment via
+a pull-request or use GitHub's [create file feature][gh-create] directly.
+
   [static commenting]: /static-commenting
   [emailed comments]: /static-commenting#emailed-comments
   [twelve-factor]: http://www.12factor.net/
@@ -155,3 +163,6 @@ article
   [wintersmith-static-comments]: https://github.com/tlvince/wintersmith-static-comments
   [expose-marked]: https://github.com/tlvince/wintersmith/commit/8c8e0faed8b76629825ab270cb79034e48f165c6
   [wintersmith-fork]: https://github.com/tlvince/wintersmith/branches
+  [vim-xdg]: /vim-respect-xdg#comments
+  [gh-comments]: https://github.com/tlvince/tlvince-comments
+  [gh-create]: https://github.com/blog/1327-creating-files-on-github

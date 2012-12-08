@@ -9,19 +9,21 @@ Wintersmith and subsequently, Jade templating.
 *Note*: I've generalised and packaged a variant of this project as
 [wintersmith-static-comments][] on GitHub.
 
-## Create a mailbox
+## Configure a mailbox
 
-Now you've decided on an email address, add it as a variable that can be later
-accessed in a view/template. Here we'll be using Wintersmith's `config.json`
-but it could quite happily be set as an environment variable (a la [The
-Twelve-Factor App][twelve-factor]).
+Comments will be sent via email, so first decide on an address to use. A likely
+candidate is `comment@your-domain.com`, but any address will do fine.
 
-Add a new key `comment_email` within the locals section:
+Next, add it as a variable that can be later accessed in a view/template. Here
+we'll be using Wintersmith's `config.json` but it could quite happily be set as
+an environment variable (a la [The Twelve-Factor App][twelve-factor]).
+
+Add a new key --- `comment_email` --- within the locals section:
 
     {
       "locals": {
         ...
-        "comment_email": "comment@tlvince.com"
+        "comment_email": "comment@example.com"
       }
     }
 
@@ -31,7 +33,7 @@ An overarching goal of static commenting is freedom. Here, we'll be storing
 comments as plain-text (Markdown formatted) files in a `git` repository.
 
 Create a new repository within Wintersmith's *contents* directory. Files placed
-here will later be accessible in the `ContentTree` object.
+here will later be accessible within the global `ContentTree` object.
 
     cd public/contents
     git init comments
@@ -49,7 +51,7 @@ The directory structure here should take the form:
 
 ... where `00.mkd`, `01.mkd`, etc. are comments in chronological order
 containing Markdown and some leading metadata (a la Wintersmith's [page
-plugin][]).
+plugin][]):
 
     name: Paul Graham
     date: 2011-04-07T19:18:06
@@ -95,12 +97,10 @@ section#comments
     | .
 ```
 
-In short, this simply loops through the comment directories that match a
-normalised version of the current url and passes its contents to
-`comment.jade`.
+In short, this simply loops through comment directories that match a normalised
+version of the current url and passes their contents to `comment.jade`.
 
-A `mailto` link in the following format is constructed for commenters to leave
-a reply:
+The `mailto` link is constructed in the following form:
 
     [mailbox]+[normalised-post-url]@[domain]?subject=[post title]
 
@@ -123,12 +123,12 @@ blockquote(id=permalink,
       a(href='\##{permalink}')=comment._metadata.date
 ```
 
-The comment is then wrapped in a `blockquote`, given a class for styling and
+Each comment is then wrapped in a `blockquote`, given a class for styling and
 anchored with a permalink. Simple.
 
 As an embellishment to the [generalised version][wintersmith-static-comments],
-the comment is also parsed as Markdown by exposing `marked` in Wintersmith's
-[page plugin][expose-marked]. You'll need to use *exposed-marked* branch of [my
+comment are also parsed as Markdown by exposing `marked` in Wintersmith's [page
+plugin][expose-marked]. You'll need to use *exposed-marked* branch of [my
 fork][wintersmith-fork] of Wintersmith if you want to try this.
 
 ## Integration

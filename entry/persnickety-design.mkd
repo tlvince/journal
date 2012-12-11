@@ -33,10 +33,10 @@ Previously, I was using [hyphenator][], which, all-in-all, works rather well.
 However, since this iteration uses *proudly* uses zero Javascript, I preferred
 a CSS approach.
 
-Alas, although CSS3's hyphenation [works wonderfully in
-Firefox][css-hyphenation], webkit browser have yet to catch up. I toyed with
-enabling it regardless, but as [Divya Manian states][h5bp-hyphens], hyphens
-without justified text *reduces* readability.
+Alas, although CSS3's hyphenation [works wonderfully in Firefox][css-hyphens],
+webkit browser have yet to catch up. I toyed with enabling it regardless, but
+as [Divya Manian states][h5bp-hyphens], hyphens without justified text
+*reduces* readability.
 
 Besides conditionally setting justified text via CSS browser hacks, native
 support for hyphenation *and* justified text is *still* impractical as of 2012.

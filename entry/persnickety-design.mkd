@@ -26,7 +26,7 @@ date][date], the imposition of block capitals (such as "API") is reduced to
 match surrounding body text and [widows][] (lines containing only a single
 word) are eliminated through careful placement of `&nbsp;`.
 
-### An aside on hyphenation
+### A bleak aside on hyphenation
 
 As with the last iteration of this site, I was keen to use hyphenation.
 Previously, I was using [hyphenator][], which, all-in-all, works rather well.

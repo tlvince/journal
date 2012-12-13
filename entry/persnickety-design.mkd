@@ -1,6 +1,6 @@
 title: Persnickety design
 date: 2012-12-11 20:44:45 +0000
-abstract: The typographical and usability details of my site
+abstract: A brief look at the typographical details of my site
 
 ## Typography
 
@@ -30,12 +30,12 @@ word) are eliminated through careful placement of `&nbsp;`.
 
 As with the last iteration of this site, I was keen to use hyphenation.
 Previously, I was using [hyphenator][], which, all-in-all, works rather well.
-However, since this iteration uses *proudly* uses zero Javascript, I preferred
-a CSS approach.
+However, since this iteration *proudly* uses zero Javascript, I preferred a CSS
+approach.
 
 Alas, although CSS3's hyphenation [works wonderfully in Firefox][css-hyphens],
-webkit browser have yet to catch up. I toyed with enabling it regardless, but
-as [Divya Manian states][h5bp-hyphens], hyphens without justified text
+webkit has yet to catch up. I toyed with enabling it regardless, but as [Divya
+Manian states][h5bp-hyphens], hyphens without justified text
 *reduces* readability.
 
 Besides conditionally setting justified text via CSS browser hacks, native
@@ -56,14 +56,3 @@ Lets hope 2013 is the year of the hyphen.
   [hyphenator]: https://code.google.com/p/hyphenator/
   [css-hyphens]: http://caniuse.com/css-hyphens
   [h5bp-hyphens]: https://github.com/h5bp/html5-boilerplate/issues/708#issuecomment-1861631
-
-## Anchors
-
-* identify.js
-* Pilcrow styling
-
-## Code
-
-* Wrap vs scroll
-
-  [identify.js]: https://github.com/tlvince/identify.js

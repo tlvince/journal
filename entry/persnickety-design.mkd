@@ -55,7 +55,7 @@ Lets hope 2013 is the year of the hyphen.
   [api]: https://github.com/ekalinin/typogr.js#api
   [open-pulls]: https://github.com/ekalinin/typogr.js/pulls/tlvince
   [pulls]: https://github.com/ekalinin/typogr.js/pulls/tlvince?direction=desc&page=1&sort=created&state=closed
-  [date]: #date-authored
+  [date]: /persnickety-design#date-authored
   [dashes]: http://www.smashingmagazine.com/2011/08/15/mind-your-en-and-em-dashes-typographic-etiquette/
   [widows]: https://en.wikipedia.org/wiki/Widow_(typesetting)
   [hyphenator]: https://code.google.com/p/hyphenator/

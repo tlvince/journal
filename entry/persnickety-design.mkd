@@ -25,8 +25,8 @@ SmartyPants. See its [API][] for more details.
 
 After [a few][open-pulls] [patches][pulls], I use typogr.js throughout this
 site. Besides smart quotes and correct use of [en- and em-dashes][dashes],
-ordinals are styled to match `sup` tags, such as those used on a post's
-[authored date][date], the imposition of block capitals (such as "API") is
+ordinals are styled to match `sup` tags (such as those used on a post's
+[authored date][date]), the imposition of block capitals (such as "API") is
 reduced to match surrounding body text and [widows][] (lines containing only a
 single word) are eliminated through careful placement of `&nbsp;`.
 

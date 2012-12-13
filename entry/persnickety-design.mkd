@@ -25,10 +25,10 @@ SmartyPants. See its [API][] for more details.
 
 After [a few][open-pulls] [patches][pulls], I use typogr.js throughout this
 site. Besides smart quotes and correct use of [en- and em-dashes][dashes],
-ordinals are styled to match `sup` tags, such as those used on the [published
-date][date], the imposition of block capitals (such as "API") is reduced to
-match surrounding body text and [widows][] (lines containing only a single
-word) are eliminated through careful placement of `&nbsp;`.
+ordinals are styled to match `sup` tags, such as those used on a post's
+[authored date][date], the imposition of block capitals (such as "API") is
+reduced to match surrounding body text and [widows][] (lines containing only a
+single word) are eliminated through careful placement of `&nbsp;`.
 
 ## A bleak aside on hyphenation
 
@@ -55,7 +55,7 @@ Lets hope 2013 is the year of the hyphen.
   [api]: https://github.com/ekalinin/typogr.js#api
   [open-pulls]: https://github.com/ekalinin/typogr.js/pulls/tlvince
   [pulls]: https://github.com/ekalinin/typogr.js/pulls/tlvince?direction=desc&page=1&sort=created&state=closed
-  [date]: #date-published
+  [date]: #date-authored
   [dashes]: http://www.smashingmagazine.com/2011/08/15/mind-your-en-and-em-dashes-typographic-etiquette/
   [widows]: https://en.wikipedia.org/wiki/Widow_(typesetting)
   [hyphenator]: https://code.google.com/p/hyphenator/

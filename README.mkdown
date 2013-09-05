@@ -1,3 +1,7 @@
-Journal entries for http://tlvince.com
+# journal
 
-Copyright 2007-2012 Tom Vincent <http://tlvince.com/contact>
+Journal entries for <http://tlvince.com>.
+
+## Author
+
+© 2007-2013 Tom Vincent <http://tlvince.com/contact>

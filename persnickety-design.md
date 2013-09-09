@@ -1,6 +1,8 @@
+```metadata
 title: Persnickety design
 date: 2012-12-11 20:44:45 +0000
 abstract: A brief look at the typographical details of my site
+```
 
 "Web Design is 95% Typography" [they say][95%]... and I tend to agree. This
 post looks at how improved my site's typography using a Node.js module and

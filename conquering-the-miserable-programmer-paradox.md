@@ -1,6 +1,8 @@
+```metadata
 title: Conquering the miserable programmer paradox
 date: 2011-01-22
 abstract: A productivity hack to overcome rote work
+```
 
 All too commonly, people work on things they despise. Programmers are no
 different, especially since computers are particularly suited to repetitive

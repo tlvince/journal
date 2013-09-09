@@ -1,6 +1,8 @@
+```metadata
 title: Taking off and landing
 date: 2010-08-14
 abstract: A few scribbles before, during and after the flight to Hong Kong
+```
 
 I start to write as I'm waiting for take off. The plane is huge: the wing spans
 as far out as I can see through the window. I've just been given a wet flannel.

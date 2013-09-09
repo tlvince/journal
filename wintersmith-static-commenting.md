@@ -1,6 +1,8 @@
+```metadata
 title: Wintersmith Static Commenting
 date: 2012-12-01 08:24:04 +0000
 abstract: An implementation of static commenting in Wintersmith
+```
 
 Following my previous entry on [static commenting][], this article serves as a
 step-by-step guide to implementing the "[emailed comments][]" approach in

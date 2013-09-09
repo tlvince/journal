@@ -1,6 +1,8 @@
+```metadata
 title: 915resolution After Ubuntu Upgrade To Gutsy
 date: 2007-10-05
 abstract: How to remove 915resolution for upgrading to Gutsy Ubuntu
+```
 
 After getting to grips with the basics of Ubuntu, I thought I might aswell have
 a try a Gutsy --- the new (currently beta) upgrade to Ubuntu.

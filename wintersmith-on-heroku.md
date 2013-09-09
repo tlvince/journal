@@ -1,6 +1,8 @@
+```metadata
 title: Wintersmith on Heroku
 date: 2012-06-22
 abstract: Efficiently serving generated static files using Connect
+```
 
 [Wintersmith][] is a static site generator written in Node. This post describes
 two methods of hosting a Wintersmith-powered site on Heroku. Note, much of this

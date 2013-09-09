@@ -1,6 +1,8 @@
+```metadata
 title: Command Line Basics & Batch Files
 date: 2007-07-25
 abstract: An overview of the Windows command line
+```
 
 ### Old File Names and Relative Paths
 

@@ -1,6 +1,8 @@
+```metadata
 title: Penang
 date: 2011-08-14
 abstract: Hitting a home of heritage
+```
 
 After KL, Penang feels more a holiday resort. Georgetown, the UNESCO protected
 area, encompasses everything you'll want to see in a short trip. Two days would

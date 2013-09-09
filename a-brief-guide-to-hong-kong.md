@@ -1,6 +1,8 @@
+```metadata
 title: A brief guide to Hong Kong
 date: 2010-09-12
 abstract: Some practicalities and things you should know about Hong Kong
+```
 
 Thinking about moving or taking a visit to Hong Kong? Here are some
 practicalities and things you should know from first-hand experience! Note, I'll

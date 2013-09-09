@@ -1,6 +1,8 @@
+```metadata
 title: Converting Eqium Presets To UNIQUEL-IZER
 date: 2008-02-27
 abstract: Hacking Eqium XML files
+```
 
 Since [Elemental Audio][1] have changed hands to [Roger Nichols Digital, Inc][2],
 all their original plugins, such as Eqium and Firium have changed name and been

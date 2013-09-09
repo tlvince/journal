@@ -1,7 +1,8 @@
+```metadata
 title: prowler an inotify based home directory cleaner
 date: 2010-07-15
 abstract: A Linux shell script to keep your home directory clean
-tags: project
+```
 
 [prowler][] is a shell script that automatically deletes files and directories
 from a home directory as soon as they're created. Read on to learn why this

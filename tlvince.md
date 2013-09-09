@@ -1,7 +1,8 @@
+```metadata
 title: tlvince
 date: 2012-02-17
 abstract: The evolution of my website
-tags: project web
+```
 
 Building websites as a hobby since 2005, it was only a matter of time before I
 made one for myself. It has served as an ongoing experiment ever since. This

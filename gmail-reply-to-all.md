@@ -1,6 +1,8 @@
+```metadata
 title: Gmail another little thing to fix
 date: 2011-04-08
 abstract: An idea to prevent accidentally not hitting reply to all in Gmail
+```
 
 Here's another [little thing to fix][1]:
 

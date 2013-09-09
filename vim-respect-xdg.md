@@ -1,6 +1,8 @@
+```metadata
 title: Making vim respect the XDG Base Directory Specification
 date: 2011-02-03
 abstract: Better organisation using XDG
+```
 
 The XDG Base Directory Specification outlines a consistent standard for
 applications to write runtime files. Teaching `vim` to respect it is

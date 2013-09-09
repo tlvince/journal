@@ -1,6 +1,8 @@
+```metadata
 title: Developers are users too!
 date: 2011-03-29
 abstract: A rant about user experience from a developers perspective
+```
 
 *Design for users* is an oft cited, well grounded mantra in programming circles.
 However, us developers often forget about a principle user group: *other

@@ -1,6 +1,8 @@
+```metadata
 title: Manila: paradise lost?
 date: 2010-11-26
 abstract: A post facto entry of an uneasy glance of the Philippines
+```
 
 After months in Hong Kong, Manila seems a stark contrast. The modernistic
 skyline replaced with run-down "bolt-togethers", the clinical cleanliness

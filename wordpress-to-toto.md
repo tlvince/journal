@@ -1,6 +1,8 @@
+```metadata
 title: Migrating from Wordpress to Toto
 date: 2011-05-27
 abstract: A customary site redesign write up
+```
 
 ## Rationale
 

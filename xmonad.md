@@ -1,6 +1,8 @@
+```metadata
 title: xmonad
 abstract: My usage notes for the Haskell-based tiling window manager
 date: 2009-11-21
+```
 
 [xmonad][] is an excellent tiling window manager (TWM) written in Haskell.
 Following my [review of TWM's][review] and publication of my [config

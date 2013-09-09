@@ -1,6 +1,8 @@
+```metadata
 title: Chow Kit
 date: 2011-08-09
 abstract: A feel for the Indonesian cultured sub-district of Malaysia
+```
 
 Arriving late meant I could not sample the city's monorail at night, instead
 opting for a taxi. A tip for anyone stuck in KL Sentral after the trains have

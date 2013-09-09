@@ -1,6 +1,8 @@
+```metadata
 title: Switching to Ubuntu Linux
 date: 2007-09-26
 abstract: A log of my Windows to Linux migration
+```
 
 If you haven't heard of Ubuntu yet, it's a flavour of Linux that's based on
 Debian. To save me the time of writing out why you should be using Ubuntu

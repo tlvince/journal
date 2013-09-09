@@ -1,6 +1,8 @@
+```metadata
 title: Tiling Window Managers
 date: 2009-01-24
 abstract: Thoughts on the usage of tiling window managers
+```
 
 Being brought up with using (what I now know to be called) *Floating* window
 mangers during the short-sighted days of "that other operating-system", it was

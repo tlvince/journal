@@ -1,6 +1,8 @@
+```metadata
 title: The Route
 date: 2011-08-07
 abstract: My Southeast Asia itinerary
+```
 
 My Southeast Asia tour: three nights (to ease in) in Kuala Lumpa (Malaysia, a
 great starting point for travel from Hong Kong) and a further three in

@@ -1,5 +1,5 @@
 ```metadata
-title: Manila: paradise lost?
+title: Manila; paradise lost?
 date: 2010-11-26
 abstract: A post facto entry of an uneasy glance of the Philippines
 ```

@@ -1,5 +1,5 @@
 ```metadata
-title: Making vim respect the XDG Base Directory Specification
+title: Vim respect XDG
 date: 2011-02-03
 abstract: Better organisation using XDG
 ```

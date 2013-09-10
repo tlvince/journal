@@ -64,9 +64,9 @@ hold any weight. Experience makes you a better estimator.
 ### On Python 3
 
 Without going into too much depth, Python 3's library module for requesting web
-pages --- `urllib.request` --- has it's limitations. Since redirect responses are
-[silently ignored][fancy], I found a mature third-party module --- `httplib2`
---- to overcome this.
+pages --- `urllib.request` --- has it's limitations. Since redirect responses
+are [silently ignored][fancy], I found a mature third-party module ---
+`httplib2` --- to overcome this.
 
 Despite strong praise in [Dive Into Python 3][dip3] (DIP3, my main and excellent
 resource for learning Python 3), I ran into a few bugs that prevented me from

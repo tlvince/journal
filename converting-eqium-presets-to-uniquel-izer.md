@@ -21,10 +21,12 @@ issue.
 
 Here's an example:
 
-    <!--2002 Elemental Audio Systems, www.elementalaudio.com-->
-    <uniquelizer_filter_settings version="Roger Nichols Digital UNIQUEL-IZER Settings v1.0">
-    [INSERT .eqm source here]
-    </uniquelizer_filter_settings>
+```xml
+<!--2002 Elemental Audio Systems, www.elementalaudio.com-->
+<uniquelizer_filter_settings version="Roger Nichols Digital UNIQUEL-IZER Settings v1.0">
+[INSERT .eqm source here]
+</uniquelizer_filter_settings>
+```
 
   [1]: http://www.elementalaudio.com/
   [2]: http://www.rogernicholsdigital.com/

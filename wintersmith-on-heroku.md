@@ -19,30 +19,38 @@ time of writing) makes it really easy to get this up and running quickly.
 
 If you haven't already, create a Heroku app:
 
-    heroku create -s cedar
+```bash
+heroku create -s cedar
+```
 
 Next, create a `package.json` file (at the root of your app), declaring
 Wintersmith as a dependency:
 
-    {
-      "name": "node-example",
-      "version": "0.0.1",
-      "dependencies": {
-        "wintersmith": "1.0.x"
-      }
-    }
+```json
+{
+  "name": "node-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "wintersmith": "1.0.x"
+  }
+}
+```
 
 Next, write a [Procfile][] (again, at the root of your app), declaring
 Wintersmith as the default web process type:
 
-    web: wintersmith preview --chdir public --port $PORT
+```
+web: wintersmith preview --chdir public --port $PORT
+```
 
 ... replacing `public` with the directory that contains your site.
 
 Finally, deploy to Heroku and open up your new site in a browser:
 
-    git push heroku master
-    heroku open
+```bash
+git push heroku master
+heroku open
+```
 
 ## Serving static files with Connect
 
@@ -59,30 +67,36 @@ feel free to use something else (Rack/Thin might be a good option).
 
 First add Connect to your `package.json` file:
 
-    "dependencies": {
-      "wintersmith": "1.0.x",
-      "connect": "2.3.x"
-    }
+```json
+"dependencies": {
+  "wintersmith": "1.0.x",
+  "connect": "2.3.x"
+}
+```
 
 ... and install it with `npm install`. Also set the web process type (in
 `Procfile`) as:
 
-    web: node server.js
+```
+web: node server.js
+```
 
 ### Connect server
 
 Now we'll write a minimal web server using the Connect framework. Create a
 `server.js` file (at the root of the project) containing the following:
 
-    var connect = require('connect');
-    var port = process.env.PORT || 3000;
-    var oneDay = 86400000;
+```javascript
+var connect = require('connect');
+var port = process.env.PORT || 3000;
+var oneDay = 86400000;
 
-    connect.createServer(
-      connect.compress(),
-      connect.logger('short'),
-      connect.static(__dirname + '/build', { maxAge: oneDay })
-    ).listen(port);
+connect.createServer(
+  connect.compress(),
+  connect.logger('short'),
+  connect.static(__dirname + '/build', { maxAge: oneDay })
+).listen(port);
+```
 
 An important line here is `var port = process.env.PORT || 3000;` which respects
 the `PORT` environment variable set by Heroku. Otherwise, the list of middleware
@@ -102,12 +116,16 @@ root and call its default task (`all`) to generate the Wintersmith site.
 
 Firstly, add the buildpack using:
 
-    heroku config:add BUILDPACK_URL="https://github.com/tlvince/heroku-buildpack-wintersmith.git#wintersmith"
+```bash
+heroku config:add BUILDPACK_URL="https://github.com/tlvince/heroku-buildpack-wintersmith.git#wintersmith"
+```
 
 ... then create a `Makefile` containing the command used to build the site:
 
-    all:
-      wintersmith build <path>
+```
+all:
+  wintersmith build <path>
+```
 
 Any arbitrary shell commands can also be added to the task as necessary.
 
@@ -116,8 +134,10 @@ Any arbitrary shell commands can also be added to the task as necessary.
 Lets test the set up by first building the site using our `Makefile` and then
 firing up the Connect server:
 
-    make
-    node server.js
+```bash
+make
+node server.js
+```
 
 If successful, you should see your blazingly fast site on
 `http://localhost:3000`. Monitor the `node` output to confirm HTTP caching is

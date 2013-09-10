@@ -17,8 +17,10 @@ the system unresponsive.
 
 Add the following to your `.zshrc` file:
 
-    # Disable hostname completion
-    zstyle ':completion:*' hosts off
+```zsh
+# Disable hostname completion
+zstyle ':completion:*' hosts off
+```
 
 ## Background
 
@@ -39,7 +41,9 @@ match a hostname.
 The idea was to disable hostname completion. With a bit of perseverance with
 the [zshcompsys(1)][2] manual, I came up with:
 
-    zstyle ':completion:*' hosts off
+```zsh
+zstyle ':completion:*' hosts off
+```
 
 `:completion:*` matches any context where tab completion can be used (any
 command, path, glob etc). `hosts` --- the "tag" (or type of completion) ---

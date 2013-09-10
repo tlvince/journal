@@ -27,16 +27,20 @@ for the new settings:
 2.  Remove 915resolution --- I chose remove completely
 3.  Remove Auto915resolution (startup script --- if you used it):
 
-        cd /etc/rc2.d
-        sudo rm S08startupscript
-        cd /etc/init.d
-        sudo rm auto915resolutionScript
+```bash
+cd /etc/rc2.d
+sudo rm S08startupscript
+cd /etc/init.d
+sudo rm auto915resolutionScript
+```
 
 4.  At that point, I restarted just to check if the resolution had changed (from
     native) --- and it did
 5.  Now run:
 
-        sudo dpkg-reconfigure xserver-xorg
+```bash
+sudo dpkg-reconfigure xserver-xorg
+```
 
 6.  This will reconfigure your xorg.conf file. Run through the process as
     normal, it's worth reading the description of whats about to be changed, if

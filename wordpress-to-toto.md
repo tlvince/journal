@@ -41,19 +41,26 @@ a fresh repository that retained the content and history of the drafts in my
 
 1. Clone the existing repository:
 
-       $ git clone --no-hardlinks /path/to/existing/repo new-repo
+```bash
+git clone --no-hardlinks /path/to/existing/repo new-repo
+```
 
 2. Delete what you don't want (from all branches):
 
-       $ git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch articles" --prune-empty -- --all
+```bash
+git filter-branch --index-filter \
+  "git rm -rf --cached --ignore-unmatch articles" --prune-empty -- --all
+```
 
 3. Clean up:
 
-       cd new-repo
-       rm -rf .git/refs/origin
-       git remote rm origin
-       git gc --aggressive
-       git prune
+```bash
+cd new-repo
+rm -rf .git/refs/origin
+git remote rm origin
+git gc --aggressive
+git prune
+```
 
 ## Customising toto
 

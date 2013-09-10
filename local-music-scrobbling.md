@@ -36,8 +36,10 @@ to track what we play and when we played it.
 1. Install `mpdscribble-git`
 2. Add the following to your `~/.mpdscribble/mpdscribble.conf`:
 
-       [local]
-       file = /home/[user]/.cache/mpd/plays.log
+```ini
+[local]
+file = /home/[user]/.cache/mpd/plays.log
+```
 
 That takes care of all future plays, but what about existing data?
 
@@ -59,29 +61,33 @@ provides a solution:
 Last.fm tracks and [import] them to Libre.fm". Usefully, this creates an
 intermediary plain-text file in the format:
 
-    date  trackname  artistname  albumname  trackmbid  artistmbid  albummbid
+```
+date  trackname  artistname  albumname  trackmbid  artistmbid  albummbid
+```
 
 ... which can easily be reused for our purpose. I wrote a small Python3 script
 to do exactly that:
 
 #### lastexport2mpd.py
 
-    #!/usr/bin/python3
-    # lastexport2mpd.py
-    # Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>
+```python
+#!/usr/bin/python3
+# lastexport2mpd.py
+# Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>
 
-    import os
-    import sys
-    import time
+import os
+import sys
+import time
 
-    file = sys.path[0] + "/exported_tracks.txt"
+file = sys.path[0] + "/exported_tracks.txt"
 
-    with open(file) as tracks:
-        with open(sys.path[0] + "/mpd-formatted-tracks.txt", mode='w', encoding='utf-8') as outFile:
-            for line in tracks:
-                timestamp, track, artist, album, trackmbid, artistmbid, albummbid = line.strip("\n").split("\t")
-                timestamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.localtime(int(timestamp)))
-                outFile.write(timestamp + " " + artist + " - " + track + "\n")
+with open(file) as tracks:
+    with open(sys.path[0] + "/mpd-formatted-tracks.txt", mode='w', encoding='utf-8') as outFile:
+        for line in tracks:
+            timestamp, track, artist, album, trackmbid, artistmbid, albummbid = line.strip("\n").split("\t")
+            timestamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.localtime(int(timestamp)))
+            outFile.write(timestamp + " " + artist + " - " + track + "\n")
+```
 
 Just put your `exported_tracks.txt` file in the same folder as
 `lastexport2mpd.py` and grab `mpd-formatted-tracks.txt` once it's finished.
@@ -99,27 +105,29 @@ export the `mpdcron` database to a format that mimics the output from
 
 #### eugene2plain
 
-    #!/usr/bin/python3
-    # eugene2plain.py
-    # Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>
+```python
+#!/usr/bin/python3
+# eugene2plain.py
+# Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>
 
-    import os
-    import sqlite3
+import os
+import sqlite3
 
-    DB = os.path.expanduser("~") + "/.mpdcron/stats.db"
-    OUT = os.path.expanduser("~") + "/plays.log"
-    PREFIX = "1970-01-01T00:00:00Z"
+DB = os.path.expanduser("~") + "/.mpdcron/stats.db"
+OUT = os.path.expanduser("~") + "/plays.log"
+PREFIX = "1970-01-01T00:00:00Z"
 
-    conn = sqlite3.connect(DB)
-    c = conn.cursor()
-    c.execute("SELECT artist,title,play_count FROM song WHERE play_count !='0'")
-    songs = (c.fetchall())
+conn = sqlite3.connect(DB)
+c = conn.cursor()
+c.execute("SELECT artist,title,play_count FROM song WHERE play_count !='0'")
+songs = (c.fetchall())
 
-    with open(OUT, mode='w', encoding='utf-8') as outFile:
-        for song in songs:
-            for i in range(int(song[2])):
-                outFile.write(PREFIX + " " + song[0] + " - " + song[1] + "\n")
-        conn.close
+with open(OUT, mode='w', encoding='utf-8') as outFile:
+    for song in songs:
+        for i in range(int(song[2])):
+            outFile.write(PREFIX + " " + song[0] + " - " + song[1] + "\n")
+    conn.close
+```
 
 The Unix epoch *prefix* is used here since timestamps aren't imported by
 `homescrape`.
@@ -139,7 +147,9 @@ Now your free to do more with your listening data. Send it off to Last.fm and
 make a [poster][] out of it, join the free alternative [Libre.fm][] or just keep
 it private and do cool things like:
 
-    cut -f2- -d ' ' ~/.cache/mpd/plays.log | uniq | wc -l
+```bash
+cut -f2- -d ' ' ~/.cache/mpd/plays.log | uniq | wc -l
+```
 
 :)
 

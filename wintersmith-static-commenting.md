@@ -22,12 +22,14 @@ an environment variable (a la [The Twelve-Factor App][twelve-factor]).
 
 Add a new key --- `comment_email` --- within the locals section:
 
-    {
-      "locals": {
-        ...
-        "comment_email": "comment@example.com"
-      }
-    }
+```json
+{
+  "locals": {
+    ...
+    "comment_email": "comment@example.com"
+  }
+}
+```
 
 ## Create a comments repository
 
@@ -37,29 +39,35 @@ comments as plain-text (Markdown formatted) files in a `git` repository.
 Create a new repository within Wintersmith's *contents* directory. Files placed
 here will later be accessible within the global `ContentTree` object.
 
-    cd public/contents
-    git init comments
+```bash
+cd public/contents
+git init comments
+```
 
 The directory structure here should take the form:
 
-    .
-    |-- [post-url]
-    |   `-- 00.mkd
-    `-- [post2-url]
-        |-- 00.mkd
-        |-- 01.mkd
-        |-- 02.mkd
-        `-- 03.mkd
+```
+.
+|-- [post-url]
+|   `-- 00.mkd
+`-- [post2-url]
+    |-- 00.mkd
+    |-- 01.mkd
+    |-- 02.mkd
+    `-- 03.mkd
+```
 
 ... where `00.mkd`, `01.mkd`, etc. are comments in chronological order
 containing Markdown and some leading metadata (a la Wintersmith's [page
 plugin][]):
 
-    name: Paul Graham
-    date: 2011-04-07T19:18:06
-    url: http://paulgraham.com
+```
+name: Paul Graham
+date: 2011-04-07T19:18:06
+url: http://paulgraham.com
 
-    An insightful comment.
+An insightful comment.
+```
 
 The only mandatory metadata keys are `name` and `date`; arbitrary keys can
 later be accessed in the view.
@@ -78,7 +86,7 @@ comments.
 
 ### comments.jade
 
-```
+```jade
 - var url = page.url.substring(page.url.indexOf('/') + 1).replace(/\//g, '-');
 - var email = locals.comment_email.split('@');
 - var mailto = email[0] + '+' + url + '@' + email[1];
@@ -94,7 +102,7 @@ section#comments
       - index++;
 
   p
-    | Have something to add? Leave a 
+    | Have something to add? Leave a&nbsp;
     a(href='mailto:'+mailto+'?subject='+page.title, target='_blank') comment
     | .
 ```
@@ -104,11 +112,13 @@ version of the current url and passes their contents to `comment.jade`.
 
 The `mailto` link is constructed in the following form:
 
-    [mailbox]+[normalised-post-url]@[domain]?subject=[post title]
+```
+[mailbox]+[normalised-post-url]@[domain]?subject=[post title]
+```
 
 ### comment.jade
 
-```
+```jade
 - var permalink = 'comment' + index;
 
 blockquote(id=permalink,
@@ -121,7 +131,7 @@ blockquote(id=permalink,
         a(href=comment._metadata.url)=comment._metadata.name
       else)
         =comment._metadata.name
-      | , 
+      | ,&nbsp;
       a(href='\##{permalink}')=comment._metadata.date
 ```
 

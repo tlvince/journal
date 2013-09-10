@@ -18,7 +18,9 @@ within the [Problems with Java][wiki] page of awesome's wiki (and within their
 Just download and compile the tiny app and have it launch within your `.xinitrc`
 as so:
 
-    wmname LG3D &
+```bash
+wmname LG3D &
+```
 
 and Java apps should be working as normal again!
 

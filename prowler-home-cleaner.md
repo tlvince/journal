@@ -33,7 +33,9 @@ instance, in the case of [dmenu][], a cache file is usually created within
 `$HOME/.dmenu_cache`. By changing the `$CACHE` variable in `dmenu_run`, you can
 specify a more sane default, such as:
 
-    CACHE="${XDG_CACHE_HOME:-"$HOME/.cache"}/dmenu-cache"
+```bash
+CACHE="${XDG_CACHE_HOME:-"$HOME/.cache"}/dmenu-cache"
+```
 
 Of course, this is time consuming since every offending application will have to
 be customised.
@@ -60,22 +62,24 @@ occurs... introducing `prowler`:
 
 ### prowler
 
-    #!/bin/bash
-    #
-    # prowler: delete unwanted files that otherwise pollute $HOME
-    #
-    # Author:   Tom Vincent
-    # Created:  2010-07-05
+```bash
+#!/bin/bash
+#
+# prowler: delete unwanted files that otherwise pollute $HOME
+#
+# Author:   Tom Vincent
+# Created:  2010-07-05
 
-    WATCH_FILES="${XDG_CONFIG_HOME:-"$HOME/.config"}/${0##*/}/badfiles" # Bash-ism
-    LOG="${XDG_CACHE_HOME:-"$HOME/.cache"}/${0##*/}.log"
+WATCH_FILES="${XDG_CONFIG_HOME:-"$HOME/.config"}/${0##*/}/badfiles" # Bash-ism
+LOG="${XDG_CACHE_HOME:-"$HOME/.cache"}/${0##*/}.log"
 
-    inotifywait -qm --format '%f' -e create "$HOME" | while read file; do
-        if $(grep -Fq "$file" "$WATCH_FILES"); then
-            rm -rf "$HOME/$file"
-            echo "$(date +"%F %R") :: Deleted $HOME/$file" >> $LOG
-        fi
-    done
+inotifywait -qm --format '%f' -e create "$HOME" | while read file; do
+    if $(grep -Fq "$file" "$WATCH_FILES"); then
+        rm -rf "$HOME/$file"
+        echo "$(date +"%F %R") :: Deleted $HOME/$file" >> $LOG
+    fi
+done
+```
 
 `prowler` simply receives a file/directory name when an `inotify` *create* event
 is triggered, checks to see if it's one we're interested in using `grep` --- [let
@@ -93,18 +97,22 @@ running Arch Linux, this means installing the `inotify-tools` package. Next,
 list which files you want to track within a file designated by `WATCH_FILES`.
 Mine looks like this:
 
-    Desktop
-    .adobe
-    .macromedia
-    .log
-    .esd_auth
-    .lyrics
-    .dmenu_cache
+```
+Desktop
+.adobe
+.macromedia
+.log
+.esd_auth
+.lyrics
+.dmenu_cache
+```
 
 Then, make sure those files and directories are already deleted (before running
 `prowler` for the fist time):
 
-    rm -rf ~/`cat ~/.config/prowler/badfiles`
+```bash
+rm -rf ~/`cat ~/.config/prowler/badfiles`
+```
 
 Note, you could avoid this step by configuring `inotifywait` to listen for more
 than just the *create* events. I chose this approach since I would assume
@@ -115,24 +123,28 @@ Now `prowler` is ready to be run. Perhaps a little overkill, I do this by
 launching it as a daemon when *X* starts up. Make sure `prowler` is in `$PATH`
 and then add `prowler &` to your `.xinitrc`:
 
-    #!/bin/sh
-    # .xinitrc
-    ...
-    prowler &
-    exec xmonad
+```bash
+#!/bin/sh
+# .xinitrc
+...
+prowler &
+exec xmonad
+```
 
 Restart *X* and there you have it; an simple automatic home directory cleaner.
 You could even save yourself a few lines of code by removing the logging
 feature, though sometimes it's interesting to see what's happening:
 
-    $ watch -n1 cat ~/.cache/prowler.log
-    2010-07-15 10:25 :: Deleted /home/tom/Desktop
-    2010-07-15 11:55 :: Deleted /home/tom/.adobe
-    2010-07-15 11:55 :: Deleted /home/tom/.macromedia
-    2010-07-15 11:55 :: Deleted /home/tom/.adobe
-    2010-07-15 11:55 :: Deleted /home/tom/.macromedia
-    2010-07-15 11:55 :: Deleted /home/tom/.adobe
-    2010-07-15 11:55 :: Deleted /home/tom/.macromedia
+```bash
+$ watch -n1 cat ~/.cache/prowler.log
+2010-07-15 10:25 :: Deleted /home/tom/Desktop
+2010-07-15 11:55 :: Deleted /home/tom/.adobe
+2010-07-15 11:55 :: Deleted /home/tom/.macromedia
+2010-07-15 11:55 :: Deleted /home/tom/.adobe
+2010-07-15 11:55 :: Deleted /home/tom/.macromedia
+2010-07-15 11:55 :: Deleted /home/tom/.adobe
+2010-07-15 11:55 :: Deleted /home/tom/.macromedia
+```
 
 Flash tries to create six directories in under a second even though it runs fine
 without them!

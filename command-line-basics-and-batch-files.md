@@ -11,25 +11,29 @@ will have to find out the 8.3 version or enclose the whole path in
 double quotes. 8.3 file names and paths can be found by using `dir /x` in
 command prompt, e.g.:
 
-    cmd.exe
-    cd \
-    dir /x
-    Volume in drive C is Home
-    Volume Serial Number is BC55-A8B4
-    Directory of C:\
-    27/12/2005 01:19 0         AUTOEXEC.BAT
-    27/12/2005 01:19 0         CONFIG.SYS
-    24/07/2007 19:21
-    DOWNLO~1 Downloads
-    2 File(s) 0 bytes
-    1 Dir(s) 12,983,218,176 bytes free
+```dos
+cmd.exe
+cd \
+dir /x
+Volume in drive C is Home
+Volume Serial Number is BC55-A8B4
+Directory of C:\
+27/12/2005 01:19 0         AUTOEXEC.BAT
+27/12/2005 01:19 0         CONFIG.SYS
+24/07/2007 19:21
+DOWNLO~1 Downloads
+2 File(s) 0 bytes
+1 Dir(s) 12,983,218,176 bytes free
+```
 
 `DOWNLO~1` is the 8.3 path name of the folder Downloads. Full paths that
 include spaces need to be enclosed by double quotes (`""`), e.g.
 
-    cmd.exe
-    cd "Downloads\My Received Files"
-    C:\Downloads\My Received Files>
+```dos
+cmd.exe
+cd "Downloads\My Received Files"
+C:\Downloads\My Received Files>
+```
 
 ### The CD Command
 
@@ -37,29 +41,37 @@ The CD command changes the current active directory. It allows you to
 move into one directory to another. For example, if you wanted to move
 the Windows directory, you would type:
 
-    cd Windows
+```dos
+cd Windows
+```
 
 If you are currently in the Windows directory and wanted to go inside a
 subdirectory, you would type:
 
-    cd System
+```dos
+cd System
+```
 
 Because Windows was the active directory, no other commands are needed.
 But if you knew you wanted to move to a subdirectory of a directory
 immediately you use a back slash (`\`). So the command would be: cd
 Parent Directory\Subdirectory e.g.
 
-    cd Windows\System
-    C:\Windows\System>
+```dos
+cd Windows\System
+C:\Windows\System>
+```
 
 This is called moving into a "deep" directory. If however, you were
 already in a deep directory and wanted to move directly to a folder that
 is nearer to the root, you can include an initial back slash (`\`). This
 tells the CD command to move to the root of the drive first.
 
-    C:\Downloads\My Received Files>
-    cd \Windows\System
-    C:\Windows\System>
+```dos
+C:\Downloads\My Received Files>
+cd \Windows\System
+C:\Windows\System>
+```
 
 ### Relative Paths & Parent Folders
 
@@ -72,10 +84,12 @@ return to the root of the drive by typing a back slash (`\`) Relative
 paths can be used with the CD command as before and can be strung
 together like usual, e.g.
 
-    cmd.exe
-    C:\Documents and Settings\Tom>
-    cd ..\..
-    C:\>
+```dos
+cmd.exe
+C:\Documents and Settings\Tom>
+cd ..\..
+C:\>
+```
 
 Relative paths are a useful way of saving time when navigating between
 folders, but are good to implement in folders that can have changing
@@ -85,9 +99,11 @@ nested within the games folders and the games folder tree remains
 intact, relative paths can be used in the config's to point, for
 example, to an exe that is in the games root folder, i.e.
 
-    D:\Quake 3\Servers\2vs2.bat
-    cd ..
-    START Quake3.exe
+```dos
+D:\Quake 3\Servers\2vs2.bat
+cd ..
+START Quake3.exe
+```
 
 ### Running A Batch File That Closes The CMD Window
 
@@ -102,27 +118,33 @@ it's still performing tasks." One way of closing the command window
 before the program has closed is to call the program with the START
 command, e.g.
 
-    @ ECHO OFF
-    D:
-    cd "D:\Games\Quake 3
-    START Quake3.exe
+```dos
+@ ECHO OFF
+D:
+cd "D:\Games\Quake 3
+START Quake3.exe
+```
 
 If the exe file contains a space, it's corresponding 8.1 filename will
 have to be used, e.g.
 
-    @ ECHO OFF
-    D:
-    cd "D:\Games\Quake 3"
-    START Quake3~1.exe
+```dos
+@ ECHO OFF
+D:
+cd "D:\Games\Quake 3"
+START Quake3~1.exe
+```
 
 Or it is possible to "trick" the START command by typing empty double
 quotes before the exe and then enclosing the exe in it's own double
 quotes:
 
-    @ ECHO OFF
-    D:
-    cd "D:\Games\Quake 3"
-    START "" "Quake 3.exe"
+```dos
+@ ECHO OFF
+D:
+cd "D:\Games\Quake 3"
+START "" "Quake 3.exe"
+```
 
 (Usually, the empty double quotes would be used to give the command
 prompt's window a title)
@@ -140,4 +162,3 @@ Now click and highlight the text you want copied and press enter.
 * `Net Stop` --- Stops a service
 * `rmdir /s` --- Deletes a folder
 * `shutdown -s -f -t 10` --- Shutdown PC
-

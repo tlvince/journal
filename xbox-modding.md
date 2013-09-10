@@ -87,9 +87,7 @@ Essential links for anyone who would like to attempt this:
 
 Now onto the next project!
 
-  [1]: http://forums.xbox-scene.com/index.php?showtopic=231250
-  "Which Mod Chip is better"
-  [ndure]: http://forums.xbox-scene.com/index.php?showtopic=496263
-  "Ndure Guide"
+  [1]: http://forums.xbox-scene.com/index.php?showtopic=231250 "Which Mod Chip is better"
+  [ndure]: http://forums.xbox-scene.com/index.php?showtopic=496263 "Ndure Guide"
   [xbs]: http://www.xbox-scene.com/
   [xbmc]: http://www.xboxmediacenter.com/

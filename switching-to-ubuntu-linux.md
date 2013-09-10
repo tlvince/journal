@@ -64,7 +64,9 @@ hard-drive completely formatted:
 * First booted Ubuntu using the Live CD
 * Securely formatted the hard-drive using:
 
-    `sudo shred -n1 -v /dev/hda`
+```bash
+sudo shred -n1 -v /dev/hda
+```
 
 * Reboot and run the Ubuntu Installer
 
@@ -89,10 +91,12 @@ After Windows has been installed, it installs it's own bootloader, which
 hides our Linux install from the system. To allow us to boot back into
 Linux, we need to [recover grub][]. Used this for the Windows entry:
 
-    title           Microsoft Windows XP Home
-    root            (hd0,1)
-    makeactive
-    chainloader +1
+```
+title           Microsoft Windows XP Home
+root            (hd0,1)
+makeactive
+chainloader +1
+```
 
 ### Ubuntu Installed
 
@@ -137,7 +141,9 @@ I thought that even after changing my default resolution back to the
 monitor's native, the fonts still looked quite bad. Firstly, I had to
 find [change the DPI to 96][] using:
 
-    DisplaySize    338 211 # 1280x800 96dpi
+```
+DisplaySize    338 211 # 1280x800 96dpi
+```
 
 After running the `xdpyinfo | grep resolution` command, my dpi would never be
 96x96. After searching around, I found there is a [bug in the xorg.config][]

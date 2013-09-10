@@ -75,7 +75,9 @@ Open the "Developer mode" drop-down and click "Pack extension". After selecting
 the source file directory you just downloaded and packing the extension, drag
 and drop the resulting `.crx` file into Chromium or invoke
 
-    $ chromium /path/to/usercontent.crx
+```bash
+$ chromium /path/to/usercontent.crx
+```
 
 ... to install the extension. Now open userContent's options page and paste
 Fanboy's CSS rules.

@@ -15,19 +15,23 @@ Here's the situation: I want to update Chromium's `userstyle` CSS file with the
 latest Fanboy element hider rules. As hackers do, my first instinct is to write
 a script to do it for me. A few lines of Python later, and I'm faced with this:
 
-    Traceback (most recent call last):
-      ...
-    urllib.error.URLError: <urlopen error [Errno 10060] A connection attempt failed
-    because the connected party did not properly respond after a period of time, or
-    established connection failed because connected host has failed to respond>
+```python
+Traceback (most recent call last):
+  ...
+urllib.error.URLError: <urlopen error [Errno 10060] A connection attempt failed
+because the connected party did not properly respond after a period of time, or
+established connection failed because connected host has failed to respond>
+```
 
 "Uh?! It must be that damn corporate firewall again." Now, I've seen this one
 before and, armed with another script (to set up `cmd` with the correct proxy
 settings... yes, I'm running Windows here), I try again... with no joy:
 
-    File "C:\Python31\lib\http\client.py", line 684, in _tunnel
-    for header, value in self._tunnel_headers.iteritems():
-    AttributeError: 'dict' object has no attribute 'iteritems'
+```python
+File "C:\Python31\lib\http\client.py", line 684, in _tunnel
+for header, value in self._tunnel_headers.iteritems():
+AttributeError: 'dict' object has no attribute 'iteritems'
+```
 
 "I'll fix it later", I think as I copy/paste the file manually.
 
@@ -63,19 +67,21 @@ Latest (presumedly stable) build was 2009?!
 
 Oh, well, I've come this far, I might as well try it:
 
-    java -jar yuicompressor-2.4.2.jar Custom.css
+```java
+java -jar yuicompressor-2.4.2.jar Custom.css
 
-    Exception in thread "main" java.lang.reflect.InvocationTargetException
-            at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-            at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-            at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-            at java.lang.reflect.Method.invoke(Unknown Source)
-            at com.yahoo.platform.yui.compressor.Bootstrap.main(Bootstrap.java:20)
-    Caused by: java.lang.IllegalArgumentException: Illegal group reference
-            at java.util.regex.Matcher.appendReplacement(Unknown Source)
-            at com.yahoo.platform.yui.compressor.CssCompressor.compress(CssCompressor.java:86)
-            at com.yahoo.platform.yui.compressor.YUICompressor.main(YUICompressor.java:178)
-            ... 5 more
+Exception in thread "main" java.lang.reflect.InvocationTargetException
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at com.yahoo.platform.yui.compressor.Bootstrap.main(Bootstrap.java:20)
+Caused by: java.lang.IllegalArgumentException: Illegal group reference
+        at java.util.regex.Matcher.appendReplacement(Unknown Source)
+        at com.yahoo.platform.yui.compressor.CssCompressor.compress(CssCompressor.java:86)
+        at com.yahoo.platform.yui.compressor.YUICompressor.main(YUICompressor.java:178)
+        ... 5 more
+```
 
 "Damnnn it!".
 
@@ -122,13 +128,15 @@ straight away.
 
 Nice, a nice easy download link.
 
-    java -jar ivy-2.2.0.jar
-    :: loading settings :: url = jar:file:/C:/Documents%20and%20Settings/user/My
-    %20Documents/dwn/unsorted/apache-ivy-2.2.0-bin-with-deps/apache-ivy-2.2.0/ivy-2.
-    2.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
-    :: resolving dependencies :: org.apache.ivy#ivy;2.2.0
-            confs: [core, httpclient, oro, vfs, sftp, standalone, ant, default, test
-    , source]
+```java
+java -jar ivy-2.2.0.jar
+:: loading settings :: url = jar:file:/C:/Documents%20and%20Settings/user/My
+%20Documents/dwn/unsorted/apache-ivy-2.2.0-bin-with-deps/apache-ivy-2.2.0/ivy-2.
+2.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+:: resolving dependencies :: org.apache.ivy#ivy;2.2.0
+        confs: [core, httpclient, oro, vfs, sftp, standalone, ant, default, test
+, source]
+```
 
 Zzz. About a minute later and nothing happend. "Resolving dependencies... Oh,
 it's trying to download something." Firing up the aforementioned "cmd proxy
@@ -137,7 +145,7 @@ setter" script, but no, still nothing.
 ## Ant (round 2)
 
 Something's up here. I'll rollback. Arbitrarily, I tried a [DDG search][ddg]
-instead. 
+instead.
 
   [![Duck Duck Go's official site badge][ddgth]][ddg]
 
@@ -161,54 +169,60 @@ the download link.
 
 Good, nice and easy. Moving on...
 
-    ant
-    Unable to locate tools.jar. Expected to find it in C:\Program Files\Java\jre6\li
-    b\tools.jar
-    Buildfile: build.xml does not exist!
-    Build failed
+```dos
+ant
+Unable to locate tools.jar. Expected to find it in C:\Program Files\Java\jre6\li
+b\tools.jar
+Buildfile: build.xml does not exist!
+Build failed
+```
 
 Huh?! "Build failed"? I just wanted to see if it'll run okay. And what's this
 Java error? You didn't mention anything about Java.
 
-    ant -h
-    Unable to locate tools.jar. Expected to find it in C:\Program Files\Java\jre6\li
-    b\tools.jar
-    ant [options] [target [target2 [target3] ...]]
-    Options:
-      ...
-      -buildfile <file>      use given buildfile
-        -file    <file>              ''
-        -f       <file>              ''
-      ...
+```dos
+ant -h
+Unable to locate tools.jar. Expected to find it in C:\Program Files\Java\jre6\li
+b\tools.jar
+ant [options] [target [target2 [target3] ...]]
+Options:
+  ...
+  -buildfile <file>      use given buildfile
+    -file    <file>              ''
+    -f       <file>              ''
+  ...
+```
 
 Hmm, seems like an option to specify the `build.xml` location (though, isn't
 that what `[target]` is?). Anyway, let's try that:
 
-    ant -buildfile "C:\Documents and Settings\user\My Doc
-    uments\dwn\unsorted\yuicompressor-2.4.2\yuicompressor-2.4.2\build.xml"
-    Unable to locate tools.jar. Expected to find it in C:\Program Files\Java\jre6\li
-    b\tools.jar
-    Buildfile: C:\Documents and Settings\user\My Documents\dwn\unsorted\yuicompr
-    essor-2.4.2\yuicompressor-2.4.2\build.xml
+```java
+ant -buildfile "C:\Documents and Settings\user\My Doc
+uments\dwn\unsorted\yuicompressor-2.4.2\yuicompressor-2.4.2\build.xml"
+Unable to locate tools.jar. Expected to find it in C:\Program Files\Java\jre6\li
+b\tools.jar
+Buildfile: C:\Documents and Settings\user\My Documents\dwn\unsorted\yuicompr
+essor-2.4.2\yuicompressor-2.4.2\build.xml
 
-    -load.properties:
+-load.properties:
 
-    -init:
+-init:
 
-    build.classes:
-        [javac] C:\Documents and Settings\user\My Documents\dwn\unsorted\yuicomp
-    ressor-2.4.2\yuicompressor-2.4.2\build.xml:23: warning: 'includeantruntime' was
-    not set, defaulting to build.sysclasspath=last; set to false for repeatable buil
-    ds
+build.classes:
+    [javac] C:\Documents and Settings\user\My Documents\dwn\unsorted\yuicomp
+ressor-2.4.2\yuicompressor-2.4.2\build.xml:23: warning: 'includeantruntime' was
+not set, defaulting to build.sysclasspath=last; set to false for repeatable buil
+ds
 
-    BUILD FAILED
-    C:\Documents and Settings\user\My Documents\dwn\unsorted\yuicompressor-2.4.2
-    \yuicompressor-2.4.2\build.xml:23: Unable to find a javac compiler;
-    com.sun.tools.javac.Main is not on the classpath.
-    Perhaps JAVA_HOME does not point to the JDK.
-    It is currently set to "C:\Program Files\Java\jre6"
+BUILD FAILED
+C:\Documents and Settings\user\My Documents\dwn\unsorted\yuicompressor-2.4.2
+\yuicompressor-2.4.2\build.xml:23: Unable to find a javac compiler;
+com.sun.tools.javac.Main is not on the classpath.
+Perhaps JAVA_HOME does not point to the JDK.
+It is currently set to "C:\Program Files\Java\jre6"
 
-    Total time: 0 seconds
+Total time: 0 seconds
+```
 
 **BUILD FAILED**. Ah, *now* you tell me that I explicitly need JDK.
 

@@ -15,4 +15,4 @@ new:
 	echo "abstract: $$abstract" >> "$$out"; \
 	echo "\`\`\`" >> "$$out"; \
 	echo "" >> "$$out"; \
-	echo "[article]" >> "$$out"
+	vim -c '+/^$$' "$$out"

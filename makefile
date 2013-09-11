@@ -14,5 +14,5 @@ new:
 	echo "date: $$(date +'%F %T %z')" >> "$$out"; \
 	echo "abstract: $$abstract" >> "$$out"; \
 	echo "\`\`\`" >> "$$out"; \
-	echo "" >> "$$out"; \
-	vim -c '+/^$$' "$$out"
+	gecho -e "\n" >> "$$out"; \
+	vim -c '+norm G' '+star' "$$out"

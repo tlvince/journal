@@ -112,7 +112,7 @@ jump to pages. "Hmm, what are those called again?"; [google sitelinks][gsl].
 because I live in China, doesn't mean I can speak Chinese. Where's an English
 fall-back option? Oh, forget it.
 
-  [![The 1st of a Google search for Apache Ant][gantth]][gant]
+  [![The first result of a Google search for Apache Ant][gantth]][gant]
 
   [gant]: /assets/img/2011-03-14_16-41-54.png
   [gantth]: /assets/img/th/2011-03-14_16-41-54.png

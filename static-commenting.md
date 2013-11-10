@@ -12,7 +12,7 @@ reviews existing solutions.
 
 Comments are an oft-neglected facet of static website generators. Typically,
 they are outsourced to third-parties (Disqus [et al][disqus]., social networks
-and news websites) or are simply "[switched off][comments off]".
+and news websites) or are simply [switched off][comments off].
 
 Whilst the [pros][three reasons] and [cons][harmful] of the aforementioned are
 well-documented, the middle-ground --- a commenting system that doesn't rely on

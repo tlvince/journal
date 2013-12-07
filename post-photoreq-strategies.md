@@ -107,7 +107,7 @@ a few approaches worth trying:
 
 The [Python Imaging Library][pil] (PIL) contains a [verify method][verify]
 (search for 'verify') that should catch obvious corruptions. After installing
-PIL, try running Denilson Sá's `[jpeg_corrupt][]`, which is a thin
+PIL, try running Denilson Sá's [jpeg_corrupt][], which is a thin
 command-line-based wrapper around PIL's verify method; given a glob of input
 paths, it prints the names of those *verify* determines as corrupt.
 

@@ -115,7 +115,7 @@ paths, it prints the names of those *verify* determines as corrupt.
   [verify]: http://effbot.org/imagingbook/image.htm
   [jpeg_corrupt]: https://bitbucket.org/denilsonsa/small_scripts/src/96af96e23bc1e19c9156412cdbb8eeba09e21cad/jpeg_corrupt.py
 
-#### Photos/Videos
+#### Music/Videos
 
 Running [ffmpeg][] without an output file parameter displays information about
 the given file. If ffmpeg is unable to parse the file, it'll spit out a warning,

@@ -25,14 +25,14 @@ This post looks at a few approaches you can use to organise the recovered files.
   [photorec]: http://www.cgsecurity.org/wiki/PhotoRec
   [formats]: http://www.cgsecurity.org/wiki/File_Formats_Recovered_By_PhotoRec
 
-## Sorting approaches
+## Sorting strategies
 
 Lets look at a few strategies to sort through the mess:
 
-* [Sort by file extension][#sort-by-file-extension]
-* [Hash audit][#hash-audit]
-* [Remove corrupt files][remove-corrupt-files]
-* [Rename using metadata][#rename-using-metadata]
+* <a href="#sort-by-file-extension">Sort by file extension</a>
+* <a href="#hash-audit">Hash audit</a>
+* <a href="#remove-corrupt-files">Remove corrupt files</a>
+* <a href="#rename-using-metadata">Rename using metadata</a>
 
 ### Sort by file extension
 
@@ -52,6 +52,8 @@ limit][dirlimit], such as FAT32.
 function that can compare file hashes against a known set. If you have a
 known-good backup, this can be an effective way to determine which files you
 already have and then prune them from PhotoRec's set.
+
+  [hashdeep]: http://md5deep.sourceforge.net
 
 ### Rename using metadata
 
